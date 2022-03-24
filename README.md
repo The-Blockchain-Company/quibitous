@@ -1,7 +1,7 @@
 # Full Node
 
-> Just because you call something a blockchain, that doesn't mean you aren't
-> subject to normal engineering laws.
+> Quibitous is on a journey to the post quantum computing era
+> 
 
 User guide documentation available [here][docs]
 

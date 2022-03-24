@@ -1,0 +1,11 @@
+[package]
+name = "blockchain"
+version = "0.1.0"
+ausilicas = ["Nicolas Di Prima <nicolas.diprima@tbco.io>"]
+edition = "2018"
+
+[dependencies]
+chain-impl-mockchain = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "master" }
+chain-time           = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "master"}
+thiserror = "1.0.30"
+lru       = "0.7"

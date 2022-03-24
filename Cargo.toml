@@ -1,0 +1,15 @@
+[workspace]
+members = [
+  "quibitous-lib",
+  "quibitous",
+  "qcli",
+  "explorer",
+  "modules/settings",
+  "modules/blockchain",
+  "testing/quibitous-automation",
+  "testing/quibitous-integration-tests",
+  "testing/gate",
+  "testing/mfive",
+  "testing/quantricity",
+  "testing/silica",
+]

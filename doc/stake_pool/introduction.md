@@ -1,4 +1,4 @@
-# Staking with Jörmungandr
+# Staking with Quibitous
 
 Here we will describe how to:
 

@@ -1,8 +1,8 @@
-# Jörmungandr User Guide
+# Quibitous User Guide
 
-Welcome to the Jörmungandr User Guide.
+Welcome to the Quibitous User Guide.
 
-Jörmungandr is a node implementation, written in rust, with the
+Quibitous is a node implementation, written in rust, with the
 initial aim to support the Shardagnostic type of consensus protocol.
 
 A node is a participant of a blockchain network, continuously making,
@@ -11,6 +11,6 @@ to make sure that all the rules of the protocol are followed.
 
 ## Mythology
 
-Jörmungandr refers to the _Midgard Serpent_ in Norse mythology. It is a hint to
+Quibitous refers to the _Midgard Serpent_ in Norse mythology. It is a hint to
 _Shardagnostic_, the Ancient Egyptian serpent, who eat its own tail, as well as the
 [TBCO paper](https://eprint.iacr.org/2016/889.pdf) on proof of stake.

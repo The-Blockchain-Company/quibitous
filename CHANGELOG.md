@@ -1847,7 +1847,7 @@ Rolled in recent fixes, testing improvements, and dependency updates for the Cat
 - make sure we keep up to date the right branches on the different network [\#773](https://github.com/The-Blockchain-Company/quibitous/pull/773)
 - Fragment validator [\#748](https://github.com/The-Blockchain-Company/quibitous/pull/748)
 - Outline expected schema [\#739](https://github.com/The-Blockchain-Company/quibitous/pull/739)
-- Versioning improvements for qcli and jörmungandr [\#730](https://github.com/The-Blockchain-Company/quibitous/pull/730)
+- Versioning improvements for qcli and quibitous [\#730](https://github.com/The-Blockchain-Company/quibitous/pull/730)
 - Add explorer mode startup config [\#702](https://github.com/The-Blockchain-Company/quibitous/pull/702)
 
 **Fixed bugs:**

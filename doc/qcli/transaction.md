@@ -106,7 +106,7 @@ Also, the simplified `make-transaction` command in  `qcli`  covers all this proc
 qcli transaction make-transaction --help
 ```
 
-Let's use the following utxo as input and transfer 50 lovelaces to the destination address
+Let's use the following utxo as input and transfer 50 entropics to the destination address
 
 ## Input utxo
 

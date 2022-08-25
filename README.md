@@ -27,7 +27,8 @@ available for many operating systems and architectures.
 Get the [Rust Compiler](https://www.rust-lang.org/tools/install) (latest stable
 version is recommended, minimum required: 1.39+).
 
-```sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
 rustup install stable
 rustup default stable
 rustc --version # if this fails, try a new command window, or add the path (see below)

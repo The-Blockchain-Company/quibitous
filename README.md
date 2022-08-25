@@ -54,7 +54,9 @@ rustc --version # if this fails, try a new command window, or add the path (see 
 * The [Protocol Buffers](https://developers.google.com/protocol-buffers) version
   bundled with crate `prost-build` will be used.
 * For distribution or container builds in general, it's a good practice to
-  install `protoc` from the official distribution package if available.
+  install `protoc` from the official distribution package if available ie.
+
+  sudo apt install -y protobuf-compiler
 
 ### Commands
 

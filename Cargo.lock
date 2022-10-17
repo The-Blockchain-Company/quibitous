@@ -3328,7 +3328,7 @@ dependencies = [
 [[package]]
 name = "proptest"
 version = "1.0.0"
-source = "git+https://github.com/The-Blockchain-Company/proptest.git#dff1e6b410121989ea5aa076e5d3d6ae21b1bd81"
+source = "git+https://github.com/The-Blockchain-Company/proptest.git#270ea99959dc4c4e5076047d79a9654f5f0ac74a"
 dependencies = [
  "bit-set",
  "bitflags",

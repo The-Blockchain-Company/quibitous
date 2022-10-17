@@ -3,7 +3,7 @@ use crate::builder::Topology;
 use crate::controller::QuibitousInteractiveCommandExec;
 use crate::controller::UserInteractionController;
 use crate::{config::Config, error::Error};
-use jortestkit::prelude::UserInteraction;
+use quibitestkit::prelude::UserInteraction;
 
 pub fn spawn_network(config: Config, topology: Topology) -> Result<(), Error> {
     let controller = NetworkBuilder::default()

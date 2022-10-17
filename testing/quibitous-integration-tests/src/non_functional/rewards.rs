@@ -3,7 +3,7 @@ use chain_impl_mockchain::block::BlockDate;
 use quibitous_automation::testing::{benchmark_consumption, benchmark_endurance, ResourcesUsage};
 use quibitous_automation::{qcli::JCli, quibitous::ConfigurationBuilder};
 use quibitous_lib::interfaces::ActiveSlotCoefficient;
-use jortestkit::process as process_utils;
+use quibitestkit::process as process_utils;
 use std::time::Duration;
 use silica::TransactionHash;
 

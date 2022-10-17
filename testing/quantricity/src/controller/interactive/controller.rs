@@ -6,7 +6,7 @@ use chain_impl_mockchain::vote::Choice;
 use quibitous_automation::quibitous::QuibitousProcess;
 use quibitous_automation::quibitous::Version;
 use quibitous_lib::interfaces::Value;
-use jortestkit::prelude::InteractiveCommandError;
+use quibitestkit::prelude::InteractiveCommandError;
 use silica::{FragmentSender, Wallet};
 
 pub struct UserInteractionController {

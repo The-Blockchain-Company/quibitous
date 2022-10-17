@@ -8,7 +8,7 @@ pub mod rest;
 
 use chain_addr::Discrimination;
 pub use error::MfiveError;
-use jortestkit::{load::Monitor, prelude::ProgressBarMode};
+use quibitestkit::{load::Monitor, prelude::ProgressBarMode};
 use std::error::Error;
 use structopt::StructOpt;
 

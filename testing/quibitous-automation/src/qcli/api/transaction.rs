@@ -8,7 +8,7 @@ use quibitous_lib::{
     crypto::hash::Hash,
     interfaces::{BlockDate, LegacyUTxO, UTxOInfo, Value},
 };
-use jortestkit::process::output_extensions::ProcessOutput as _;
+use quibitestkit::process::output_extensions::ProcessOutput as _;
 use std::path::Path;
 
 pub struct Transaction {

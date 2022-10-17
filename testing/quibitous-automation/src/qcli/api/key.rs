@@ -1,7 +1,7 @@
 use crate::qcli::command::KeyCommand;
 use assert_cmd::assert::OutputAssertExt;
 use assert_fs::{fixture::FileWriteStr, NamedTempFile};
-use jortestkit::prelude::ProcessOutput;
+use quibitestkit::prelude::ProcessOutput;
 use std::path::Path;
 const DEFAULT_KEY_TYPE: &str = "Ed25519Extended";
 

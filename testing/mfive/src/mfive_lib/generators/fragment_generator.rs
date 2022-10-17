@@ -10,7 +10,7 @@ use quibitous_automation::testing::SyncNode;
 use quibitous_automation::testing::{VoteCastCounter, VotePlanBuilder};
 use quibitous_lib::crypto::hash::Hash;
 use quibitous_lib::interfaces::BlockDate as BlockDateDto;
-use jortestkit::load::{Request, RequestFailure, RequestGenerator};
+use quibitestkit::load::{Request, RequestFailure, RequestGenerator};
 use rand::RngCore;
 use rand_core::OsRng;
 use std::iter;

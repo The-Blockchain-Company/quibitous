@@ -6,7 +6,7 @@ use chain_addr::Discrimination;
 use chain_impl_mockchain::block::BlockDate;
 use quibitous_automation::quibitous::RemoteQuibitousBuilder;
 use quibitous_lib::crypto::hash::Hash;
-use jortestkit::{
+use quibitestkit::{
     load::ConfigurationBuilder, prelude::parse_progress_bar_mode_from_str, prelude::ProgressBarMode,
 };
 use std::{path::PathBuf, str::FromStr, time::Duration};
@@ -106,7 +106,7 @@ impl TxOnly {
         let status_provider = FragmentStatusProvider::new(remote_quibitous);
 
         let stats =
-            jortestkit::load::start_async(request_gen, status_provider, config, "rest  test");
+            quibitestkit::load::start_async(request_gen, status_provider, config, "rest  test");
         if self.measure {
             assert!((stats.calculate_passrate() as u32) > 95);
         }

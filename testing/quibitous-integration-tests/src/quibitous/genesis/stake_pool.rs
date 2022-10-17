@@ -9,7 +9,7 @@ use quibitous_lib::{
     crypto::hash::Hash,
     interfaces::{BlockDate, InitialUTxO, Ratio, TaxType, Value},
 };
-use jortestkit::process::Wait;
+use quibitestkit::process::Wait;
 use silica::Wallet;
 
 use assert_fs::prelude::*;

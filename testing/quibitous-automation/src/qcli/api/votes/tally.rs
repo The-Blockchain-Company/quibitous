@@ -1,6 +1,6 @@
 use crate::qcli::command::votes::TallyCommand;
 use assert_cmd::assert::OutputAssertExt;
-use jortestkit::prelude::ProcessOutput;
+use quibitestkit::prelude::ProcessOutput;
 use std::path::Path;
 
 pub struct Tally {

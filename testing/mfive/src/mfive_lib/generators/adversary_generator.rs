@@ -1,7 +1,7 @@
 use chain_impl_mockchain::fragment::FragmentId;
 use quibitous_automation::quibitous::RemoteQuibitous;
 use quibitous_automation::testing::SyncNode;
-use jortestkit::load::{Request, RequestFailure, RequestGenerator};
+use quibitestkit::load::{Request, RequestFailure, RequestGenerator};
 use gate::AdversaryFragmentSender;
 use rand_core::OsRng;
 use std::time::Instant;

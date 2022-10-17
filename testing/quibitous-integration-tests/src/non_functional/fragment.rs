@@ -8,7 +8,7 @@ use quibitous_automation::{
 use quibitous_lib::interfaces::{
     ActiveSlotCoefficient, BlockDate as BlockDateDto, KesUpdateSpeed,
 };
-pub use jortestkit::{
+pub use quibitestkit::{
     console::progress_bar::{parse_progress_bar_mode_from_str, ProgressBarMode},
     load::{self, ConfigurationBuilder as LoadConfigurationBuilder, Monitor},
     prelude::Wait,

@@ -1,6 +1,6 @@
 use crate::qcli::command::rest::v1::VoteCommand;
 use assert_cmd::assert::OutputAssertExt;
-use jortestkit::prelude::ProcessOutput;
+use quibitestkit::prelude::ProcessOutput;
 
 pub struct Vote {
     vote_command: VoteCommand,

@@ -28,7 +28,7 @@ mod wrappers;
 pub use wrappers::LastBlockResponse;
 
 use data::PoolId;
-use jortestkit::{file, process::Wait};
+use quibitestkit::{file, process::Wait};
 use serde::Serialize;
 use std::path::Path;
 use std::path::PathBuf;

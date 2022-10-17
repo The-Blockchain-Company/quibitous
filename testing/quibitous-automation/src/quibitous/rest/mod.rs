@@ -32,7 +32,7 @@ pub enum RestError {
     #[error("hash parse error")]
     HashParseError(#[from] chain_crypto::hash::Error),
     #[error("error while polling endpoint")]
-    PollError(#[from] jortestkit::process::WaitError),
+    PollError(#[from] quibitestkit::process::WaitError),
     #[error("non success error code {status}")]
     NonSuccessErrorCode {
         response: String,

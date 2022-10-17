@@ -3,7 +3,7 @@ use assert_cmd::assert::OutputAssertExt;
 use assert_fs::assert::PathAssert;
 use assert_fs::fixture::FileWriteStr;
 use assert_fs::NamedTempFile;
-use jortestkit::prelude::ProcessOutput;
+use quibitestkit::prelude::ProcessOutput;
 use std::path::Path;
 
 pub struct MemberKey {
@@ -27,8 +27,8 @@ impl MemberKey {
             .build()
             .assert()
             .success();
-        output_file.assert(jortestkit::prelude::file_exists_and_not_empty());
-        jortestkit::prelude::read_file(output_file.path())
+        output_file.assert(quibitestkit::prelude::file_exists_and_not_empty());
+        quibitestkit::prelude::read_file(output_file.path())
     }
 
     pub fn generate<P: AsRef<Path>, S: Into<String>>(

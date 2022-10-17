@@ -3,7 +3,7 @@ use assert_cmd::assert::OutputAssertExt;
 use quibitous_lib::crypto::hash::Hash;
 use quibitous_lib::interfaces::UTxOInfo;
 use quibitous_lib::interfaces::UTxOOutputInfo;
-use jortestkit::prelude::ProcessOutput;
+use quibitestkit::prelude::ProcessOutput;
 use std::str::FromStr;
 pub struct UtxO {
     utxo_command: UtxOCommand,

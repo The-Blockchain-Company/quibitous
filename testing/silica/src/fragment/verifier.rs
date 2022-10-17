@@ -2,7 +2,7 @@ use chain_impl_mockchain::fragment::FragmentId;
 use quibitous_automation::quibitous::{FragmentNode, FragmentNodeError, MemPoolCheck};
 use quibitous_lib::interfaces::FragmentLog;
 use quibitous_lib::interfaces::FragmentStatus;
-use jortestkit::prelude::Wait;
+use quibitestkit::prelude::Wait;
 use std::collections::HashMap;
 use std::time::Duration;
 

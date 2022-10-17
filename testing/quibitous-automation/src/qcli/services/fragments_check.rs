@@ -4,8 +4,8 @@ use crate::{
     quibitous::QuibitousProcess,
 };
 use quibitous_lib::interfaces::FragmentLog;
-use jortestkit::prelude::*;
-use jortestkit::process::run_process_until_response_matches;
+use quibitestkit::prelude::*;
+use quibitestkit::process::run_process_until_response_matches;
 use std::process::Command;
 
 pub struct FragmentsCheck<'a> {

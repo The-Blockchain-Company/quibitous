@@ -18,8 +18,8 @@ use quibitous_automation::quibitous::{ConfigurationBuilder, Starter};
 use quibitous_automation::testing::time::{wait_for_date, wait_for_epoch};
 use quibitous_automation::testing::{benchmark_consumption, VotePlanBuilder};
 use quibitous_lib::interfaces::BlockDate as BlockDateLib;
-use jortestkit::load::Configuration;
-use jortestkit::measurement::Status;
+use quibitestkit::load::Configuration;
+use quibitestkit::measurement::Status;
 use gate::AdversaryFragmentSender;
 use gate::AdversaryFragmentSenderSetup;
 use mfive::generators::{AdversaryFragmentGenerator, FragmentStatusProvider, VoteCastsGenerator};
@@ -135,7 +135,7 @@ pub fn private_vote_load_scenario(quick_config: PrivateVotingLoadTestConfig) {
         transaction_sender.clone(),
     );
 
-    let stats = jortestkit::load::start_async(
+    let stats = quibitestkit::load::start_async(
         votes_generator,
         FragmentStatusProvider::new(quibitous.to_remote()),
         quick_config.configuration(),
@@ -313,7 +313,7 @@ pub fn adversary_private_vote_load_scenario(
 
     adversary_votes_generator.fill_from_faucet(&mut noise_wallet_from);
 
-    let _noise = jortestkit::load::start_background_async(
+    let _noise = quibitestkit::load::start_background_async(
         adversary_votes_generator,
         FragmentStatusProvider::new(quibitous.to_remote()),
         adversary_noise_config,
@@ -327,7 +327,7 @@ pub fn adversary_private_vote_load_scenario(
         transaction_sender.clone(),
     );
 
-    let stats = jortestkit::load::start_async(
+    let stats = quibitestkit::load::start_async(
         votes_generator,
         FragmentStatusProvider::new(quibitous.to_remote()),
         quick_config.configuration(),

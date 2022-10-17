@@ -7,7 +7,7 @@ use quibitous_automation::{
     quibitous::{ConfigurationBuilder, Explorer},
 };
 use quibitous_lib::interfaces::ActiveSlotCoefficient;
-use jortestkit::process::Wait;
+use quibitestkit::process::Wait;
 use std::str::FromStr;
 use std::time::Duration;
 use silica::{StakePool, TransactionHash};

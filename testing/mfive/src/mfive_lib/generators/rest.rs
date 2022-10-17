@@ -1,5 +1,5 @@
 use quibitous_automation::quibitous::{QuibitousRest, RestError};
-use jortestkit::load::{Request, RequestFailure, RequestGenerator};
+use quibitestkit::load::{Request, RequestFailure, RequestGenerator};
 use rand::RngCore;
 use rand_core::OsRng;
 use std::time::Instant;

@@ -1,7 +1,7 @@
 use crate::qcli::command::rest::v0::BlockCommand;
 use assert_cmd::assert::OutputAssertExt;
 use quibitous_lib::crypto::hash::Hash;
-use jortestkit::prelude::ProcessOutput;
+use quibitestkit::prelude::ProcessOutput;
 
 pub struct Block {
     block_command: BlockCommand,

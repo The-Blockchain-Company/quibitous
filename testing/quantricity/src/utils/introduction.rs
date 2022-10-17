@@ -1,5 +1,5 @@
 use crate::config::SessionSettings;
-pub use jortestkit::console::style;
+pub use quibitestkit::console::style;
 
 pub fn print_intro(session_settings: &SessionSettings, name: &str) {
     println!(

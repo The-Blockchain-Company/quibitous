@@ -2022,7 +2022,7 @@ dependencies = [
  "indicatif",
  "quibitous-automation",
  "quibitous-lib",
- "jortestkit",
+ "quibitestkit",
  "parity-multiaddr",
  "rand 0.8.4",
  "rand_chacha 0.3.1",
@@ -2427,7 +2427,7 @@ dependencies = [
  "hex",
  "humantime",
  "quibitous-lib",
- "jortestkit",
+ "quibitestkit",
  "json",
  "keynesis",
  "lazy_static",
@@ -2487,7 +2487,7 @@ dependencies = [
  "indicatif",
  "quibitous-automation",
  "quibitous-lib",
- "jortestkit",
+ "quibitestkit",
  "json",
  "lazy_static",
  "gate",
@@ -2551,9 +2551,9 @@ dependencies = [
 ]
 
 [[package]]
-name = "jortestkit"
+name = "quibitestkit"
 version = "0.1.0"
-source = "git+https://github.com/The-Blockchain-Company/jortestkit.git?branch=master#51f92676429a2e8cd72ee1907195c565824b52d4"
+source = "git+https://github.com/The-Blockchain-Company/quibitestkit.git?branch=master#51f92676429a2e8cd72ee1907195c565824b52d4"
 dependencies = [
  "assert_fs",
  "base64",
@@ -2891,7 +2891,7 @@ dependencies = [
  "indicatif",
  "quibitous-automation",
  "quibitous-lib",
- "jortestkit",
+ "quibitestkit",
  "gate",
  "rand 0.8.4",
  "rand_core 0.6.3",
@@ -4701,7 +4701,7 @@ dependencies = [
  "qcli",
  "quibitous-automation",
  "quibitous-lib",
- "jortestkit",
+ "quibitestkit",
  "rand 0.8.4",
  "rand_chacha 0.3.1",
  "rand_core 0.6.3",

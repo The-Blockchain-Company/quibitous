@@ -13,7 +13,7 @@ use quibitous_lib::{
 };
 use mfive::generators::ExplorerRequestGen;
 
-use jortestkit::load::{ConfigurationBuilder as LoadConfigurationBuilder, Monitor};
+use quibitestkit::load::{ConfigurationBuilder as LoadConfigurationBuilder, Monitor};
 use std::{str::FromStr, time::Duration};
 use silica::{BlockDateGenerator, Wallet};
 
@@ -151,6 +151,6 @@ pub fn explorer_load_test() {
         .monitor(Monitor::Progress(100))
         .status_pace(Duration::from_secs(1))
         .build();
-    let stats = jortestkit::load::start_sync(request_gen, config, "Explorer load test");
+    let stats = quibitestkit::load::start_sync(request_gen, config, "Explorer load test");
     assert!((stats.calculate_passrate() as u32) > 95);
 }

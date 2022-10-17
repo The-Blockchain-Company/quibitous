@@ -1,7 +1,7 @@
 use crate::qcli::command::AddressCommand;
 use assert_cmd::assert::OutputAssertExt;
 use chain_addr::Discrimination;
-use jortestkit::prelude::ProcessOutput;
+use quibitestkit::prelude::ProcessOutput;
 use std::collections::BTreeMap;
 
 pub struct Address {

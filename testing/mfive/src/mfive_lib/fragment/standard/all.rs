@@ -6,9 +6,9 @@ use chain_addr::Discrimination;
 use chain_impl_mockchain::block::BlockDate;
 use quibitous_automation::{quibitous::RemoteQuibitousBuilder, testing::time};
 use quibitous_lib::crypto::hash::Hash;
-use jortestkit::load::ConfigurationBuilder;
-use jortestkit::prelude::parse_progress_bar_mode_from_str;
-use jortestkit::prelude::ProgressBarMode;
+use quibitestkit::load::ConfigurationBuilder;
+use quibitestkit::prelude::parse_progress_bar_mode_from_str;
+use quibitestkit::prelude::ProgressBarMode;
 use std::time::Duration;
 use std::{path::PathBuf, str::FromStr};
 use structopt::StructOpt;
@@ -146,7 +146,7 @@ impl AllFragments {
         let fragment_status_provider = FragmentStatusProvider::new(remote_quibitous);
 
         let stats =
-            jortestkit::load::start_async(generator, fragment_status_provider, config, title);
+            quibitestkit::load::start_async(generator, fragment_status_provider, config, title);
         stats.print_summary(title);
 
         Ok(())

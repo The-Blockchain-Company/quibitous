@@ -1,7 +1,7 @@
 use crate::qcli::command::rest::v0::VoteCommand;
 use assert_cmd::assert::OutputAssertExt;
 use quibitous_lib::interfaces::{CommitteeIdDef, VotePlanStatus};
-use jortestkit::prelude::ProcessOutput;
+use quibitestkit::prelude::ProcessOutput;
 
 pub struct Vote {
     vote_command: VoteCommand,

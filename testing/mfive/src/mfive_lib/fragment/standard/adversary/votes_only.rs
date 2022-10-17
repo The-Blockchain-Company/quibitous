@@ -7,7 +7,7 @@ use chain_impl_mockchain::block::BlockDate;
 use quibitous_automation::quibitous::RemoteQuibitousBuilder;
 use quibitous_automation::testing::block0::{get_block, Block0ConfigurationExtension};
 use quibitous_lib::crypto::hash::Hash;
-use jortestkit::{
+use quibitestkit::{
     load::ConfigurationBuilder,
     prelude::{parse_progress_bar_mode_from_str, ProgressBarMode},
 };
@@ -116,7 +116,7 @@ impl VotesOnly {
                 .shutdown_grace_period(Duration::from_secs(30))
                 .build();
 
-        let noise_stats = jortestkit::load::start_background_async(
+        let noise_stats = quibitestkit::load::start_background_async(
             generator,
             FragmentStatusProvider::new(remote_quibitous),
             adversary_noise_config,

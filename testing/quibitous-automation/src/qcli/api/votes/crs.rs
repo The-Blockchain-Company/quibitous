@@ -1,6 +1,6 @@
 use crate::qcli::command::votes::CrsCommand;
 use assert_cmd::assert::OutputAssertExt;
-use jortestkit::prelude::ProcessOutput;
+use quibitestkit::prelude::ProcessOutput;
 
 pub struct Crs {
     crs_command: CrsCommand,

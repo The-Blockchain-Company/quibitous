@@ -9,13 +9,13 @@ edition = "2021"
 qcli = { path = "../../qcli" }
 quibitous-lib = { path = "../../quibitous-lib" }
 quibitous-automation = { path = "../quibitous-automation" }
-jortestkit = { git = "https://github.com/The-Blockchain-Company/jortestkit.git", branch = "master" }
-chain-impl-mockchain = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "master", features = [ "property-test-api" ] }
-chain-addr      = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "master", features = [ "property-test-api" ] }
-chain-crypto    = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "master", features = [ "property-test-api" ] }
-chain-core      = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "master" }
+jortestkit = { git = "https://github.com/The-Blockchain-Company/jortestkit.git", branch = "main" }
+chain-impl-mockchain = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main", features = [ "property-test-api" ] }
+chain-addr      = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main", features = [ "property-test-api" ] }
+chain-crypto    = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main", features = [ "property-test-api" ] }
+chain-core      = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main" }
 assert_fs = "1.0"
-chain-vote      = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "master" }
+chain-vote      = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main" }
 serde = { version = "1.0", features = ["derive"] }
 cocoon = "0.2.4"
 dirs = "4.0.0"

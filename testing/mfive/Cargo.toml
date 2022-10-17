@@ -8,7 +8,7 @@ edition = "2018"
 
 [dependencies]
 quibitous-lib = { path = "../../quibitous-lib" }
-jortestkit = { git = "https://github.com/The-Blockchain-Company/jortestkit.git", branch = "master" }
+jortestkit = { git = "https://github.com/The-Blockchain-Company/jortestkit.git", branch = "main" }
 quibitous-automation = { path = "../quibitous-automation" }
 rand_core = "0.6"
 rand = "0.8"
@@ -16,13 +16,13 @@ thiserror = "1.0"
 structopt = "^0.3"
 assert_fs = "1.0"
 indicatif = "0.15"
-chain-impl-mockchain = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "master", features = [ "property-test-api" ] }
-chain-addr      = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "master", features = [ "property-test-api" ] }
-chain-core      = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "master" }
-chain-crypto    = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "master", features = [ "property-test-api" ] }
-chain-time      = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "master" }
-chain-storage   = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "master", features = ["with-bench"] }
-chain-vote      = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "master" }
+chain-impl-mockchain = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main", features = [ "property-test-api" ] }
+chain-addr      = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main", features = [ "property-test-api" ] }
+chain-core      = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main" }
+chain-crypto    = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main", features = [ "property-test-api" ] }
+chain-time      = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main" }
+chain-storage   = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main", features = ["with-bench"] }
+chain-vote      = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main" }
 tokio = { version = "1.15", features = ["macros"] }
 silica = { path = "../silica" }
 gate = { path = "../gate" }

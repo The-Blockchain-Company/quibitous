@@ -5,7 +5,7 @@ ausilicas = ["Nicolas Di Prima <nicolas.diprima@blockchain-company.io>"]
 edition = "2018"
 
 [dependencies]
-chain-impl-mockchain = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "master" }
-chain-time           = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "master"}
+chain-impl-mockchain = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main" }
+chain-time           = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main"}
 thiserror = "1.0.30"
 lru       = "0.7"

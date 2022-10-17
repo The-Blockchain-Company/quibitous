@@ -12,19 +12,19 @@ tokio = { version = "1.15", features = ["macros", "time"] }
 futures      = "0.3.21"
 base64 = "0.13"
 hex = "0.4.2"
-chain-addr      = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "master" }
-chain-core      = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "master" }
-chain-crypto    = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "master" }
-chain-impl-mockchain = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "master" }
-chain-time      = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "master" }
-chain-vote      = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "master" }
+chain-addr      = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main" }
+chain-core      = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main" }
+chain-crypto    = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main" }
+chain-impl-mockchain = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main" }
+chain-time      = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main" }
+chain-vote      = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main" }
 quibitous-lib = { path = "../../quibitous-lib" }
 quantricity = { path = "../quantricity" }
 gate = { path = "../gate" }
 silica = { path = "../silica" }
 mfive = { path = "../mfive" }
 quibitous-automation = { path = "../quibitous-automation" }
-jortestkit = { git = "https://github.com/The-Blockchain-Company/jortestkit.git", branch = "master" }
+jortestkit = { git = "https://github.com/The-Blockchain-Company/jortestkit.git", branch = "main" }
 rand = "0.8"
 rand_core = "0.6"
 rand_chacha = "0.3"

@@ -1,7 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    utils.url = "github:kreisys/flake-utils";
+    utils.url = "github:rmourey26/flake-utils";
   };
 
   nixConfig = {
@@ -11,7 +11,7 @@
     ];
     extra-trusted-public-keys = [
       "hydra.tbco.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ="
-      "vit-ops.cachix.org-1:LY84nIKdW7g1cvhJ6LsupHmGtGcKAlUXo+l1KByoDho="
+      "tbco.cachix.org-1:OYKDS3zfcsf4WEVuSTV+XmgaIn1GeclGW0kSFd3G0NU="
     ];
   };
 

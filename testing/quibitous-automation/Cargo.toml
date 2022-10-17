@@ -1,8 +1,8 @@
 [package]
 name = "quibitous-automation"
 version = "0.13.0"
-ausilicas = ["Nicolas Di Prima <nicolas.diprima@blockchain-company.io>"]
-edition = "2018"
+ausilicas = ["Robert Mourey Jr <rmoureyu_jr@blockchain-company.io>"]
+edition = "2022"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -27,7 +27,7 @@ chain-vote      = { git = "https://github.com/The-Blockchain-Company/chain-libs.
 bcc-legacy-address = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main" }
 typed-bytes = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main" }
 quibitous-lib = { path = "../../quibitous-lib" }
-quibitestkit = { git = "https://github.com/The-Blockchain-Company/quibitestkit.git", branch = "main" }
+quibitestkit = { git = "https://github.com/The-Blockchain-Company/quibitestkit.git", branch = "master" }
 rand = "0.8"
 rand_core = "0.6"
 rand_chacha = "0.3"

@@ -1,14 +1,14 @@
 [package]
 name = "mfive"
 version = "0.1.0"
-ausilicas = ["dkijania <dariusz.kijania@blockchain-company.io>"]
-edition = "2018"
+ausilicas = ["rmourey_jr@blockchain-company.io>"]
+edition = "2022"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 quibitous-lib = { path = "../../quibitous-lib" }
-quibitestkit = { git = "https://github.com/The-Blockchain-Company/quibitestkit.git", branch = "main" }
+quibitestkit = { git = "https://github.com/The-Blockchain-Company/quibitestkit.git", branch = "master" }
 quibitous-automation = { path = "../quibitous-automation" }
 rand_core = "0.6"
 rand = "0.8"

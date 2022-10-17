@@ -24,7 +24,7 @@ gate = { path = "../gate" }
 silica = { path = "../silica" }
 mfive = { path = "../mfive" }
 quibitous-automation = { path = "../quibitous-automation" }
-quibitestkit = { git = "https://github.com/The-Blockchain-Company/quibitestkit.git", branch = "main" }
+quibitestkit = { git = "https://github.com/The-Blockchain-Company/quibitestkit.git", branch = "master" }
 rand = "0.8"
 rand_core = "0.6"
 rand_chacha = "0.3"

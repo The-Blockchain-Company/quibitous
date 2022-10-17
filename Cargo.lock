@@ -2553,7 +2553,7 @@ dependencies = [
 [[package]]
 name = "quibitestkit"
 version = "0.1.0"
-source = "git+https://github.com/The-Blockchain-Company/quibitestkit.git?branch=master#2ccec696ecd999b38620f3a708fbeffb55691352"
+source = "git+https://github.com/The-Blockchain-Company/quibitestkit.git?branch=master#e670e960e1310341c0c4118f49a59b5121b632a1"
 dependencies = [
  "assert_fs",
  "base64",

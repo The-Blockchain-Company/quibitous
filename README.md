@@ -97,9 +97,9 @@ to. The simplest way to start such a node is:
 
     quibitous --block0-hash <HASH> --trusted-peers <IPs>
 
-## Quick-Start - Bcc Shelly Testnet
+## Quick-Start - Bcc Sophie Testnet
 
-* [Official Bcc Shelly Testnet Documentation](https://testnet.tbcodev.io/bcc/sophie/).
+* [Official Bcc Sophie Testnet Documentation](https://testnet.tbcodev.io/bcc/sophie/).
 * For the **nightly testnet**, ask within the
   [Bcc Stake Pool Workgroup Telegram group](https://web.telegram.org/#/im?p=@BccStakePoolWorkgroup).
 

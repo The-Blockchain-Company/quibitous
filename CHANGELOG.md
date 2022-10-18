@@ -1985,7 +1985,7 @@ Rolled in recent fixes, testing improvements, and dependency updates for the Cat
 
 **Merged pull requests:**
 
-- Remove Mjolnir [\#683](https://github.com/the-blockchain-company/quibitous/pull/683)
+- Remove Mfive [\#683](https://github.com/the-blockchain-company/quibitous/pull/683)
 - Remove unused deps from Quibitous [\#682](https://github.com/the-blockchain-company/quibitous/pull/682)
 - internal code design: simple case state machine [\#681](https://github.com/the-blockchain-company/quibitous/pull/681)
 - Implement bootstrap for new blockchain API [\#675](https://github.com/the-blockchain-company/quibitous/pull/675)

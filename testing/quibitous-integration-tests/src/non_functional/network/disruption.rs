@@ -1,10 +1,10 @@
 use crate::networking::utils;
 use crate::non_functional::network::*;
-use hersir::builder::wallet::template::builder::WalletTemplateBuilder;
-use hersir::builder::NetworkBuilder;
-use hersir::builder::Node;
-use hersir::builder::SpawnParams;
-use hersir::builder::Topology;
+use quantricity::builder::wallet::template::builder::WalletTemplateBuilder;
+use quantricity::builder::NetworkBuilder;
+use quantricity::builder::Node;
+use quantricity::builder::SpawnParams;
+use quantricity::builder::Topology;
 use quibitous_automation::quibitous::{LeadershipMode, PersistenceMode};
 use quibitous_automation::testing::benchmark::MeasurementReportInterval;
 use quibitous_automation::testing::SyncWaitParams;

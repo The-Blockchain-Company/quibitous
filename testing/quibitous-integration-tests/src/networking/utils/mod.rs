@@ -1,4 +1,4 @@
-use hersir::controller::Controller;
+use quantricity::controller::Controller;
 use quibitous_automation::quibitous::FragmentNode;
 pub use quibitous_automation::testing::{
     assert, assert_equals,

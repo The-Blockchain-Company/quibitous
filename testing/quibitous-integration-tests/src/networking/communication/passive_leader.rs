@@ -1,7 +1,7 @@
 use crate::networking::utils::wait;
-use hersir::builder::Blockchain;
-use hersir::builder::{wallet::template::builder::WalletTemplateBuilder, NetworkBuilder};
-use hersir::builder::{Node, SpawnParams, Topology};
+use quantricity::builder::Blockchain;
+use quantricity::builder::{wallet::template::builder::WalletTemplateBuilder, NetworkBuilder};
+use quantricity::builder::{Node, SpawnParams, Topology};
 use quibitous_automation::quibitous::{LogLevel, MemPoolCheck};
 use quibitous_automation::testing::benchmark::{
     measure_and_log_sync_time, MeasurementReportInterval,

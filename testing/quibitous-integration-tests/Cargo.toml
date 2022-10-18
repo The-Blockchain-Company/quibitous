@@ -19,10 +19,10 @@ chain-impl-mockchain = { git = "https://github.com/the-blockchain-company/chain-
 chain-time      = { git = "https://github.com/the-blockchain-company/chain-libs.git", branch = "main" }
 chain-vote      = { git = "https://github.com/the-blockchain-company/chain-libs.git", branch = "main" }
 quibitous-lib = { path = "../../quibitous-lib" }
-hersir = { path = "../hersir" }
-loki = { path = "../loki" }
+quantricity = { path = "../quantricity" }
+gate = { path = "../gate" }
 thor = { path = "../thor" }
-mjolnir = { path = "../mjolnir" }
+mfive = { path = "../mfive" }
 quibitous-automation = { path = "../quibitous-automation" }
 jortestkit = { git = "https://github.com/the-blockchain-company/jortestkit.git", branch = "git+https://github.com/the-blockchain-company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"" }
 rand = "0.8"

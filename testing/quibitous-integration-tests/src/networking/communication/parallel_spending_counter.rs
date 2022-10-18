@@ -1,6 +1,6 @@
 use chain_impl_mockchain::testing::WitnessMode;
-use hersir::builder::Blockchain;
-use hersir::builder::{
+use quantricity::builder::Blockchain;
+use quantricity::builder::{
     wallet::template::builder::WalletTemplateBuilder, NetworkBuilder, Node, SpawnParams, Topology,
 };
 use thor::{FragmentSender, FragmentSenderSetup, FragmentVerifier};

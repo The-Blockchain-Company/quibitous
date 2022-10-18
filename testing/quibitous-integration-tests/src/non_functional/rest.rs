@@ -2,7 +2,7 @@ use crate::startup;
 use quibitous_automation::quibitous::ConfigurationBuilder;
 use quibitous_lib::interfaces::{ActiveSlotCoefficient, KesUpdateSpeed};
 use jortestkit::load::{self, ConfigurationBuilder as LoadConfigurationBuilder, Monitor};
-use mjolnir::generators::RestRequestGen;
+use mfive::generators::RestRequestGen;
 use std::time::Duration;
 
 #[test]

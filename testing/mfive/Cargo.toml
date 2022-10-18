@@ -1,0 +1,31 @@
+[package]
+name = "mfive"
+version = "0.1.0"
+authors = ["dkijania <dariusz.kijania@tbco.io>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+quibitous-lib = { path = "../../quibitous-lib" }
+jortestkit = { git = "https://github.com/the-blockchain-company/jortestkit.git", branch = "git+https://github.com/the-blockchain-company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"" }
+quibitous-automation = { path = "../quibitous-automation" }
+rand_core = "0.6"
+rand = "0.8"
+thiserror = "1.0"
+structopt = "^0.3"
+assert_fs = "1.0"
+indicatif = "0.15"
+chain-impl-mockchain = { git = "https://github.com/the-blockchain-company/chain-libs.git", branch = "main", features = [ "property-test-api" ] }
+chain-addr      = { git = "https://github.com/the-blockchain-company/chain-libs.git", branch = "main", features = [ "property-test-api" ] }
+chain-core      = { git = "https://github.com/the-blockchain-company/chain-libs.git", branch = "main" }
+chain-crypto    = { git = "https://github.com/the-blockchain-company/chain-libs.git", branch = "main", features = [ "property-test-api" ] }
+chain-time      = { git = "https://github.com/the-blockchain-company/chain-libs.git", branch = "main" }
+chain-storage   = { git = "https://github.com/the-blockchain-company/chain-libs.git", branch = "main", features = ["with-bench"] }
+chain-vote      = { git = "https://github.com/the-blockchain-company/chain-libs.git", branch = "main" }
+tokio = { version = "1.15", features = ["macros"] }
+thor = { path = "../thor" }
+gate = { path = "../gate" }
+
+[build-dependencies]
+versionisator = "1.0.2"

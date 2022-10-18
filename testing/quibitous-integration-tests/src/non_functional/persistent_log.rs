@@ -9,7 +9,7 @@ pub use jortestkit::{
     console::progress_bar::{parse_progress_bar_mode_from_str, ProgressBarMode},
     load::{self, ConfigurationBuilder as LoadConfigurationBuilder, Monitor},
 };
-use mjolnir::generators::{BatchFragmentGenerator, FragmentStatusProvider};
+use mfive::generators::{BatchFragmentGenerator, FragmentStatusProvider};
 use thor::{BlockDateGenerator, FragmentSenderSetup, PersistentLogViewer};
 
 #[test]

@@ -11,7 +11,7 @@ use quibitous_lib::{
     crypto::hash::Hash,
     interfaces::{ActiveSlotCoefficient, BlockDate, KesUpdateSpeed},
 };
-use mjolnir::generators::ExplorerRequestGen;
+use mfive::generators::ExplorerRequestGen;
 
 use jortestkit::load::{ConfigurationBuilder as LoadConfigurationBuilder, Monitor};
 use std::{str::FromStr, time::Duration};

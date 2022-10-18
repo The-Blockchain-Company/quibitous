@@ -1,11 +1,11 @@
 use crate::networking::utils;
 use chain_impl_mockchain::header::BlockDate;
-use hersir::builder::wallet::template::builder::WalletTemplateBuilder;
-use hersir::builder::Blockchain;
-use hersir::builder::NetworkBuilder;
-use hersir::builder::Node;
-use hersir::builder::SpawnParams;
-use hersir::builder::Topology;
+use quantricity::builder::wallet::template::builder::WalletTemplateBuilder;
+use quantricity::builder::Blockchain;
+use quantricity::builder::NetworkBuilder;
+use quantricity::builder::Node;
+use quantricity::builder::SpawnParams;
+use quantricity::builder::Topology;
 use quibitous_automation::quibitous::QuibitousProcess;
 use quibitous_lib::interfaces::NodeStats;
 use quibitous_lib::interfaces::Policy;

@@ -17,8 +17,8 @@ use quibitous_automation::testing::time::wait_for_epoch;
 use quibitous_automation::testing::{benchmark_consumption, VotePlanBuilder};
 use jortestkit::load::Configuration;
 use jortestkit::measurement::Status;
-use loki::{AdversaryFragmentSender, AdversaryFragmentSenderSetup};
-use mjolnir::generators::{AdversaryFragmentGenerator, FragmentStatusProvider, VoteCastsGenerator};
+use gate::{AdversaryFragmentSender, AdversaryFragmentSenderSetup};
+use mfive::generators::{AdversaryFragmentGenerator, FragmentStatusProvider, VoteCastsGenerator};
 use thor::{vote_plan_cert, BlockDateGenerator, FragmentSender, FragmentSenderSetup, Wallet};
 
 pub fn public_vote_load_scenario(quick_config: PublicVotingLoadTestConfig) {

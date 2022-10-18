@@ -1,13 +1,13 @@
 use super::{ALICE, BOB, CLARICE, DAVID};
 use super::{LEADER, PASSIVE};
-use hersir::builder::wallet::template::builder::WalletTemplateBuilder;
-use hersir::builder::Blockchain;
-use hersir::builder::NetworkBuilder;
-use hersir::builder::Node;
-use hersir::builder::SpawnParams;
-use hersir::builder::Topology;
-use hersir::config::SessionSettings;
-use hersir::controller::Controller;
+use quantricity::builder::wallet::template::builder::WalletTemplateBuilder;
+use quantricity::builder::Blockchain;
+use quantricity::builder::NetworkBuilder;
+use quantricity::builder::Node;
+use quantricity::builder::SpawnParams;
+use quantricity::builder::Topology;
+use quantricity::config::SessionSettings;
+use quantricity::controller::Controller;
 use quibitous_automation::quibitous::{
     download_last_n_releases, get_quibitous_bin, version_0_8_19, FragmentNode, Version,
 };

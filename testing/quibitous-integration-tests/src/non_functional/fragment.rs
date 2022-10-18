@@ -13,7 +13,7 @@ pub use jortestkit::{
     load::{self, ConfigurationBuilder as LoadConfigurationBuilder, Monitor},
     prelude::Wait,
 };
-use mjolnir::generators::{
+use mfive::generators::{
     BatchFragmentGenerator, FragmentGenerator, FragmentStatusProvider, TransactionGenerator,
 };
 use std::time::Duration;

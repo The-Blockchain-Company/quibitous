@@ -2010,7 +2010,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "hersir"
+name = "quantricity"
 version = "0.1.0"
 dependencies = [
  "assert_fs",
@@ -2482,7 +2482,7 @@ dependencies = [
  "fs_extra",
  "function_name",
  "futures",
- "hersir",
+ "quantricity",
  "hex",
  "indicatif",
  "quibitous-automation",
@@ -2490,8 +2490,8 @@ dependencies = [
  "jortestkit",
  "json",
  "lazy_static",
- "loki",
- "mjolnir",
+ "gate",
+ "mfive",
  "parity-multiaddr",
  "poldercast",
  "predicates",
@@ -2739,7 +2739,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "loki"
+name = "gate"
 version = "0.1.0"
 dependencies = [
  "chain-addr",
@@ -2877,7 +2877,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "mjolnir"
+name = "mfive"
 version = "0.1.0"
 dependencies = [
  "assert_fs",
@@ -2892,7 +2892,7 @@ dependencies = [
  "quibitous-automation",
  "quibitous-lib",
  "jortestkit",
- "loki",
+ "gate",
  "rand 0.8.4",
  "rand_core 0.6.3",
  "structopt",

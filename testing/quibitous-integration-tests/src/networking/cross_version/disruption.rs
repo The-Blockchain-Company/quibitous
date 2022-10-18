@@ -3,13 +3,13 @@ use super::{ALICE, BOB, LEADER_1, LEADER_2, LEADER_3, LEADER_4};
 use crate::networking::utils;
 use assert_fs::fixture::PathChild;
 use function_name::named;
-use hersir::builder::wallet::template::builder::WalletTemplateBuilder;
-use hersir::builder::Blockchain;
-use hersir::builder::NetworkBuilder;
-use hersir::builder::Node;
-use hersir::builder::SpawnParams;
-use hersir::builder::Topology;
-use hersir::config::SessionSettings;
+use quantricity::builder::wallet::template::builder::WalletTemplateBuilder;
+use quantricity::builder::Blockchain;
+use quantricity::builder::NetworkBuilder;
+use quantricity::builder::Node;
+use quantricity::builder::SpawnParams;
+use quantricity::builder::Topology;
+use quantricity::config::SessionSettings;
 use quibitous_automation::{
     quibitous::{download_last_n_releases, get_quibitous_bin, Version},
     testing::{benchmark::MeasurementReportInterval, SyncNode, SyncWaitParams},

@@ -5,16 +5,16 @@ use assert_fs::{fixture::PathChild, TempDir};
 use chain_impl_mockchain::block::BlockDate;
 use quibitous_automation::quibitous::ConfigurationBuilder;
 use quibitous_lib::interfaces::{Mempool, PersistentLog};
-pub use quibitestkit::{
+pub use jortestkit::{
     console::progress_bar::{parse_progress_bar_mode_from_str, ProgressBarMode},
     load::{self, ConfigurationBuilder as LoadConfigurationBuilder, Monitor},
 };
-use mfive::generators::{BatchFragmentGenerator, FragmentStatusProvider};
-use silica::{BlockDateGenerator, FragmentSenderSetup, PersistentLogViewer};
+use mjolnir::generators::{BatchFragmentGenerator, FragmentStatusProvider};
+use thor::{BlockDateGenerator, FragmentSenderSetup, PersistentLogViewer};
 
 #[test]
 pub fn persistent_log_load_test() {
-    let mut faucet = silica::Wallet::default();
+    let mut faucet = thor::Wallet::default();
 
     let temp_dir = TempDir::new().unwrap();
     let persistent_log_path = temp_dir.child("fragment_dump");

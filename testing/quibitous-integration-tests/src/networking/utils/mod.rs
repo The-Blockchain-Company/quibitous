@@ -1,4 +1,4 @@
-use quantricity::controller::Controller;
+use hersir::controller::Controller;
 use quibitous_automation::quibitous::FragmentNode;
 pub use quibitous_automation::testing::{
     assert, assert_equals,
@@ -11,7 +11,7 @@ pub use quibitous_automation::testing::{
 use quibitous_automation::testing::{Speed, Thresholds};
 pub use quibitous_automation::testing::{SyncNode, SyncWaitParams};
 use std::time::Duration;
-use silica::{FragmentSender, Wallet};
+use thor::{FragmentSender, Wallet};
 
 pub fn wait(seconds: u64) {
     std::thread::sleep(Duration::from_secs(seconds));

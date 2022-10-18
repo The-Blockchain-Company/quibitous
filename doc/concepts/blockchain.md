@@ -108,7 +108,7 @@ Transaction have fees that are defined by the blockchain settings and the follow
 
 \\( \sum Inputs = \sum Outputs + fees \\)
 
-Transaction need to be ausilicaized by each of the inputs in the transaction by their respective witness.
+Transaction need to be authorized by each of the inputs in the transaction by their respective witness.
 In the most basic case, a witness is a cryptographic signature, but depending on the type of input can
 the type of witness vary.
 

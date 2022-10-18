@@ -2,7 +2,7 @@ use chain_impl_mockchain::stake;
 use serde::{Deserialize, Deserializer, Serialize, Serializer};
 use std::{fmt, str::FromStr};
 
-/// Stake in the blockchain, always printed as absolute Entropic
+/// Stake in the blockchain, always printed as absolute Lovelace
 ///
 /// Stake has some property to be human readable on standard display
 ///

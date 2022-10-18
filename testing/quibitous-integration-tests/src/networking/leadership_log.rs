@@ -1,9 +1,9 @@
 use chain_impl_mockchain::chaintypes::ConsensusVersion;
-use quantricity::builder::blockchain::BlockchainBuilder;
-use quantricity::builder::NetworkBuilder;
-use quantricity::builder::Node;
-use quantricity::builder::SpawnParams;
-use quantricity::builder::Topology;
+use hersir::builder::blockchain::BlockchainBuilder;
+use hersir::builder::NetworkBuilder;
+use hersir::builder::Node;
+use hersir::builder::SpawnParams;
+use hersir::builder::Topology;
 use quibitous_automation::testing::time;
 use quibitous_lib::interfaces::BlockDate;
 const LEADER_1: &str = "Leader1";

@@ -1,6 +1,6 @@
 # Network overview
 
-Quibitous network capabilities are split into:
+Jörmungandr network capabilities are split into:
 
 1. the REST API, used for informational queries or control of the node;
 2. the gRPC API for blockchain protocol exchange and participation;
@@ -11,7 +11,7 @@ chapter: [go to the REST documentation](../quickstart/03_rest_api.md)
 ## The protocol
 
 The protocol is based on [`gRPC`] that combines commonly used protocols like HTTP/2 and RPC.
-More precisely, Quibitous utilises.
+More precisely, Jörmungandr utilises.
 
 This choice was made because  [`gRPC`] is already widely supported around the world because
 of it's uitilization of standard protocols HTTP/2 which makes it much easier for Proxies and Firewalls to recognise

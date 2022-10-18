@@ -2,10 +2,10 @@ openapi: 3.0.2
 
 info:
   title: Generic blockchain node REST API
-  description: Quibitous Rest API v1
+  description: Jörmungandr Rest API v1
   version: 0.0.1
   contact:
-    url: 'https://github.com/The-Blockchain-Company/quibitous/'
+    url: 'https://github.com/the-blockchain-company/quibitous/'
 
 servers:
   - url: 'https://localhost'

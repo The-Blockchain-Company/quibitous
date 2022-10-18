@@ -350,7 +350,7 @@ impl Client {
         let (handle, sink, _) = intercom::stream_request(buffer_sizes::inbound::HEADERS);
         // TODO: make sure that back pressure on the number of requests
         // in flight prevents unlimited spawning of these tasks.
-        // https://github.com/The-Blockchain-Company/quibitous/issues/1034
+        // https://github.com/the-blockchain-company/quibitous/issues/1034
         self.global_state.spawn(
             async move {
                 let res = block_box.send(BlockMsg::ChainHeaders(handle)).await;
@@ -395,7 +395,7 @@ impl Client {
         let (handle, sink, _) = intercom::stream_request(buffer_sizes::inbound::BLOCKS);
         // TODO: make sure that back pressure on the number of requests
         // in flight prevents unlimited spawning of these tasks.
-        // https://github.com/The-Blockchain-Company/quibitous/issues/1034
+        // https://github.com/the-blockchain-company/quibitous/issues/1034
         self.global_state.spawn(
             async move {
                 let res = block_box.send(BlockMsg::NetworkBlocks(handle)).await;

@@ -1,28 +1,28 @@
 use crate::startup;
 use chain_impl_mockchain::block::BlockDate;
 use quibitous_automation::{
-    qcli::{FragmentsCheck, JCli},
+    qcli::{FragmentsCheck, QCli},
     quibitous::ConfigurationBuilder,
     testing::time,
 };
 use quibitous_lib::interfaces::{
     ActiveSlotCoefficient, BlockDate as BlockDateDto, KesUpdateSpeed,
 };
-pub use quibitestkit::{
+pub use jortestkit::{
     console::progress_bar::{parse_progress_bar_mode_from_str, ProgressBarMode},
     load::{self, ConfigurationBuilder as LoadConfigurationBuilder, Monitor},
     prelude::Wait,
 };
-use mfive::generators::{
+use mjolnir::generators::{
     BatchFragmentGenerator, FragmentGenerator, FragmentStatusProvider, TransactionGenerator,
 };
 use std::time::Duration;
-use silica::{BlockDateGenerator, FragmentSender, FragmentSenderSetup};
+use thor::{BlockDateGenerator, FragmentSender, FragmentSenderSetup};
 
 #[test]
 pub fn fragment_load_test() {
-    let faucet = silica::Wallet::default();
-    let receiver = silica::Wallet::default();
+    let faucet = thor::Wallet::default();
+    let receiver = thor::Wallet::default();
 
     let (mut quibitous, _) = startup::start_stake_pool(
         &[faucet.clone()],
@@ -72,7 +72,7 @@ pub fn fragment_load_test() {
 
     request_generator.prepare(BlockDateDto::new(2, 0));
 
-    let qcli: JCli = Default::default();
+    let qcli: QCli = Default::default();
     let fragment_check = FragmentsCheck::new(qcli, &quibitous);
     let wait = Wait::new(Duration::from_secs(1), 25);
     fragment_check.wait_until_all_processed(&wait).unwrap();
@@ -89,7 +89,7 @@ pub fn fragment_load_test() {
 
 #[test]
 pub fn fragment_batch_load_test() {
-    let mut faucet = silica::Wallet::default();
+    let mut faucet = thor::Wallet::default();
 
     let (mut quibitous, _) = startup::start_stake_pool(
         &[faucet.clone()],
@@ -142,7 +142,7 @@ pub fn fragment_batch_load_test() {
 
 #[test]
 pub fn transaction_load_test() {
-    let mut faucet = silica::Wallet::default();
+    let mut faucet = thor::Wallet::default();
 
     let (mut quibitous, _) = startup::start_stake_pool(
         &[faucet.clone()],

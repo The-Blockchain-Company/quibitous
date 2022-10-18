@@ -1,18 +1,18 @@
 use crate::networking::utils;
 use chain_impl_mockchain::header::BlockDate;
-use quantricity::builder::wallet::template::builder::WalletTemplateBuilder;
-use quantricity::builder::Blockchain;
-use quantricity::builder::NetworkBuilder;
-use quantricity::builder::Node;
-use quantricity::builder::SpawnParams;
-use quantricity::builder::Topology;
+use hersir::builder::wallet::template::builder::WalletTemplateBuilder;
+use hersir::builder::Blockchain;
+use hersir::builder::NetworkBuilder;
+use hersir::builder::Node;
+use hersir::builder::SpawnParams;
+use hersir::builder::Topology;
 use quibitous_automation::quibitous::QuibitousProcess;
 use quibitous_lib::interfaces::NodeStats;
 use quibitous_lib::interfaces::Policy;
 use quibitous_lib::interfaces::SlotDuration;
 use std::fmt::Display;
 use std::time::Duration;
-use silica::FragmentSender;
+use thor::FragmentSender;
 
 const LEADER1: &str = "LEADER1";
 const LEADER2: &str = "LEADER2";
@@ -152,7 +152,7 @@ pub fn p2p_stats_test() {
 
 // build a blockchain with a longer slot duration than default
 // to avoid spurious failures as described in
-// https://github.com/The-Blockchain-Company/quibitous/issues/3183.
+// https://github.com/the-blockchain-company/quibitous/issues/3183.
 // It is a macro because the builder is returned by reference.
 macro_rules! build_network {
     () => {{

@@ -16,7 +16,7 @@ use structopt::StructOpt;
 /// Quibitous CLI toolkit
 #[derive(StructOpt)]
 #[structopt(rename_all = "kebab-case")]
-pub struct JCli {
+pub struct QCli {
     /// display full version details (software version, source version, targets and compiler used)
     #[structopt(long = "full-version")]
     full_version: bool,
@@ -27,14 +27,14 @@ pub struct JCli {
     source_version: bool,
 
     #[structopt(subcommand)]
-    command: Option<JCliCommand>,
+    command: Option<QCliCommand>,
 }
 
 #[allow(clippy::large_enum_variant)]
 /// Quibitous CLI toolkit
 #[derive(StructOpt)]
 #[structopt(rename_all = "kebab-case")]
-pub enum JCliCommand {
+pub enum QCliCommand {
     /// Key Generation
     Key(key::Key),
     /// Address tooling and helper
@@ -57,7 +57,7 @@ pub enum JCliCommand {
     Votes(vote::Vote),
 }
 
-impl JCli {
+impl QCli {
     pub fn exec(self) -> Result<(), Box<dyn Error>> {
         use std::io::Write as _;
         if self.full_version {
@@ -73,9 +73,9 @@ impl JCli {
     }
 }
 
-impl JCliCommand {
+impl QCliCommand {
     pub fn exec(self) -> Result<(), Box<dyn Error>> {
-        use self::JCliCommand::*;
+        use self::QCliCommand::*;
         match self {
             Key(key) => key.exec()?,
             Address(address) => address.exec()?,

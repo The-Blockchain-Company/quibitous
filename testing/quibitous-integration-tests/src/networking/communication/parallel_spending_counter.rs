@@ -1,9 +1,9 @@
 use chain_impl_mockchain::testing::WitnessMode;
-use quantricity::builder::Blockchain;
-use quantricity::builder::{
+use hersir::builder::Blockchain;
+use hersir::builder::{
     wallet::template::builder::WalletTemplateBuilder, NetworkBuilder, Node, SpawnParams, Topology,
 };
-use silica::{FragmentSender, FragmentSenderSetup, FragmentVerifier};
+use thor::{FragmentSender, FragmentSenderSetup, FragmentVerifier};
 
 const LEADER: &str = "Leader";
 const PASSIVE_1: &str = "Passive1";

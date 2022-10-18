@@ -142,7 +142,7 @@ The protobuf files describing these methods are available in the
 `proto` directory of `chain-network` crate in the
 [chain-libs][chain-libs-gh] project repository.
 
-[chain-libs-gh]: https://github.com/The-Blockchain-Company/chain-libs/
+[chain-libs-gh]: https://github.com/the-blockchain-company/chain-libs/
 
 ### Pseudocode chain sync algorithm
 

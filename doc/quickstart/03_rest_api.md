@@ -32,4 +32,4 @@ The result may be:
 Please note that the end points and the results may change in the future.
 
 To see the whole Node API documentation,
-[click here](https://editor.swagger.io/?url=https://raw.githubusercontent.com/The-Blockchain-Company/quibitous/master/doc/api/v0.yaml)
+[click here](https://editor.swagger.io/?url=https://raw.githubusercontent.com/the-blockchain-company/quibitous/git+https://github.com/the-blockchain-company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"/doc/api/v0.yaml)

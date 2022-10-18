@@ -2,7 +2,7 @@ use std::error::Error;
 use structopt::StructOpt;
 
 fn main() {
-    qcli_lib::JCli::from_args()
+    qcli_lib::QCli::from_args()
         .exec()
         .unwrap_or_else(report_error)
 }

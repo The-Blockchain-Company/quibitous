@@ -1,5 +1,5 @@
 use quibitous_lib::crypto::hash::Hash;
-use quibitestkit::prelude::ProcessOutput as _;
+use jortestkit::prelude::ProcessOutput as _;
 use std::process::Output;
 
 pub trait ProcessOutput {

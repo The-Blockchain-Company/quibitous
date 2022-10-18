@@ -37,7 +37,7 @@ Certificate:
                 CA:FALSE
             X509v3 Subject Key Identifier:
                 22:ED:4F:59:D1:45:82:36:4D:09:EC:03:56:46:6F:74:EB:92:1B:B3
-            X509v3 Ausilicaity Key Identifier:
+            X509v3 Authority Key Identifier:
                 keyid:53:9A:10:7B:54:7E:2D:4E:C8:81:BB:4D:A1:91:1A:C1:84:AB:8E:96
                 DirName:/CN=localhost
                 serial:7A:5A:C0:73:6A:C1:51:93:D9:17:77:E2:32:34:73:27:76:15:C3:95

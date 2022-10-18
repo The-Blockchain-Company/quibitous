@@ -1,7 +1,7 @@
 use super::NodeStuckError;
 use crate::startup;
 use quibitous_automation::{
-    qcli::JCli,
+    qcli::QCli,
     quibitous::{ConfigurationBuilder, QuibitousProcess},
     testing::{
         benchmark_consumption, benchmark_endurance, Endurance, EnduranceBenchmarkRun, Thresholds,
@@ -11,17 +11,17 @@ use quibitous_lib::{
     crypto::hash::Hash,
     interfaces::{ActiveSlotCoefficient, BlockDate, KesUpdateSpeed},
 };
-use mfive::generators::ExplorerRequestGen;
+use mjolnir::generators::ExplorerRequestGen;
 
-use quibitestkit::load::{ConfigurationBuilder as LoadConfigurationBuilder, Monitor};
+use jortestkit::load::{ConfigurationBuilder as LoadConfigurationBuilder, Monitor};
 use std::{str::FromStr, time::Duration};
-use silica::{BlockDateGenerator, Wallet};
+use thor::{BlockDateGenerator, Wallet};
 
 #[test]
 pub fn test_explorer_is_in_sync_with_node_for_15_minutes() {
-    let mut sender = silica::Wallet::default();
-    let mut receiver = silica::Wallet::default();
-    let qcli: JCli = Default::default();
+    let mut sender = thor::Wallet::default();
+    let mut receiver = thor::Wallet::default();
+    let qcli: QCli = Default::default();
 
     let (quibitous, _) = startup::start_stake_pool(
         &[sender.clone()],
@@ -101,7 +101,7 @@ fn finish_test_prematurely(error_message: String, benchmark: EnduranceBenchmarkR
 fn check_explorer_and_rest_are_in_sync(
     quibitous: &QuibitousProcess,
 ) -> Result<(), NodeStuckError> {
-    let qcli: JCli = Default::default();
+    let qcli: QCli = Default::default();
     let block_tip = Hash::from_str(&qcli.rest().v0().tip(&quibitous.rest_uri())).unwrap();
 
     let explorer = quibitous.explorer();
@@ -122,10 +122,10 @@ fn check_explorer_and_rest_are_in_sync(
 
 #[test]
 pub fn explorer_load_test() {
-    let stake_pool_owners: Vec<Wallet> = std::iter::from_fn(|| Some(silica::Wallet::default()))
+    let stake_pool_owners: Vec<Wallet> = std::iter::from_fn(|| Some(thor::Wallet::default()))
         .take(100)
         .collect();
-    let addresses: Vec<Wallet> = std::iter::from_fn(|| Some(silica::Wallet::default()))
+    let addresses: Vec<Wallet> = std::iter::from_fn(|| Some(thor::Wallet::default()))
         .take(100)
         .collect();
 
@@ -151,6 +151,6 @@ pub fn explorer_load_test() {
         .monitor(Monitor::Progress(100))
         .status_pace(Duration::from_secs(1))
         .build();
-    let stats = quibitestkit::load::start_sync(request_gen, config, "Explorer load test");
+    let stats = jortestkit::load::start_sync(request_gen, config, "Explorer load test");
     assert!((stats.calculate_passrate() as u32) > 95);
 }

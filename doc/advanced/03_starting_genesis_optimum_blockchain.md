@@ -104,6 +104,6 @@ quibitous --genesis-block block-0.bin --config config.yaml --secret poolsecret.y
 
 # Test script
 
-There is a script [here](https://github.com/The-Blockchain-Company/quibitous/blob/master/scripts/bootstrap.py)
+There is a script [here](https://github.com/the-blockchain-company/quibitous/blob/git+https://github.com/the-blockchain-company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"/scripts/bootstrap.py)
 that can be used to bootstrap a test node with a pre-set faucet and stake pool and can be used as an
 example.

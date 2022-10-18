@@ -8,8 +8,8 @@ members = [
   "modules/blockchain",
   "testing/quibitous-automation",
   "testing/quibitous-integration-tests",
-  "testing/gate",
-  "testing/mfive",
-  "testing/quantricity",
-  "testing/silica",
+  "testing/loki",
+  "testing/mjolnir",
+  "testing/hersir",
+  "testing/thor",
 ]

@@ -1,18 +1,18 @@
 use crate::networking::p2p::connections::parse_timestamp;
 use crate::networking::utils::wait;
 use crate::non_functional::network::*;
-use quantricity::builder::blockchain::BlockchainBuilder;
-use quantricity::builder::wallet::template::builder::WalletTemplateBuilder;
-use quantricity::builder::NetworkBuilder;
-use quantricity::builder::Node;
-use quantricity::builder::SpawnParams;
-use quantricity::builder::Topology;
+use hersir::builder::blockchain::BlockchainBuilder;
+use hersir::builder::wallet::template::builder::WalletTemplateBuilder;
+use hersir::builder::NetworkBuilder;
+use hersir::builder::Node;
+use hersir::builder::SpawnParams;
+use hersir::builder::Topology;
 use quibitous_automation::quibitous::LogLevel;
 use quibitous_automation::testing::ensure_nodes_are_in_sync;
 use quibitous_automation::testing::SyncWaitParams;
 use std::time::{Duration, SystemTime};
-use silica::FragmentSender;
-use silica::FragmentVerifier;
+use thor::FragmentSender;
+use thor::FragmentVerifier;
 
 const CORE_NODE: &str = "Core";
 const RELAY_NODE_1: &str = "Relay1";

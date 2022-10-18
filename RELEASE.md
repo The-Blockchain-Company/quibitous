@@ -2,10 +2,10 @@
 
 ## Release
 
-release are a specific commit on the 'master' branch
+release are a specific commit on the 'git+https://github.com/the-blockchain-company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"' branch
 
-release will happens on master every Wednesday, unless the repository
-has not changed since the last release or that master doesn't compile.
+release will happens on git+https://github.com/the-blockchain-company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56" every Wednesday, unless the repository
+has not changed since the last release or that git+https://github.com/the-blockchain-company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56" doesn't compile.
 
 A release must have:
 

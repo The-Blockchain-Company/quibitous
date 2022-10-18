@@ -137,7 +137,7 @@ redundancy.
 
 ### Layers
 
-Quibitous provides multiple additional layers to the `poldercast` default ones:
+Jörmungandr provides multiple additional layers to the `poldercast` default ones:
 the preferred list or the bottle in the sea.
 
 #### Preferred list

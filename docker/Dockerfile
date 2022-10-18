@@ -19,7 +19,7 @@ RUN apt-get update && \
     mkdir -p ${ENV_PREFIX}/src && \
     mkdir -p ${ENV_PREFIX}/bin && \
     cd ${ENV_PREFIX} && \
-    git clone --recurse-submodules https://github.com/The-Blockchain-Company/quibitous src && \
+    git clone --recurse-submodules https://github.com/the-blockchain-company/quibitous src && \
     cd src && git checkout ${ENV_VER} && \
     cp scripts/bootstrap scripts/faucet-send-money.shtempl scripts/faucet-send-certificate.shtempl \
     scripts/create-stakepool.shtempl \
@@ -29,7 +29,7 @@ RUN apt-get update && \
 RUN if [ "${ENV_BUILD}" = "false" ]; then \
     echo "[INFO] - you have selected to install binaries" && \
     cd ${ENV_PREFIX}/bin && \
-    curl -s -O -L https://github.com/The-Blockchain-Company/quibitous/releases/download/${ENV_VER}/quibitous-${ENV_VER}-x86_64-unknown-linux-gnu.tar.gz && \
+    curl -s -O -L https://github.com/the-blockchain-company/quibitous/releases/download/${ENV_VER}/quibitous-${ENV_VER}-x86_64-unknown-linux-gnu.tar.gz && \
     tar xzf quibitous-${ENV_VER}-x86_64-unknown-linux-gnu.tar.gz && rm quibitous-${ENV_VER}-x86_64-unknown-linux-gnu.tar.gz ; fi
 
 # install the node and qcli from source

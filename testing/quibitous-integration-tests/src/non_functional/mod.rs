@@ -32,12 +32,12 @@ pub mod rewards;
 pub mod voting;
 
 use quibitous_automation::{
-    qcli::{self, JCli},
+    qcli::{self, QCli},
     quibitous::{ExplorerError, QuibitousError, QuibitousProcess},
 };
 use quibitous_lib::{crypto::hash::Hash, interfaces::Value};
 use thiserror::Error;
-use silica::Wallet;
+use thor::Wallet;
 
 #[derive(Error, Debug)]
 pub enum NodeStuckError {
@@ -69,7 +69,7 @@ pub fn send_transaction_and_ensure_block_was_produced(
     transation_messages: &[String],
     quibitous: &QuibitousProcess,
 ) -> Result<(), NodeStuckError> {
-    let qcli: JCli = Default::default();
+    let qcli: QCli = Default::default();
     let block_tip_before_transaction = qcli.rest().v0().tip(&quibitous.rest_uri());
     let block_counter_before_transaction = quibitous.logger.get_created_blocks_counter();
 
@@ -118,7 +118,7 @@ pub fn check_funds_transferred_to(
     value: Value,
     quibitous: &QuibitousProcess,
 ) -> Result<(), NodeStuckError> {
-    let qcli: JCli = Default::default();
+    let qcli: QCli = Default::default();
     let account_state = qcli
         .rest()
         .v0()

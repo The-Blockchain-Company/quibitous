@@ -4,7 +4,7 @@ use crate::quibitous::genesis::stake_pool::{
 use assert_fs::fixture::PathChild;
 use assert_fs::TempDir;
 use quibitous_automation::{
-    qcli::JCli,
+    qcli::QCli,
     quibitous::{
         download_last_n_releases, get_quibitous_bin, ConfigurationBuilder, QuibitousParams,
         QuibitousProcess, Starter, StartupVerificationMode, Version,
@@ -12,9 +12,9 @@ use quibitous_automation::{
     testing::benchmark::storage_loading_benchmark_from_log,
 };
 use quibitous_lib::interfaces::{BlockDate, Log, LogEntry, LogOutput, TrustedPeer};
-use quibitestkit::process::WaitBuilder;
+use jortestkit::process::WaitBuilder;
 use std::{env, path::PathBuf, time::Duration};
-use silica::Wallet;
+use thor::Wallet;
 
 #[derive(Clone, Debug)]
 pub struct TestnetConfig {
@@ -129,7 +129,7 @@ impl TestnetConfig {
 }
 
 fn create_actor_account(private_key: &str, quibitous: &QuibitousProcess) -> Wallet {
-    let qcli: JCli = Default::default();
+    let qcli: QCli = Default::default();
     let discrimination = quibitous.rest().settings().unwrap().discrimination;
     let actor_account = Wallet::from_existing_account(private_key, None, discrimination);
     let account_state = qcli

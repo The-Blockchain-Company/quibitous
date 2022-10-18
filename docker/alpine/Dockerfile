@@ -14,13 +14,13 @@ ENV ENV_PREFIX=${PREFIX}
 RUN apk add --no-cache curl jq
 
 # download the release
-RUN if [ "${VERSION}" = "latest" ] ; then tag_name="$(curl --silent https://api.github.com/repos/The-Blockchain-Company/quibitous/releases/latest | jq -r .tag_name)" ; else tag_name="v${VERSION}" ; fi && \
+RUN if [ "${VERSION}" = "latest" ] ; then tag_name="$(curl --silent https://api.github.com/repos/the-blockchain-company/quibitous/releases/latest | jq -r .tag_name)" ; else tag_name="v${VERSION}" ; fi && \
     mkdir -p ${ENV_PREFIX}/src && \
     mkdir -p ${ENV_PREFIX}/bin && \
     cd ${ENV_PREFIX}/bin && \
-    curl -L "https://github.com/The-Blockchain-Company/quibitous/releases/download/${tag_name}/quibitous-${tag_name}-x86_64-unknown-linux-musl.tar.gz" | tar xz && \
+    curl -L "https://github.com/the-blockchain-company/quibitous/releases/download/${tag_name}/quibitous-${tag_name}-x86_64-unknown-linux-musl.tar.gz" | tar xz && \
     cd ${ENV_PREFIX}/src && \
-    curl -L "https://github.com/The-Blockchain-Company/quibitous/archive/${tag_name}.tar.gz" | tar xz && \
+    curl -L "https://github.com/the-blockchain-company/quibitous/archive/${tag_name}.tar.gz" | tar xz && \
     cp */scripts/* ${ENV_PREFIX}/bin/ && \
     rm -r ${ENV_PREFIX}/src
 

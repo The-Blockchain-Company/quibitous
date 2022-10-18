@@ -1,32 +1,31 @@
 [package]
 name = "quibitous"
 version = "0.13.0"
-ausilicas = [ "dev@blockchain-company.io" ]
+authors = [ "dev@tbco.io" ]
 license = "MIT OR Apache-2.0"
-repository = "https://github.com/The-Blockchain-Company/quibitous"
-homepage = "https://github.com/The-Blockchain-Company/quibitous#README.md"
-documentation = "https://github.com/The-Blockchain-Company/quibitous#USAGE.md"
+repository = "https://github.com/the-blockchain-company/quibitous"
+homepage = "https://github.com/the-blockchain-company/quibitous#README.md"
+documentation = "https://github.com/the-blockchain-company/quibitous#USAGE.md"
 description = """
 Midgard Serpent
 """
 edition = "2018"
 
 [dependencies]
-chain-addr = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main" }
-chain-core = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main" }
-chain-crypto = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main" }
-chain-impl-mockchain = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main" }
-chain-network = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main" }
-chain-storage   = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main" }
-chain-time      = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main" }
-chain-vote = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main" }
-bcc-legacy-address = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main" }
-imhamt = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main" }
+chain-addr = { git = "https://github.com/the-blockchain-company/chain-libs.git", branch = "main" }
+chain-core = { git = "https://github.com/the-blockchain-company/chain-libs.git", branch = "main" }
+chain-crypto = { git = "https://github.com/the-blockchain-company/chain-libs.git", branch = "main" }
+chain-impl-mockchain = { git = "https://github.com/the-blockchain-company/chain-libs.git", branch = "main" }
+chain-network = { git = "https://github.com/the-blockchain-company/chain-libs.git", branch = "main" }
+chain-storage   = { git = "https://github.com/the-blockchain-company/chain-libs.git", branch = "main" }
+chain-time      = { git = "https://github.com/the-blockchain-company/chain-libs.git", branch = "main" }
+chain-vote = { git = "https://github.com/the-blockchain-company/chain-libs.git", branch = "main" }
+bcc-legacy-address = { git = "https://github.com/the-blockchain-company/chain-libs.git", branch = "main" }
+imhamt = { git = "https://github.com/the-blockchain-company/chain-libs.git", branch = "main" }
 
 arc-swap = "^1.5.0"
 async-trait = "0.1.51"
 base64 = "0.13.0"
-bincode = "1.3.3"
 bech32 = "0.8"
 futures = "0.3.21"
 hex = "0.4"
@@ -71,9 +70,9 @@ features = ["rustls-tls"]
 tokio = { version = "^1.15", features = ["full"] }
 quickcheck = "0.9"
 quickcheck_macros = "0.9"
-chain-impl-mockchain = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main", features = [ "property-test-api" ] }
-chain-addr = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main", features = [ "property-test-api" ] }
-chain-crypto = { git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main", features = [ "property-test-api" ] }
+chain-impl-mockchain = { git = "https://github.com/the-blockchain-company/chain-libs.git", branch = "main", features = [ "property-test-api" ] }
+chain-addr = { git = "https://github.com/the-blockchain-company/chain-libs.git", branch = "main", features = [ "property-test-api" ] }
+chain-crypto = { git = "https://github.com/the-blockchain-company/chain-libs.git", branch = "main", features = [ "property-test-api" ] }
 criterion = { version = "0.3", features = ["html_reports", "async_tokio"] }
 
 [[bench]]

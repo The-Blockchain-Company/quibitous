@@ -1,13 +1,13 @@
 use crate::startup;
 use quibitous_automation::quibitous::ConfigurationBuilder;
 use quibitous_lib::interfaces::{ActiveSlotCoefficient, KesUpdateSpeed};
-use quibitestkit::load::{self, ConfigurationBuilder as LoadConfigurationBuilder, Monitor};
-use mfive::generators::RestRequestGen;
+use jortestkit::load::{self, ConfigurationBuilder as LoadConfigurationBuilder, Monitor};
+use mjolnir::generators::RestRequestGen;
 use std::time::Duration;
 
 #[test]
 pub fn rest_load_quick() {
-    let faucet = silica::Wallet::default();
+    let faucet = thor::Wallet::default();
 
     let (mut quibitous, _) = startup::start_stake_pool(
         &[faucet],

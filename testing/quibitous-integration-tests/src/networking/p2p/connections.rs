@@ -1,16 +1,16 @@
 use crate::networking::utils;
-use quantricity::builder::wallet::template::builder::WalletTemplateBuilder;
-use quantricity::builder::Blockchain;
-use quantricity::builder::NetworkBuilder;
-use quantricity::builder::Node;
-use quantricity::builder::SpawnParams;
-use quantricity::builder::Topology;
+use hersir::builder::wallet::template::builder::WalletTemplateBuilder;
+use hersir::builder::Blockchain;
+use hersir::builder::NetworkBuilder;
+use hersir::builder::Node;
+use hersir::builder::SpawnParams;
+use hersir::builder::Topology;
 use quibitous_automation::quibitous::LogLevel;
 use quibitous_lib::interfaces::TopicsOfInterest;
 use quibitous_lib::interfaces::TrustedPeer;
 use quibitous_lib::time::Duration;
-use silica::DummySyncNode;
-use silica::FragmentSender;
+use thor::DummySyncNode;
+use thor::FragmentSender;
 
 const LEADER1: &str = "LEADER1";
 const LEADER2: &str = "LEADER2";

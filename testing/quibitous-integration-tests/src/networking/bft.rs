@@ -1,15 +1,15 @@
 use crate::networking::utils;
-use quantricity::builder::wallet::template::builder::WalletTemplateBuilder;
-use quantricity::builder::Blockchain;
-use quantricity::builder::NetworkBuilder;
-use quantricity::builder::Node;
-use quantricity::builder::SpawnParams;
-use quantricity::builder::Topology;
+use hersir::builder::wallet::template::builder::WalletTemplateBuilder;
+use hersir::builder::Blockchain;
+use hersir::builder::NetworkBuilder;
+use hersir::builder::Node;
+use hersir::builder::SpawnParams;
+use hersir::builder::Topology;
 use quibitous_automation::testing::benchmark::sync::MeasurementReportInterval;
 use quibitous_automation::testing::SyncWaitParams;
 use std::time::Duration;
-use silica::FragmentSender;
-use silica::FragmentVerifier;
+use thor::FragmentSender;
+use thor::FragmentVerifier;
 
 const LEADER_1: &str = "Leader1";
 const LEADER_2: &str = "Leader2";

@@ -3,19 +3,19 @@
 The software is bundled with 2 different command line software:
 
 1. **quibitous**: the node;
-2. **qcli**: Quibitous Command Line Interface, the helpers and primitives to run and interact with the node.
+2. **qcli**: Jörmungandr Command Line Interface, the helpers and primitives to run and interact with the node.
 
 ## Installation
 
 ### From a release
 
 This is the recommended method. Releases are all available
-[here](https://github.com/The-Blockchain-Company/quibitous/releases).
+[here](https://github.com/the-blockchain-company/quibitous/releases).
 
 ### From source
 
-Quibitous's code source is available on
-[github](https://github.com/The-Blockchain-Company/quibitous#how-to-install-from-sources).
+Jörmungandr's code source is available on
+[github](https://github.com/the-blockchain-company/quibitous#how-to-install-from-sources).
 Follow the instructions to build the software from sources.
 
 ## Help and auto completion

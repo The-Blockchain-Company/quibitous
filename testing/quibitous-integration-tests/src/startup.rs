@@ -8,7 +8,7 @@ use quibitous_lib::{
     crypto::key::Identifier,
     interfaces::{ConsensusLeaderId, InitialUTxO, NodeSecret, SignedCertificate},
 };
-use silica::{signed_delegation_cert, signed_stake_pool_cert, StakePool, Wallet};
+use thor::{signed_delegation_cert, signed_stake_pool_cert, StakePool, Wallet};
 
 pub fn create_new_utxo_address() -> Wallet {
     Wallet::new_utxo(&mut rand::rngs::OsRng)

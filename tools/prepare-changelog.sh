@@ -27,7 +27,7 @@ fi
 
 
 github_changelog_generator \
-    --user The-Blockchain-Company \
+    --user the-blockchain-company \
     --project quibitous \
     --output release.latest \
     --token ${GITHUB_TOKEN} \

@@ -59,7 +59,7 @@ dependencies = [
  "cipher",
  "ctr",
  "ghash",
- "subtle 2.4.1",
+ "subtle",
 ]
 
 [[package]]
@@ -324,17 +324,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "904dfeac50f3cdaba28fc6f57fdcddb75f49ed61346676a78c4ffe55877802fd"
 
 [[package]]
-name = "bcc-legacy-address"
-version = "0.1.1"
-source = "git+https://github.com/The-Blockchain-Company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"
-dependencies = [
- "cbor_event",
- "chain-ser",
- "cryptoxide 0.4.2",
- "ed25519-bip32",
-]
-
-[[package]]
 name = "bech32"
 version = "0.7.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -388,22 +377,10 @@ version = "0.20.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7774144344a4faa177370406a7ff5f1da24303817368584c6206c8303eb07848"
 dependencies = [
- "funty 1.1.0",
- "radium 0.6.2",
+ "funty",
+ "radium",
  "tap",
- "wyz 0.2.0",
-]
-
-[[package]]
-name = "bitvec"
-version = "1.0.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1bc2832c24239b0141d5674bb9174f9d68a8b5b3f2753311927c172ca46f7e9c"
-dependencies = [
- "funty 2.0.0",
- "radium 0.7.0",
- "tap",
- "wyz 0.5.0",
+ "wyz",
 ]
 
 [[package]]
@@ -561,6 +538,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "bcc-legacy-address"
+version = "0.1.1"
+source = "git+https://github.com/the-blockchain-company/chain-libs.git?branch=git+https://github.com/the-blockchain-company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"#ef798477aba3794c7b4b171f0926884bc0327563"
+dependencies = [
+ "cbor_event",
+ "chain-ser",
+ "cryptoxide 0.4.2",
+ "ed25519-bip32",
+]
+
+[[package]]
 name = "cast"
 version = "0.2.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -621,7 +609,7 @@ dependencies = [
 [[package]]
 name = "chain-addr"
 version = "0.1.0"
-source = "git+https://github.com/The-Blockchain-Company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"
+source = "git+https://github.com/the-blockchain-company/chain-libs.git?branch=git+https://github.com/the-blockchain-company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"#ef798477aba3794c7b4b171f0926884bc0327563"
 dependencies = [
  "bech32 0.8.1",
  "chain-core",
@@ -635,7 +623,7 @@ dependencies = [
 [[package]]
 name = "chain-core"
 version = "0.1.0"
-source = "git+https://github.com/The-Blockchain-Company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"
+source = "git+https://github.com/the-blockchain-company/chain-libs.git?branch=git+https://github.com/the-blockchain-company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"#ef798477aba3794c7b4b171f0926884bc0327563"
 dependencies = [
  "chain-ser",
 ]
@@ -643,7 +631,7 @@ dependencies = [
 [[package]]
 name = "chain-crypto"
 version = "0.1.0"
-source = "git+https://github.com/The-Blockchain-Company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"
+source = "git+https://github.com/the-blockchain-company/chain-libs.git?branch=git+https://github.com/the-blockchain-company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"#ef798477aba3794c7b4b171f0926884bc0327563"
 dependencies = [
  "bech32 0.8.1",
  "cryptoxide 0.4.2",
@@ -665,7 +653,7 @@ dependencies = [
 [[package]]
 name = "chain-evm"
 version = "0.1.0"
-source = "git+https://github.com/The-Blockchain-Company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"
+source = "git+https://github.com/the-blockchain-company/chain-libs.git?branch=git+https://github.com/the-blockchain-company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"#ef798477aba3794c7b4b171f0926884bc0327563"
 dependencies = [
  "aurora-bn",
  "base64",
@@ -673,13 +661,13 @@ dependencies = [
  "byte-slice-cast",
  "chain-ser",
  "ethabi",
- "ethereum-types 0.13.1",
  "evm",
  "hex",
  "imhamt",
  "libsecp256k1",
  "logos",
  "num",
+ "primitive-types",
  "quickcheck",
  "ripemd",
  "rlp",
@@ -692,7 +680,7 @@ dependencies = [
 [[package]]
 name = "chain-impl-mockchain"
 version = "0.1.0"
-source = "git+https://github.com/The-Blockchain-Company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"
+source = "git+https://github.com/the-blockchain-company/chain-libs.git?branch=git+https://github.com/the-blockchain-company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"#ef798477aba3794c7b4b171f0926884bc0327563"
 dependencies = [
  "bcc-legacy-address",
  "chain-addr",
@@ -722,7 +710,7 @@ dependencies = [
 [[package]]
 name = "chain-network"
 version = "0.1.0"
-source = "git+https://github.com/The-Blockchain-Company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"
+source = "git+https://github.com/the-blockchain-company/chain-libs.git?branch=git+https://github.com/the-blockchain-company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"#ef798477aba3794c7b4b171f0926884bc0327563"
 dependencies = [
  "async-trait",
  "chain-crypto",
@@ -739,7 +727,7 @@ dependencies = [
 [[package]]
 name = "chain-ser"
 version = "0.1.0"
-source = "git+https://github.com/The-Blockchain-Company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"
+source = "git+https://github.com/the-blockchain-company/chain-libs.git?branch=git+https://github.com/the-blockchain-company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"#ef798477aba3794c7b4b171f0926884bc0327563"
 dependencies = [
  "thiserror",
 ]
@@ -747,7 +735,7 @@ dependencies = [
 [[package]]
 name = "chain-storage"
 version = "0.1.0"
-source = "git+https://github.com/The-Blockchain-Company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"
+source = "git+https://github.com/the-blockchain-company/chain-libs.git?branch=git+https://github.com/the-blockchain-company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"#ef798477aba3794c7b4b171f0926884bc0327563"
 dependencies = [
  "criterion",
  "data-pile",
@@ -760,7 +748,7 @@ dependencies = [
 [[package]]
 name = "chain-time"
 version = "0.1.0"
-source = "git+https://github.com/The-Blockchain-Company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"
+source = "git+https://github.com/the-blockchain-company/chain-libs.git?branch=git+https://github.com/the-blockchain-company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"#ef798477aba3794c7b4b171f0926884bc0327563"
 dependencies = [
  "chain-core",
  "chain-ser",
@@ -772,9 +760,9 @@ dependencies = [
 [[package]]
 name = "chain-vote"
 version = "0.1.0"
-source = "git+https://github.com/The-Blockchain-Company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"
+source = "git+https://github.com/the-blockchain-company/chain-libs.git?branch=git+https://github.com/the-blockchain-company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"#ef798477aba3794c7b4b171f0926884bc0327563"
 dependencies = [
- "cfg-if 0.1.10",
+ "cfg-if 1.0.0",
  "chain-core",
  "chain-crypto",
  "const_format",
@@ -825,16 +813,15 @@ dependencies = [
 
 [[package]]
 name = "cocoon"
-version = "0.2.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3330c1645bbbe8e3bc9054613e0f25b266b5bfe2b215f8e8f7cda029ec6c5a3e"
+version = "0.3.0"
+source = "git+https://github.com/dkijania/cocoon.git#1dfd975c3f0720d51c56fb297e7c92467bc3448a"
 dependencies = [
  "aes-gcm",
  "chacha20poly1305",
  "hmac",
  "pbkdf2",
- "rand 0.7.3",
- "sha2 0.8.2",
+ "rand 0.8.4",
+ "sha2 0.9.9",
  "zeroize",
 ]
 
@@ -903,9 +890,9 @@ dependencies = [
 
 [[package]]
 name = "crc32fast"
-version = "1.3.2"
+version = "1.3.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b540bd8bc810d3885c6ea91e2018302f68baba2129ab3e88f32389ee9370880d"
+checksum = "a2209c310e29876f7f0b2721e7e26b84aff178aa3da5d091f9bfbf47669e60e3"
 dependencies = [
  "cfg-if 1.0.0",
 ]
@@ -1009,22 +996,22 @@ dependencies = [
 
 [[package]]
 name = "crypto-mac"
-version = "0.7.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4434400df11d95d556bac068ddfedd482915eb18fe8bea89bc80b6e4b1c179e5"
-dependencies = [
- "generic-array 0.12.4",
- "subtle 1.0.0",
-]
-
-[[package]]
-name = "crypto-mac"
 version = "0.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b584a330336237c1eecd3e94266efb216c56ed91225d634cb2991c5f3fd1aeab"
 dependencies = [
  "generic-array 0.14.5",
- "subtle 2.4.1",
+ "subtle",
+]
+
+[[package]]
+name = "crypto-mac"
+version = "0.11.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b1d1a86f49236c215f271d40892d5fc950490551400b02ef360692c29815c714"
+dependencies = [
+ "generic-array 0.14.5",
+ "subtle",
 ]
 
 [[package]]
@@ -1089,7 +1076,7 @@ dependencies = [
  "byteorder",
  "digest 0.9.0",
  "rand_core 0.5.1",
- "subtle 2.4.1",
+ "subtle",
  "zeroize",
 ]
 
@@ -1366,13 +1353,13 @@ checksum = "68b91989ae21441195d7d9b9993a2f9295c7e1a8c96255d8b729accddc124797"
 
 [[package]]
 name = "ethabi"
-version = "17.2.0"
+version = "16.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e4966fba78396ff92db3b817ee71143eccd98acf0f876b8d600e585a670c5d1b"
+checksum = "a4c98847055d934070b90e806e12d3936b787d0a115068981c1d8dfd5dfef5a5"
 dependencies = [
- "ethereum-types 0.13.1",
+ "ethereum-types",
  "hex",
- "sha3 0.10.0",
+ "sha3 0.9.1",
 ]
 
 [[package]]
@@ -1383,22 +1370,9 @@ checksum = "bfb684ac8fa8f6c5759f788862bb22ec6fe3cb392f6bfd08e3c64b603661e3f8"
 dependencies = [
  "crunchy",
  "fixed-hash",
- "impl-codec 0.5.1",
+ "impl-codec",
  "impl-rlp",
  "scale-info",
- "tiny-keccak",
-]
-
-[[package]]
-name = "ethbloom"
-version = "0.12.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "11da94e443c60508eb62cf256243a64da87304c2802ac2528847f79d750007ef"
-dependencies = [
- "crunchy",
- "fixed-hash",
- "impl-rlp",
- "impl-serde",
  "tiny-keccak",
 ]
 
@@ -1409,10 +1383,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "34c90e0a755da706ce0970ec0fa8cc48aabcc8e8efa1245336acf718dab06ffe"
 dependencies = [
  "bytes",
- "ethereum-types 0.12.1",
+ "ethereum-types",
  "hash-db",
  "hash256-std-hasher",
- "parity-scale-codec 2.3.1",
+ "parity-scale-codec",
  "rlp",
  "rlp-derive",
  "scale-info",
@@ -1427,34 +1401,20 @@ version = "0.12.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "05136f7057fe789f06e6d41d07b34e6f70d8c86e5693b60f97aaa6553553bdaf"
 dependencies = [
- "ethbloom 0.11.1",
+ "ethbloom",
  "fixed-hash",
- "impl-codec 0.5.1",
+ "impl-codec",
  "impl-rlp",
- "primitive-types 0.10.1",
+ "primitive-types",
  "scale-info",
  "uint",
 ]
 
 [[package]]
-name = "ethereum-types"
-version = "0.13.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b2827b94c556145446fcce834ca86b7abf0c39a805883fe20e72c5bfdb5a0dc6"
-dependencies = [
- "ethbloom 0.12.1",
- "fixed-hash",
- "impl-rlp",
- "impl-serde",
- "primitive-types 0.11.1",
- "uint",
-]
-
-[[package]]
 name = "evm"
-version = "0.34.0"
+version = "0.33.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "65fab1fdec9ffb1d6f05a8fd9e79ea508581a24ec09f8778152b289251b52c9d"
+checksum = "408ffdd509e16de15ea9b51f5333748f6086601f29d445d2ba53dd7e95565574"
 dependencies = [
  "auto_impl",
  "environmental",
@@ -1463,8 +1423,8 @@ dependencies = [
  "evm-gasometer",
  "evm-runtime",
  "log",
- "parity-scale-codec 2.3.1",
- "primitive-types 0.10.1",
+ "parity-scale-codec",
+ "primitive-types",
  "rlp",
  "scale-info",
  "serde",
@@ -1473,39 +1433,38 @@ dependencies = [
 
 [[package]]
 name = "evm-core"
-version = "0.34.0"
+version = "0.33.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7276ba368a138b0f81e4ffb64f4c4bef226bb8f318695d34e0bcccd620590c34"
+checksum = "4dfe4f2a56c4c05a8107b8596380e2332fc2019ffcf56b8f2d01971393a30c4d"
 dependencies = [
- "funty 1.1.0",
- "parity-scale-codec 2.3.1",
- "primitive-types 0.10.1",
+ "funty",
+ "parity-scale-codec",
+ "primitive-types",
  "scale-info",
  "serde",
 ]
 
 [[package]]
 name = "evm-gasometer"
-version = "0.34.0"
+version = "0.33.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "38cdffa2c3f272d1387adcf9096ce03e95885aabc8fe43a76ca5369eb7c30887"
+checksum = "c446679607eacac4e8c8738e20c97ea9b3c86eddd8b43666744b05f416037bd9"
 dependencies = [
  "environmental",
  "evm-core",
  "evm-runtime",
- "primitive-types 0.10.1",
+ "primitive-types",
 ]
 
 [[package]]
 name = "evm-runtime"
-version = "0.34.0"
+version = "0.33.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c709269d4e20b0e20b610f799d59eca77e461a6fc041fdb79ec617091c96007a"
+checksum = "419e8434ac6e850a8a4bc09a19406264582d1940913b2920be2af948f4ffc49b"
 dependencies = [
- "auto_impl",
  "environmental",
  "evm-core",
- "primitive-types 0.10.1",
+ "primitive-types",
  "sha3 0.8.2",
 ]
 
@@ -1531,9 +1490,9 @@ dependencies = [
  "futures-util",
  "http-zipkin",
  "imhamt",
+ "quibitous-lib",
  "lazy_static",
  "parity-multiaddr",
- "quibitous-lib",
  "rand 0.8.4",
  "rand_chacha 0.3.1",
  "serde",
@@ -1702,12 +1661,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "fed34cd105917e91daa4da6b3728c47b068749d6a62c59811f06ed2ac71d9da7"
 
 [[package]]
-name = "funty"
-version = "2.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e6d5a32815ae3f33302d95fdcb2ce17862f8c65363dcfd29360480ba1001fc9c"
-
-[[package]]
 name = "futures"
 version = "0.3.21"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1803,30 +1756,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c31b6d751ae2c7f11320402d34e41349dd1016f8d5d45e48c4312bc8625af50c"
 dependencies = [
  "byteorder",
-]
-
-[[package]]
-name = "gate"
-version = "0.1.0"
-dependencies = [
- "chain-addr",
- "chain-core",
- "chain-crypto",
- "chain-impl-mockchain",
- "custom_debug",
- "parity-multiaddr",
- "quibitous-automation",
- "quibitous-lib",
- "rand 0.8.4",
- "rand_core 0.6.3",
- "reqwest",
- "serde",
- "serde_yaml",
- "silica",
- "structopt",
- "thiserror",
- "tokio",
- "warp",
 ]
 
 [[package]]
@@ -2081,6 +2010,37 @@ dependencies = [
 ]
 
 [[package]]
+name = "hersir"
+version = "0.1.0"
+dependencies = [
+ "assert_fs",
+ "chain-addr",
+ "chain-core",
+ "chain-crypto",
+ "chain-impl-mockchain",
+ "ctrlc",
+ "custom_debug",
+ "hex",
+ "indicatif",
+ "quibitous-automation",
+ "quibitous-lib",
+ "jortestkit",
+ "parity-multiaddr",
+ "rand 0.8.4",
+ "rand_chacha 0.3.1",
+ "rand_core 0.6.3",
+ "reqwest",
+ "serde",
+ "serde_derive",
+ "serde_json",
+ "serde_yaml",
+ "structopt",
+ "thiserror",
+ "thor",
+ "yaml-rust",
+]
+
+[[package]]
 name = "hex"
 version = "0.4.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2088,12 +2048,12 @@ checksum = "7f24254aa9a54b5c858eaee2f5bccdb46aaf0e486a595ed5fd8f86ba55232a70"
 
 [[package]]
 name = "hmac"
-version = "0.7.1"
+version = "0.11.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5dcb5e64cda4c23119ab41ba960d1e170a774c8e4b9d9e6a9bc18aabf5e59695"
+checksum = "2a2a2320eb7ec0ebe8da8f744d7812d9fc4cb4d09344ac01898dbcb6a20ae69b"
 dependencies = [
- "crypto-mac 0.7.0",
- "digest 0.8.1",
+ "crypto-mac 0.11.1",
+ "digest 0.9.0",
 ]
 
 [[package]]
@@ -2244,7 +2204,7 @@ dependencies = [
 [[package]]
 name = "imhamt"
 version = "0.1.0"
-source = "git+https://github.com/The-Blockchain-Company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"
+source = "git+https://github.com/the-blockchain-company/chain-libs.git?branch=git+https://github.com/the-blockchain-company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"#ef798477aba3794c7b4b171f0926884bc0327563"
 dependencies = [
  "thiserror",
 ]
@@ -2255,16 +2215,7 @@ version = "0.5.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "161ebdfec3c8e3b52bf61c4f3550a1eea4f9579d10dc1b936f3171ebdcd6c443"
 dependencies = [
- "parity-scale-codec 2.3.1",
-]
-
-[[package]]
-name = "impl-codec"
-version = "0.6.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ba6a270039626615617f3f36d15fc827041df3b78c439da2cadfa47455a77f2f"
-dependencies = [
- "parity-scale-codec 3.1.5",
+ "parity-scale-codec",
 ]
 
 [[package]]
@@ -2274,15 +2225,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f28220f89297a075ddc7245cd538076ee98b01f2a9c23a53a4f1105d5a322808"
 dependencies = [
  "rlp",
-]
-
-[[package]]
-name = "impl-serde"
-version = "0.3.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4551f042f3438e64dbd6226b20527fc84a6e1fe65688b58746a2f53623f25f5c"
-dependencies = [
- "serde",
 ]
 
 [[package]]
@@ -2365,6 +2307,292 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1aab8fc367588b89dcee83ab0fd66b72b50b72fa1904d7095045ace2b0c81c35"
 
 [[package]]
+name = "qcli"
+version = "0.13.0"
+dependencies = [
+ "assert_fs",
+ "base64",
+ "bech32 0.8.1",
+ "bincode",
+ "bytes",
+ "chain-addr",
+ "chain-core",
+ "chain-crypto",
+ "chain-impl-mockchain",
+ "chain-time",
+ "chain-vote",
+ "clap",
+ "ed25519-bip32",
+ "gtmpl",
+ "hex",
+ "quibitous-lib",
+ "predicates",
+ "quickcheck",
+ "rand 0.7.3",
+ "rand 0.8.4",
+ "rand_chacha 0.3.1",
+ "rayon",
+ "reqwest",
+ "rpassword",
+ "serde",
+ "serde_derive",
+ "serde_json",
+ "serde_yaml",
+ "structopt",
+ "thiserror",
+ "versionisator",
+]
+
+[[package]]
+name = "quibitous"
+version = "0.13.0"
+dependencies = [
+ "arc-swap",
+ "async-trait",
+ "base64",
+ "bech32 0.8.1",
+ "bcc-legacy-address",
+ "chain-addr",
+ "chain-core",
+ "chain-crypto",
+ "chain-impl-mockchain",
+ "chain-network",
+ "chain-storage",
+ "chain-time",
+ "chain-vote",
+ "criterion",
+ "futures",
+ "hex",
+ "http-zipkin",
+ "imhamt",
+ "quibitous-lib",
+ "keynesis",
+ "lazy_static",
+ "libc",
+ "linked-hash-map",
+ "lru",
+ "nix",
+ "parity-multiaddr",
+ "poldercast",
+ "prometheus",
+ "quickcheck",
+ "quickcheck_macros",
+ "rand 0.8.4",
+ "rand_chacha 0.3.1",
+ "reqwest",
+ "serde",
+ "serde_derive",
+ "serde_json",
+ "serde_with",
+ "serde_yaml",
+ "structopt",
+ "thiserror",
+ "time 0.3.7",
+ "tokio",
+ "tokio-stream",
+ "tokio-util",
+ "tonic 0.6.2",
+ "tracing",
+ "tracing-appender 0.2.0",
+ "tracing-futures",
+ "tracing-gelf 0.6.0",
+ "tracing-journald 0.2.0",
+ "tracing-subscriber 0.3.7",
+ "versionisator",
+ "warp",
+]
+
+[[package]]
+name = "quibitous-automation"
+version = "0.13.0"
+dependencies = [
+ "assert_cmd",
+ "assert_fs",
+ "base64",
+ "bech32 0.8.1",
+ "bytesize",
+ "bcc-legacy-address",
+ "chain-addr",
+ "chain-core",
+ "chain-crypto",
+ "chain-impl-mockchain",
+ "chain-storage",
+ "chain-time",
+ "chain-vote",
+ "custom_debug",
+ "flate2",
+ "fs_extra",
+ "futures",
+ "graphql_client",
+ "hex",
+ "humantime",
+ "quibitous-lib",
+ "jortestkit",
+ "json",
+ "keynesis",
+ "lazy_static",
+ "log",
+ "netstat2",
+ "os_info",
+ "parity-multiaddr",
+ "poldercast",
+ "predicates",
+ "prost 0.9.0",
+ "rand 0.8.4",
+ "rand_chacha 0.3.1",
+ "rand_core 0.6.3",
+ "regex",
+ "reqwest",
+ "semver",
+ "serde",
+ "serde_derive",
+ "serde_json",
+ "serde_yaml",
+ "strum",
+ "sysinfo 0.23.1",
+ "tar",
+ "tempfile",
+ "thiserror",
+ "tokio",
+ "tokio-stream",
+ "tonic 0.6.2",
+ "tonic-build",
+ "tracing",
+ "tracing-subscriber 0.3.7",
+ "typed-bytes",
+ "url",
+ "warp",
+ "zip",
+]
+
+[[package]]
+name = "quibitous-integration-tests"
+version = "0.13.0"
+dependencies = [
+ "assert_cmd",
+ "assert_fs",
+ "base64",
+ "bech32 0.7.3",
+ "chain-addr",
+ "chain-core",
+ "chain-crypto",
+ "chain-impl-mockchain",
+ "chain-time",
+ "chain-vote",
+ "fs_extra",
+ "function_name",
+ "futures",
+ "hersir",
+ "hex",
+ "indicatif",
+ "quibitous-automation",
+ "quibitous-lib",
+ "jortestkit",
+ "json",
+ "lazy_static",
+ "loki",
+ "mjolnir",
+ "parity-multiaddr",
+ "poldercast",
+ "predicates",
+ "prost 0.9.0",
+ "rand 0.8.4",
+ "rand_chacha 0.3.1",
+ "rand_core 0.6.3",
+ "regex",
+ "reqwest",
+ "rstest",
+ "serde",
+ "serde_derive",
+ "serde_json",
+ "serde_yaml",
+ "tempfile",
+ "thiserror",
+ "thor",
+ "tokio",
+ "tonic 0.6.2",
+ "tracing",
+ "url",
+ "yaml-rust",
+]
+
+[[package]]
+name = "quibitous-lib"
+version = "0.13.0"
+dependencies = [
+ "base64",
+ "bech32 0.8.1",
+ "bincode",
+ "bcc-legacy-address",
+ "chain-addr",
+ "chain-core",
+ "chain-crypto",
+ "chain-impl-mockchain",
+ "chain-time",
+ "chain-vote",
+ "ed25519-bip32",
+ "hex",
+ "http",
+ "humantime",
+ "parity-multiaddr",
+ "quickcheck",
+ "quickcheck_macros",
+ "rand 0.7.3",
+ "rand 0.8.4",
+ "rand_chacha 0.3.1",
+ "rand_core 0.6.3",
+ "serde",
+ "serde_json",
+ "serde_with",
+ "serde_yaml",
+ "thiserror",
+ "time 0.3.7",
+ "typed-bytes",
+]
+
+[[package]]
+name = "jortestkit"
+version = "0.1.0"
+source = "git+https://github.com/the-blockchain-company/jortestkit.git?branch=git+https://github.com/the-blockchain-company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"#51f92676429a2e8cd72ee1907195c565824b52d4"
+dependencies = [
+ "assert_fs",
+ "base64",
+ "bech32 0.8.1",
+ "bytesize",
+ "console",
+ "csv",
+ "custom_debug",
+ "dialoguer",
+ "flate2",
+ "fs_extra",
+ "hex",
+ "humantime",
+ "indicatif",
+ "lazy_static",
+ "os_info",
+ "predicates",
+ "rand 0.8.4",
+ "rand_chacha 0.3.1",
+ "rand_core 0.5.1",
+ "rayon",
+ "reqwest",
+ "semver",
+ "serde",
+ "serde_derive",
+ "serde_json",
+ "serde_yaml",
+ "sha-1 0.9.8",
+ "sha2 0.9.9",
+ "sysinfo 0.14.15",
+ "tar",
+ "thiserror",
+ "time 0.3.7",
+ "tokio",
+ "warp",
+ "zip",
+]
+
+[[package]]
 name = "js-sys"
 version = "0.3.56"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2440,7 +2668,7 @@ checksum = "5be9b9bb642d8522a44d533eab56c16c738301965504753b03ad1de3425d5451"
 dependencies = [
  "crunchy",
  "digest 0.9.0",
- "subtle 2.4.1",
+ "subtle",
 ]
 
 [[package]]
@@ -2511,6 +2739,30 @@ dependencies = [
 ]
 
 [[package]]
+name = "loki"
+version = "0.1.0"
+dependencies = [
+ "chain-addr",
+ "chain-core",
+ "chain-crypto",
+ "chain-impl-mockchain",
+ "custom_debug",
+ "quibitous-automation",
+ "quibitous-lib",
+ "parity-multiaddr",
+ "rand 0.8.4",
+ "rand_core 0.6.3",
+ "reqwest",
+ "serde",
+ "serde_yaml",
+ "structopt",
+ "thiserror",
+ "thor",
+ "tokio",
+ "warp",
+]
+
+[[package]]
 name = "lru"
 version = "0.7.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2577,32 +2829,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8452105ba047068f40ff7093dd1d9da90898e63dd61736462e9cdda6a90ad3c3"
 
 [[package]]
-name = "mfive"
-version = "0.1.0"
-dependencies = [
- "assert_fs",
- "chain-addr",
- "chain-core",
- "chain-crypto",
- "chain-impl-mockchain",
- "chain-storage",
- "chain-time",
- "chain-vote",
- "gate",
- "indicatif",
- "quibitestkit",
- "quibitous-automation",
- "quibitous-lib",
- "rand 0.8.4",
- "rand_core 0.6.3",
- "silica",
- "structopt",
- "thiserror",
- "tokio",
- "versionisator",
-]
-
-[[package]]
 name = "mime"
 version = "0.3.16"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2648,6 +2874,32 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b9f1c5b025cda876f66ef43a113f91ebc9f4ccef34843000e0adf6ebbab84e21"
 dependencies = [
  "winapi",
+]
+
+[[package]]
+name = "mjolnir"
+version = "0.1.0"
+dependencies = [
+ "assert_fs",
+ "chain-addr",
+ "chain-core",
+ "chain-crypto",
+ "chain-impl-mockchain",
+ "chain-storage",
+ "chain-time",
+ "chain-vote",
+ "indicatif",
+ "quibitous-automation",
+ "quibitous-lib",
+ "jortestkit",
+ "loki",
+ "rand 0.8.4",
+ "rand_core 0.6.3",
+ "structopt",
+ "thiserror",
+ "thor",
+ "tokio",
+ "versionisator",
 ]
 
 [[package]]
@@ -2939,24 +3191,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "373b1a4c1338d9cd3d1fa53b3a11bdab5ab6bd80a20f7f7becd76953ae2be909"
 dependencies = [
  "arrayvec",
- "bitvec 0.20.4",
+ "bitvec",
  "byte-slice-cast",
  "impl-trait-for-tuples",
- "parity-scale-codec-derive 2.3.1",
- "serde",
-]
-
-[[package]]
-name = "parity-scale-codec"
-version = "3.1.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9182e4a71cae089267ab03e67c99368db7cd877baf50f931e5d6d4b71e195ac0"
-dependencies = [
- "arrayvec",
- "bitvec 1.0.1",
- "byte-slice-cast",
- "impl-trait-for-tuples",
- "parity-scale-codec-derive 3.1.3",
+ "parity-scale-codec-derive",
  "serde",
 ]
 
@@ -2965,18 +3203,6 @@ name = "parity-scale-codec-derive"
 version = "2.3.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1557010476e0595c9b568d16dcfb81b93cdeb157612726f5170d31aa707bed27"
-dependencies = [
- "proc-macro-crate 1.1.0",
- "proc-macro2 1.0.36",
- "quote 1.0.15",
- "syn 1.0.86",
-]
-
-[[package]]
-name = "parity-scale-codec-derive"
-version = "3.1.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9299338969a3d2f491d65f140b00ddec470858402f888af98e8642fb5e8965cd"
 dependencies = [
  "proc-macro-crate 1.1.0",
  "proc-macro2 1.0.36",
@@ -3011,14 +3237,13 @@ dependencies = [
 
 [[package]]
 name = "pbkdf2"
-version = "0.3.0"
+version = "0.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "006c038a43a45995a9670da19e67600114740e8511d4333bf97a56e66a7542d9"
+checksum = "f05894bce6a1ba4be299d0c5f29563e08af2bc18bb7d48313113bed71e904739"
 dependencies = [
- "byteorder",
- "crypto-mac 0.7.0",
+ "crypto-mac 0.11.1",
  "hmac",
- "sha2 0.8.2",
+ "sha2 0.9.9",
 ]
 
 [[package]]
@@ -3230,22 +3455,9 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "05e4722c697a58a99d5d06a08c30821d7c082a4632198de1eaa5a6c22ef42373"
 dependencies = [
  "fixed-hash",
- "impl-codec 0.5.1",
+ "impl-codec",
  "impl-rlp",
  "scale-info",
- "uint",
-]
-
-[[package]]
-name = "primitive-types"
-version = "0.11.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e28720988bff275df1f51b171e1b2a18c30d194c4d2b61defdacecd625a5d94a"
-dependencies = [
- "fixed-hash",
- "impl-codec 0.6.0",
- "impl-rlp",
- "impl-serde",
  "uint",
 ]
 
@@ -3328,7 +3540,7 @@ dependencies = [
 [[package]]
 name = "proptest"
 version = "1.0.0"
-source = "git+https://github.com/The-Blockchain-Company/proptest.git#270ea99959dc4c4e5076047d79a9654f5f0ac74a"
+source = "git+https://github.com/the-blockchain-company/proptest.git#dff1e6b410121989ea5aa076e5d3d6ae21b1bd81"
 dependencies = [
  "bit-set",
  "bitflags",
@@ -3428,325 +3640,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "00e95f7417529a121d3c1d0bd831fd86cc5d5bf7b77ae1449259db3d5ff8b3e7"
 
 [[package]]
-name = "qcli"
-version = "0.13.0"
-dependencies = [
- "assert_fs",
- "base64",
- "bech32 0.8.1",
- "bincode",
- "bytes",
- "chain-addr",
- "chain-core",
- "chain-crypto",
- "chain-impl-mockchain",
- "chain-time",
- "chain-vote",
- "clap",
- "ed25519-bip32",
- "gtmpl",
- "hex",
- "predicates",
- "quibitous-lib",
- "quickcheck",
- "rand 0.7.3",
- "rand 0.8.4",
- "rand_chacha 0.3.1",
- "rayon",
- "reqwest",
- "rpassword",
- "serde",
- "serde_derive",
- "serde_json",
- "serde_yaml",
- "structopt",
- "thiserror",
- "versionisator",
-]
-
-[[package]]
-name = "quantricity"
-version = "0.1.0"
-dependencies = [
- "assert_fs",
- "chain-addr",
- "chain-core",
- "chain-crypto",
- "chain-impl-mockchain",
- "ctrlc",
- "custom_debug",
- "hex",
- "indicatif",
- "parity-multiaddr",
- "quibitestkit",
- "quibitous-automation",
- "quibitous-lib",
- "rand 0.8.4",
- "rand_chacha 0.3.1",
- "rand_core 0.6.3",
- "reqwest",
- "serde",
- "serde_derive",
- "serde_json",
- "serde_yaml",
- "silica",
- "structopt",
- "thiserror",
- "yaml-rust",
-]
-
-[[package]]
-name = "quibitestkit"
-version = "0.1.0"
-source = "git+https://github.com/The-Blockchain-Company/quibitestkit.git?branch=master#e670e960e1310341c0c4118f49a59b5121b632a1"
-dependencies = [
- "assert_fs",
- "base64",
- "bech32 0.8.1",
- "bytesize",
- "console",
- "csv",
- "custom_debug",
- "dialoguer",
- "flate2",
- "fs_extra",
- "hex",
- "humantime",
- "indicatif",
- "lazy_static",
- "os_info",
- "predicates",
- "rand 0.8.4",
- "rand_chacha 0.3.1",
- "rand_core 0.6.3",
- "rayon",
- "reqwest",
- "semver",
- "serde",
- "serde_derive",
- "serde_json",
- "serde_yaml",
- "sha-1 0.9.8",
- "sha2 0.9.9",
- "sysinfo 0.14.15",
- "tar",
- "thiserror",
- "time 0.3.7",
- "tokio",
- "warp",
- "zip 0.6.0",
-]
-
-[[package]]
-name = "quibitous"
-version = "0.13.0"
-dependencies = [
- "arc-swap",
- "async-trait",
- "base64",
- "bcc-legacy-address",
- "bech32 0.8.1",
- "bincode",
- "chain-addr",
- "chain-core",
- "chain-crypto",
- "chain-impl-mockchain",
- "chain-network",
- "chain-storage",
- "chain-time",
- "chain-vote",
- "criterion",
- "futures",
- "hex",
- "http-zipkin",
- "imhamt",
- "keynesis",
- "lazy_static",
- "libc",
- "linked-hash-map",
- "lru",
- "nix",
- "parity-multiaddr",
- "poldercast",
- "prometheus",
- "quibitous-lib",
- "quickcheck",
- "quickcheck_macros",
- "rand 0.8.4",
- "rand_chacha 0.3.1",
- "reqwest",
- "serde",
- "serde_derive",
- "serde_json",
- "serde_with",
- "serde_yaml",
- "structopt",
- "thiserror",
- "time 0.3.7",
- "tokio",
- "tokio-stream",
- "tokio-util",
- "tonic 0.6.2",
- "tracing",
- "tracing-appender 0.2.0",
- "tracing-futures",
- "tracing-gelf 0.6.0",
- "tracing-journald 0.2.0",
- "tracing-subscriber 0.3.7",
- "versionisator",
- "warp",
-]
-
-[[package]]
-name = "quibitous-automation"
-version = "0.13.0"
-dependencies = [
- "assert_cmd",
- "assert_fs",
- "base64",
- "bcc-legacy-address",
- "bech32 0.8.1",
- "bincode",
- "bytesize",
- "chain-addr",
- "chain-core",
- "chain-crypto",
- "chain-impl-mockchain",
- "chain-storage",
- "chain-time",
- "chain-vote",
- "custom_debug",
- "flate2",
- "fs_extra",
- "futures",
- "graphql_client",
- "hex",
- "humantime",
- "json",
- "keynesis",
- "lazy_static",
- "log",
- "netstat2",
- "os_info",
- "parity-multiaddr",
- "poldercast",
- "predicates",
- "prost 0.9.0",
- "quibitestkit",
- "quibitous-lib",
- "rand 0.8.4",
- "rand_chacha 0.3.1",
- "rand_core 0.6.3",
- "regex",
- "reqwest",
- "semver",
- "serde",
- "serde_derive",
- "serde_json",
- "serde_yaml",
- "strum",
- "sysinfo 0.23.1",
- "tar",
- "tempfile",
- "thiserror",
- "tokio",
- "tokio-stream",
- "tonic 0.6.2",
- "tonic-build",
- "tracing",
- "tracing-subscriber 0.3.7",
- "typed-bytes",
- "url",
- "warp",
- "zip 0.5.13",
-]
-
-[[package]]
-name = "quibitous-integration-tests"
-version = "0.13.0"
-dependencies = [
- "assert_cmd",
- "assert_fs",
- "base64",
- "bech32 0.7.3",
- "chain-addr",
- "chain-core",
- "chain-crypto",
- "chain-impl-mockchain",
- "chain-time",
- "chain-vote",
- "fs_extra",
- "function_name",
- "futures",
- "gate",
- "hex",
- "indicatif",
- "json",
- "lazy_static",
- "mfive",
- "parity-multiaddr",
- "poldercast",
- "predicates",
- "prost 0.9.0",
- "quantricity",
- "quibitestkit",
- "quibitous-automation",
- "quibitous-lib",
- "rand 0.8.4",
- "rand_chacha 0.3.1",
- "rand_core 0.6.3",
- "regex",
- "reqwest",
- "rstest",
- "serde",
- "serde_derive",
- "serde_json",
- "serde_yaml",
- "silica",
- "tempfile",
- "thiserror",
- "tokio",
- "tonic 0.6.2",
- "tracing",
- "url",
- "yaml-rust",
-]
-
-[[package]]
-name = "quibitous-lib"
-version = "0.13.0"
-dependencies = [
- "base64",
- "bcc-legacy-address",
- "bech32 0.8.1",
- "bincode",
- "chain-addr",
- "chain-core",
- "chain-crypto",
- "chain-impl-mockchain",
- "chain-time",
- "chain-vote",
- "ed25519-bip32",
- "hex",
- "http",
- "humantime",
- "parity-multiaddr",
- "quickcheck",
- "quickcheck_macros",
- "rand 0.7.3",
- "rand 0.8.4",
- "rand_chacha 0.3.1",
- "rand_core 0.6.3",
- "serde",
- "serde_json",
- "serde_with",
- "serde_yaml",
- "thiserror",
- "time 0.3.7",
- "typed-bytes",
-]
-
-[[package]]
 name = "quick-error"
 version = "1.2.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3804,12 +3697,6 @@ name = "radium"
 version = "0.6.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "643f8f41a8ebc4c5dc4515c82bb8abd397b527fc20fd681b7c011c2aee5d44fb"
-
-[[package]]
-name = "radium"
-version = "0.7.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "dc33ff2d4973d518d823d61aa239014831e521c75da58e3df4840d3f47749d09"
 
 [[package]]
 name = "rand"
@@ -4195,10 +4082,10 @@ version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5c55b744399c25532d63a0d2789b109df8d46fc93752d46b0782991a931a782f"
 dependencies = [
- "bitvec 0.20.4",
+ "bitvec",
  "cfg-if 1.0.0",
  "derive_more",
- "parity-scale-codec 2.3.1",
+ "parity-scale-codec",
  "scale-info-derive",
 ]
 
@@ -4378,18 +4265,6 @@ dependencies = [
 
 [[package]]
 name = "sha2"
-version = "0.8.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a256f46ea78a0c0d9ff00077504903ac881a1dafdc20da66545699e7776b3e69"
-dependencies = [
- "block-buffer 0.7.3",
- "digest 0.8.1",
- "fake-simd",
- "opaque-debug 0.2.3",
-]
-
-[[package]]
-name = "sha2"
 version = "0.9.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4d58a1e1bf39749807d89cf2d98ac2dfa0ff1cb3faa38fbb64dd88ac8013d800"
@@ -4472,36 +4347,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f054c6c1a6e95179d6f23ed974060dcefb2d9388bb7256900badad682c499de4"
 
 [[package]]
-name = "silica"
-version = "0.1.0"
-dependencies = [
- "assert_fs",
- "bech32 0.8.1",
- "bincode",
- "chain-addr",
- "chain-core",
- "chain-crypto",
- "chain-impl-mockchain",
- "chain-vote",
- "cocoon",
- "custom_debug",
- "dirs",
- "hex",
- "qcli",
- "quibitestkit",
- "quibitous-automation",
- "quibitous-lib",
- "rand 0.8.4",
- "rand_chacha 0.3.1",
- "rand_core 0.6.3",
- "serde",
- "serde_yaml",
- "structopt",
- "thiserror",
- "time 0.3.7",
-]
-
-[[package]]
 name = "slab"
 version = "0.4.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4542,7 +4387,7 @@ dependencies = [
 [[package]]
 name = "sparse-array"
 version = "0.1.0"
-source = "git+https://github.com/The-Blockchain-Company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"
+source = "git+https://github.com/the-blockchain-company/chain-libs.git?branch=git+https://github.com/the-blockchain-company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"#ef798477aba3794c7b4b171f0926884bc0327563"
 
 [[package]]
 name = "spin"
@@ -4642,12 +4487,6 @@ dependencies = [
  "rustversion",
  "syn 1.0.86",
 ]
-
-[[package]]
-name = "subtle"
-version = "1.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2d67a5a62ba6e01cb2192ff309324cb4875d0c451d55fe2319433abe7a05a8ee"
 
 [[package]]
 name = "subtle"
@@ -4822,6 +4661,36 @@ dependencies = [
  "proc-macro2 1.0.36",
  "quote 1.0.15",
  "syn 1.0.86",
+]
+
+[[package]]
+name = "thor"
+version = "0.1.0"
+dependencies = [
+ "assert_fs",
+ "bech32 0.8.1",
+ "bincode",
+ "chain-addr",
+ "chain-core",
+ "chain-crypto",
+ "chain-impl-mockchain",
+ "chain-vote",
+ "cocoon",
+ "custom_debug",
+ "dirs",
+ "hex",
+ "qcli",
+ "quibitous-automation",
+ "quibitous-lib",
+ "jortestkit",
+ "rand 0.8.4",
+ "rand_chacha 0.3.1",
+ "rand_core 0.6.3",
+ "serde",
+ "serde_yaml",
+ "structopt",
+ "thiserror",
+ "time 0.3.7",
 ]
 
 [[package]]
@@ -5345,7 +5214,7 @@ dependencies = [
 [[package]]
 name = "typed-bytes"
 version = "0.1.0"
-source = "git+https://github.com/The-Blockchain-Company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"
+source = "git+https://github.com/the-blockchain-company/chain-libs.git?branch=git+https://github.com/the-blockchain-company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"#ef798477aba3794c7b4b171f0926884bc0327563"
 
 [[package]]
 name = "typenum"
@@ -5426,7 +5295,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9f214e8f697e925001e66ec2c6e37a4ef93f0f78c2eed7814394e10c62025b05"
 dependencies = [
  "generic-array 0.14.5",
- "subtle 2.4.1",
+ "subtle",
 ]
 
 [[package]]
@@ -5761,15 +5630,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "85e60b0d1b5f99db2556934e21937020776a5d31520bf169e851ac44e6420214"
 
 [[package]]
-name = "wyz"
-version = "0.5.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "30b31594f29d27036c383b53b59ed3476874d518f0efb151b27a4c275141390e"
-dependencies = [
- "tap",
-]
-
-[[package]]
 name = "xattr"
 version = "0.2.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -5820,16 +5680,6 @@ dependencies = [
  "flate2",
  "thiserror",
  "time 0.1.44",
-]
-
-[[package]]
-name = "zip"
-version = "0.6.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e6fa4aa90e99fb8d701bda16fb040d8ed2f9c7176fb44de750e880a74b580315"
-dependencies = [
- "byteorder",
- "crc32fast",
 ]
 
 [[package]]

@@ -6,13 +6,13 @@ use quibitous_automation::quibitous::{
 };
 use quibitous_automation::testing::Release;
 use quibitous_lib::interfaces::InitialUTxO;
-use silica::{FragmentSender, TransactionHash};
+use thor::{FragmentSender, TransactionHash};
 
-fn test_connectivity_between_master_and_legacy_app(release: Release, temp_dir: &TempDir) {
+fn test_connectivity_between_git+https://github.com/the-blockchain-company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"_and_legacy_app(release: Release, temp_dir: &TempDir) {
     println!("Testing version: {}", release.version());
 
-    let sender = silica::Wallet::default();
-    let receiver = silica::Wallet::default();
+    let sender = thor::Wallet::default();
+    let receiver = thor::Wallet::default();
 
     let leader_config = ConfigurationBuilder::new()
         .with_funds(vec![InitialUTxO {
@@ -39,7 +39,7 @@ fn test_connectivity_between_master_and_legacy_app(release: Release, temp_dir: &
         .start()
         .unwrap();
 
-    let new_transaction = silica::FragmentBuilder::new(
+    let new_transaction = thor::FragmentBuilder::new(
         &leader_quibitous.genesis_block_hash(),
         &leader_quibitous.fees(),
         BlockDate::first().next_epoch(),
@@ -49,7 +49,7 @@ fn test_connectivity_between_master_and_legacy_app(release: Release, temp_dir: &
     .encode();
 
     let message = format!(
-        "Unable to connect newest master with node from {} version",
+        "Unable to connect newest git+https://github.com/the-blockchain-company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56" with node from {} version",
         release.version()
     );
     assert!(
@@ -59,7 +59,7 @@ fn test_connectivity_between_master_and_legacy_app(release: Release, temp_dir: &
         message
     );
 
-    trusted_quibitous.assert_no_errors_in_log_with_message("newest master has errors in log");
+    trusted_quibitous.assert_no_errors_in_log_with_message("newest git+https://github.com/the-blockchain-company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56" has errors in log");
     leader_quibitous.assert_no_errors_in_log_with_message(&format!(
         "Legacy nodes from {} version, has errrors in logs",
         release.version()
@@ -73,7 +73,7 @@ fn test_connectivity_between_master_and_legacy_app(release: Release, temp_dir: &
 pub fn test_compability() {
     let temp_dir = TempDir::new().unwrap();
     for release in download_last_n_releases(5) {
-        test_connectivity_between_master_and_legacy_app(release, &temp_dir);
+        test_connectivity_between_git+https://github.com/the-blockchain-company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"_and_legacy_app(release, &temp_dir);
     }
 }
 
@@ -81,15 +81,15 @@ pub fn test_compability() {
 pub fn test_upgrade_downgrade() {
     let temp_dir = TempDir::new().unwrap();
     for release in download_last_n_releases(1) {
-        test_upgrade_and_downgrade_from_legacy_to_master(release.version(), &temp_dir);
+        test_upgrade_and_downgrade_from_legacy_to_git+https://github.com/the-blockchain-company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"(release.version(), &temp_dir);
     }
 }
 
-fn test_upgrade_and_downgrade_from_legacy_to_master(version: Version, temp_dir: &TempDir) {
+fn test_upgrade_and_downgrade_from_legacy_to_git+https://github.com/the-blockchain-company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"(version: Version, temp_dir: &TempDir) {
     println!("Testing version: {}", version);
 
-    let mut sender = silica::Wallet::default();
-    let mut receiver = silica::Wallet::default();
+    let mut sender = thor::Wallet::default();
+    let mut receiver = thor::Wallet::default();
 
     let config = ConfigurationBuilder::new()
         .with_funds(vec![

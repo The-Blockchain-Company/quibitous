@@ -12,6 +12,7 @@ use crate::{
     metrics::{Metrics, MetricsBackend},
     utils::async_msg::MessageBox,
 };
+use chain_core::{packer::Codec, property::Serialize};
 use chain_impl_mockchain::{
     block::BlockDate, fragment::Contents, setting::Settings, transaction::Transaction,
 };
@@ -129,17 +130,18 @@ impl Pool {
         }
 
         if let Some(persistent_log) = self.persistent_log.as_mut() {
-            use bincode::Options;
             let entry = PersistentFragmentLog {
                 time: SecondsSinceUnixEpoch::now(),
                 fragment: fragment.clone(),
             };
             // this must be sufficient: the PersistentFragmentLog format is using byte array
             // for serialization so we do not expect any problems during deserialization
-            let codec = bincode::DefaultOptions::new().with_fixint_encoding();
-            let serialized = codec.serialize(&entry).unwrap();
-
-            if let Err(err) = persistent_log.write_all(&serialized).await {
+            let mut codec = Codec::new(Vec::new());
+            entry.serialize(&mut codec).unwrap();
+            if let Err(err) = persistent_log
+                .write_all(codec.into_inner().as_slice())
+                .await
+            {
                 tracing::error!(err = %err, "failed to write persistent fragment log entry");
             }
         }
@@ -358,6 +360,7 @@ fn is_fragment_valid(fragment: &Fragment) -> bool {
         Fragment::VoteTally(ref tx) => is_transaction_valid(tx),
         Fragment::MintToken(ref tx) => is_transaction_valid(tx),
         Fragment::Evm(ref tx) => is_transaction_valid(tx),
+        Fragment::EvmMapping(ref tx) => is_transaction_valid(tx),
     }
 }
 
@@ -382,6 +385,7 @@ fn get_transaction_expiry_date(fragment: &Fragment) -> Option<BlockDate> {
         Fragment::VoteTally(tx) => Some(tx.as_slice().valid_until()),
         Fragment::MintToken(tx) => Some(tx.as_slice().valid_until()),
         Fragment::Evm(tx) => Some(tx.as_slice().valid_until()),
+        Fragment::EvmMapping(tx) => Some(tx.as_slice().valid_until()),
     }
 }
 
@@ -727,7 +731,7 @@ pub(super) mod internal {
                 pool.total_size_bytes,
                 fragments1
                     .iter()
-                    .map(|(f, _)| f.to_raw().size_bytes_plus_size())
+                    .map(|(f, _)| f.serialized_size())
                     .sum::<usize>()
             );
 

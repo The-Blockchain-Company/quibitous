@@ -1,12 +1,12 @@
 [package]
-ausilicas = ["dev@blockchain-company.io"]
+authors = ["dev@tbco.io"]
 description = "explorer service for quibitous"
-documentation = "https://github.com/The-Blockchain-Company/quibitous#USAGE.md"
+documentation = "https://github.com/the-blockchain-company/quibitous#USAGE.md"
 edition = "2018"
-homepage = "https://github.com/The-Blockchain-Company/quibitous#README.md"
+homepage = "https://github.com/the-blockchain-company/quibitous#README.md"
 license = "MIT OR Apache-2.0"
 name = "explorer"
-repository = "https://github.com/The-Blockchain-Company/quibitous"
+repository = "https://github.com/the-blockchain-company/quibitous"
 version = "0.9.1"
 
 [dependencies]
@@ -42,16 +42,16 @@ http-zipkin = "0.3.0"
 
 quibitous-lib = {path = "../quibitous-lib"}
 
-bcc-legacy-address = {git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main"}
-chain-addr = {git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main"}
-chain-core = {git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main"}
-chain-crypto = {git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main"}
-chain-impl-mockchain = {git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main"}
-chain-time = {git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main"}
-chain-vote = {git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main"}
-chain-ser = {git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main"}
-chain-network = {git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main"}
-imhamt = {git = "https://github.com/The-Blockchain-Company/chain-libs.git", branch = "main"}
+bcc-legacy-address = {git = "https://github.com/the-blockchain-company/chain-libs.git", branch = "main"}
+chain-addr = {git = "https://github.com/the-blockchain-company/chain-libs.git", branch = "main"}
+chain-core = {git = "https://github.com/the-blockchain-company/chain-libs.git", branch = "main"}
+chain-crypto = {git = "https://github.com/the-blockchain-company/chain-libs.git", branch = "main"}
+chain-impl-mockchain = {git = "https://github.com/the-blockchain-company/chain-libs.git", branch = "main"}
+chain-time = {git = "https://github.com/the-blockchain-company/chain-libs.git", branch = "main"}
+chain-vote = {git = "https://github.com/the-blockchain-company/chain-libs.git", branch = "main"}
+chain-ser = {git = "https://github.com/the-blockchain-company/chain-libs.git", branch = "main"}
+chain-network = {git = "https://github.com/the-blockchain-company/chain-libs.git", branch = "main"}
+imhamt = {git = "https://github.com/the-blockchain-company/chain-libs.git", branch = "main"}
 
 [features]
 default = []

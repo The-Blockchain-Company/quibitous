@@ -5,8 +5,8 @@ It covers the network, logging and storage parameters.
 
 ## Node Configuration
 
-This is an common example of a Quibitous node configuration file typically named `node-config.yaml`, however your's will vary depending on your needs.
-Additionally, this configuration has been tested on a *specific Quibitous version* and may change with newer versions.
+This is an common example of a Jörmungandr node configuration file typically named `node-config.yaml`, however your's will vary depending on your needs.
+Additionally, this configuration has been tested on a *specific Jörmungandr version* and may change with newer versions.
 It's important to keep in mind that the `trusted_peers` portion of this configuration will be different for each Bcc blockchain network.
 If you're trying to connect this node to a specific network, you need to know its genesis block hash, and its associated list of trusted peers.
 
@@ -20,7 +20,7 @@ log:
   format: plain
 
 http_fetch_block0_service:
-  - https://url/quibitous-block0/raw/master/data
+  - https://url/quibitous-block0/raw/git+https://github.com/the-blockchain-company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"/data
 
 skip_bootstrap: false # If set to true - will skip the bootstrapping phase
 
@@ -96,7 +96,7 @@ Note:
 ### Rewards report
 
 Starting the node `quibitous` with the command line option `--rewards-report-all` will
-collect a silicaough report of all the reward distribution. It can then be accessed via the
+collect a thorough report of all the reward distribution. It can then be accessed via the
 REST endpoints `/api/v0/rewards/history/1` or `/api/v0/rewards/epoch/10`.
 
 **this is not a recommended setting as it may take memory and may trigger some latency**.

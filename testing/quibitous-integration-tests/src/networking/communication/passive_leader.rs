@@ -1,7 +1,7 @@
 use crate::networking::utils::wait;
-use quantricity::builder::Blockchain;
-use quantricity::builder::{wallet::template::builder::WalletTemplateBuilder, NetworkBuilder};
-use quantricity::builder::{Node, SpawnParams, Topology};
+use hersir::builder::Blockchain;
+use hersir::builder::{wallet::template::builder::WalletTemplateBuilder, NetworkBuilder};
+use hersir::builder::{Node, SpawnParams, Topology};
 use quibitous_automation::quibitous::{LogLevel, MemPoolCheck};
 use quibitous_automation::testing::benchmark::{
     measure_and_log_sync_time, MeasurementReportInterval,
@@ -9,8 +9,8 @@ use quibitous_automation::testing::benchmark::{
 use quibitous_automation::testing::SyncWaitParams;
 use quibitous_lib::interfaces::Policy;
 use std::time::Duration;
-use silica::FragmentSender;
-use silica::FragmentSenderSetup;
+use thor::FragmentSender;
+use thor::FragmentSenderSetup;
 
 const PASSIVE: &str = "PASSIVE";
 const LEADER: &str = "LEADER";

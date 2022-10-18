@@ -1,14 +1,14 @@
-use quantricity::builder::wallet::template::builder::WalletTemplateBuilder;
-use quantricity::builder::Blockchain;
-use quantricity::builder::NetworkBuilder;
-use quantricity::builder::Node;
-use quantricity::builder::SpawnParams;
-use quantricity::builder::Topology;
+use hersir::builder::wallet::template::builder::WalletTemplateBuilder;
+use hersir::builder::Blockchain;
+use hersir::builder::NetworkBuilder;
+use hersir::builder::Node;
+use hersir::builder::SpawnParams;
+use hersir::builder::Topology;
 use quibitous_automation::testing::benchmark::sync::{
     measure_and_log_sync_time, MeasurementReportInterval,
 };
 use quibitous_automation::testing::SyncWaitParams;
-use silica::FragmentSender;
+use thor::FragmentSender;
 
 const LEADER_1: &str = "Leader1";
 const LEADER_2: &str = "Leader2";

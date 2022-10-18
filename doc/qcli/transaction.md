@@ -6,7 +6,7 @@ Tooling for offline transaction creation and signing.
 qcli transaction
 ```
 
-Those familiar with [`bcc-cli`](http://github.com/The-Blockchain-Company/bcc-cli)
+Those familiar with [`bcc-cli`](http://github.com/the-blockchain-company/bcc-cli)
 transaction builder will see resemblance in `qcli transaction`.
 
 There is a couple of commands that can be used to:
@@ -106,7 +106,7 @@ Also, the simplified `make-transaction` command in  `qcli`  covers all this proc
 qcli transaction make-transaction --help
 ```
 
-Let's use the following utxo as input and transfer 50 entropics to the destination address
+Let's use the following utxo as input and transfer 50 lovelaces to the destination address
 
 ## Input utxo
 

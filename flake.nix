@@ -6,11 +6,9 @@
 
   nixConfig = {
     extra-substituters = [
-      "https://hydra.tbco.io"
-      "https://vit-ops.cachix.org"
+      "https://tbco.cachix.org"
     ];
     extra-trusted-public-keys = [
-      "hydra.tbco.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ="
       "tbco.cachix.org-1:OYKDS3zfcsf4WEVuSTV+XmgaIn1GeclGW0kSFd3G0NU="
     ];
   };

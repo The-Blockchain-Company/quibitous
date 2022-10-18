@@ -25,7 +25,7 @@
     "utils": {
       "locked": {
         "lastModified": 1624650440,
-        "narHash": "sha256-yHci698D8cccMNenKhGnJ6s7X5QhfOzXqpNeQW7Fgik=",
+        "narHash": "sha256-AKnUr9zaFtob/tX+Ko0qUzS84e3oBEZvCRMzGci8XFU=",
         "owner": "rmourey26",
         "repo": "flake-utils",
         "rev": "c0e246b9b83f637f4681389ecabcb2681b4f3af0",

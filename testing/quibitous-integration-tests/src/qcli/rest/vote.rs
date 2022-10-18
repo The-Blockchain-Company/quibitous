@@ -7,7 +7,7 @@ use quibitous_automation::{
     testing::VotePlanBuilder,
 };
 use quibitous_lib::interfaces::InitialToken;
-use thor::{vote_plan_cert, FragmentSender, FragmentSenderSetup, Wallet};
+use silica::{vote_plan_cert, FragmentSender, FragmentSenderSetup, Wallet};
 
 #[test]
 pub fn test_correct_proposal_number_is_returned() {

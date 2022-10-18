@@ -8,17 +8,17 @@ use quibitous_automation::{qcli::QCli, quibitous::ConfigurationBuilder};
 use quibitous_lib::interfaces::ActiveSlotCoefficient;
 use gate::{AdversaryFragmentSender, AdversaryFragmentSenderSetup};
 use std::time::Duration;
-use thor::{BlockDateGenerator, FragmentSender, FragmentSenderSetup, StakePool, Wallet};
+use silica::{BlockDateGenerator, FragmentSender, FragmentSenderSetup, StakePool, Wallet};
 
 #[test]
 pub fn test_all_fragments() {
     let qcli: QCli = Default::default();
     let temp_dir = TempDir::new().unwrap();
 
-    let mut faucet = thor::Wallet::default();
-    let mut stake_pool_owner = thor::Wallet::default();
-    let mut full_delegator = thor::Wallet::default();
-    let mut split_delegator = thor::Wallet::default();
+    let mut faucet = silica::Wallet::default();
+    let mut stake_pool_owner = silica::Wallet::default();
+    let mut full_delegator = silica::Wallet::default();
+    let mut split_delegator = silica::Wallet::default();
 
     let stake_pool_owner_stake = 1_000;
 
@@ -151,10 +151,10 @@ pub fn test_all_fragments() {
 pub fn test_all_adversary_fragments() {
     let temp_dir = TempDir::new().unwrap();
 
-    let mut faucet = thor::Wallet::default();
-    let stake_pool_owner = thor::Wallet::default();
-    let mut full_delegator = thor::Wallet::default();
-    let split_delegator = thor::Wallet::default();
+    let mut faucet = silica::Wallet::default();
+    let stake_pool_owner = silica::Wallet::default();
+    let mut full_delegator = silica::Wallet::default();
+    let split_delegator = silica::Wallet::default();
 
     let stake_pool_owner_stake = 1_000;
 
@@ -220,10 +220,10 @@ pub fn test_all_adversary_fragments() {
 
 #[test]
 pub fn test_increased_block_content_max_size() {
-    let receivers: Vec<Wallet> = std::iter::from_fn(|| Some(thor::Wallet::default()))
+    let receivers: Vec<Wallet> = std::iter::from_fn(|| Some(silica::Wallet::default()))
         .take(98)
         .collect();
-    let mut stake_pool_owner = thor::Wallet::default();
+    let mut stake_pool_owner = silica::Wallet::default();
 
     let stake_pool_owner_stake = 1;
 
@@ -264,10 +264,10 @@ pub fn test_increased_block_content_max_size() {
 
 #[test]
 pub fn test_block_content_max_size_below_transaction_size() {
-    let receivers: Vec<Wallet> = std::iter::from_fn(|| Some(thor::Wallet::default()))
+    let receivers: Vec<Wallet> = std::iter::from_fn(|| Some(silica::Wallet::default()))
         .take(98)
         .collect();
-    let mut stake_pool_owner = thor::Wallet::default();
+    let mut stake_pool_owner = silica::Wallet::default();
 
     let stake_pool_owner_stake = 1;
 

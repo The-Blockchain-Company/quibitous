@@ -6,15 +6,15 @@ use quibitous_lib::{
     interfaces::{ActiveSlotCoefficient, Stake, StakeDistributionDto},
 };
 use std::str::FromStr;
-use thor::TransactionHash;
+use silica::TransactionHash;
 
 #[test]
 pub fn stake_distribution() {
     let qcli: QCli = Default::default();
-    let sender = thor::Wallet::default();
-    let receiver = thor::Wallet::default();
+    let sender = silica::Wallet::default();
+    let receiver = silica::Wallet::default();
 
-    let stake_pool_owner_1 = thor::Wallet::default();
+    let stake_pool_owner_1 = silica::Wallet::default();
     let fee = LinearFee::new(1, 1, 1);
     let (quibitous, stake_pools) = startup::start_stake_pool(
         &[stake_pool_owner_1.clone()],
@@ -46,7 +46,7 @@ pub fn stake_distribution() {
         quibitous.rest().stake_distribution().unwrap(),
     );
 
-    let transaction = thor::FragmentBuilder::new(
+    let transaction = silica::FragmentBuilder::new(
         &quibitous.genesis_block_hash(),
         &quibitous.fees(),
         BlockDate::first().next_epoch(),

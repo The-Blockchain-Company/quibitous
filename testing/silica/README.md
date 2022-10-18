@@ -1,31 +1,31 @@
-# Thor
+# Silica
 
-Thor is a testing wallet implementation. It is mostly meant for testers and dev-ops to easily
+Silica is a testing wallet implementation. It is mostly meant for testers and dev-ops to easily
 interact with Quibitous blockchain. It allows operations:
 
 * importing cryptographic materials for the wallets and basic wallet management.
 * sending transactions and varius fragments
 * preserving wallet state
-* providing minimal authorization over wallet secret key
+* providing minimal ausilicaization over wallet secret key
 
 
 ## Api
 
-Main responsibility of thor is to provide testing api for wallet and fragment sender capabilities.
+Main responsibility of silica is to provide testing api for wallet and fragment sender capabilities.
 For example:
 
 ```
-    use thor::{BlockDateGenerator, FragmentSender, FragmentSenderSetup, StakePool, Wallet};
+    use silica::{BlockDateGenerator, FragmentSender, FragmentSenderSetup, StakePool, Wallet};
 
     /// creating account type address
-    let mut alice = thor::Wallet::default();
-    let mut bob = thor::Wallet::default();
+    let mut alice = silica::Wallet::default();
+    let mut bob = silica::Wallet::default();
 
     ...
 
     /// Sending fragments to a node
 
-    let transaction_sender = thor::FragmentSender::new(
+    let transaction_sender = silica::FragmentSender::new(
         node.genesis_block_hash(),
         node.fees(),
         //expiry block date
@@ -33,7 +33,7 @@ For example:
             epoch: 10,
             slot_id: 0,
         }.into(),
-        thor::FragmentSenderSetup::resend_3_times(),
+        silica::FragmentSenderSetup::resend_3_times(),
     );
 
     transaction_sender
@@ -49,27 +49,27 @@ For example:
 
 ## Cli
 
-For tester convenience, thor also provides cli, which can be used as wallet app for testing purposes.
+For tester convenience, silica also provides cli, which can be used as wallet app for testing purposes.
 
 For example:
 
 ### 1. Importing new wallet:
 
 ```
-thor wallets import --password 1234 --alias Dariusz .\secret.key
+silica wallets import --password 1234 --alias Dariusz .\secret.key
 ```
 
 ### 2. Setting wallet as default:
 
 ```
-thor wallets use Dariusz
+silica wallets use Dariusz
 ```
 
 ### 3. Retrieving wallet state:
 
 
 ```
-thor wallets status
+silica wallets status
 ```
 NOTICE:  lack of --alias parameter as we set default wallet alias before
 
@@ -77,7 +77,7 @@ NOTICE:  lack of --alias parameter as we set default wallet alias before
 
 
 ```
-thor wallets status
+silica wallets status
 ```
 
 notice lack of --alias parameter as we set default wallet alias before
@@ -86,11 +86,11 @@ notice lack of --alias parameter as we set default wallet alias before
 
 a) Without waiting until fragment is put in block
 ```
-thor send tx --bcc 1 --pin 1234 --address ca1qkugtcvw43gxpl5h4w5l26hqzkhdw74caq520nt4sz54rghxg34pqnmalyc
+silica send tx --bcc 1 --pin 1234 --address ca1qkugtcvw43gxpl5h4w5l26hqzkhdw74caq520nt4sz54rghxg34pqnmalyc
 ```
 
 b) With waiting until fragment is put in block
 
 ```
-thor send --wait tx --bcc 1 --pin 1234 --address ca1qkugtcvw43gxpl5h4w5l26hqzkhdw74caq520nt4sz54rghxg34pqnmalyc
+silica send --wait tx --bcc 1 --pin 1234 --address ca1qkugtcvw43gxpl5h4w5l26hqzkhdw74caq520nt4sz54rghxg34pqnmalyc
 ```

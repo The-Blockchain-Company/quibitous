@@ -6,7 +6,7 @@ use quantricity::builder::SpawnParams;
 use quantricity::builder::Topology;
 use quibitous_automation::testing::time;
 use quibitous_lib::interfaces::BlockDate;
-use thor::FragmentSender;
+use silica::FragmentSender;
 const LEADER_1: &str = "Leader_1";
 const LEADER_2: &str = "Leader_2";
 const LEADER_3: &str = "Leader_3";

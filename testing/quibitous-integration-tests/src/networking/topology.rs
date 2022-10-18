@@ -7,8 +7,8 @@ use quantricity::builder::SpawnParams;
 use quantricity::builder::Topology;
 use quibitous_automation::testing::benchmark::MeasurementReportInterval;
 use quibitous_automation::testing::SyncWaitParams;
-use thor::FragmentSender;
-use thor::FragmentSenderSetup;
+use silica::FragmentSender;
+use silica::FragmentSenderSetup;
 
 const LEADER_1: &str = "Leader1";
 const LEADER_2: &str = "Leader2";

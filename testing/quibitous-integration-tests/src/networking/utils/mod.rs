@@ -11,7 +11,7 @@ pub use quibitous_automation::testing::{
 use quibitous_automation::testing::{Speed, Thresholds};
 pub use quibitous_automation::testing::{SyncNode, SyncWaitParams};
 use std::time::Duration;
-use thor::{FragmentSender, Wallet};
+use silica::{FragmentSender, Wallet};
 
 pub fn wait(seconds: u64) {
     std::thread::sleep(Duration::from_secs(seconds));

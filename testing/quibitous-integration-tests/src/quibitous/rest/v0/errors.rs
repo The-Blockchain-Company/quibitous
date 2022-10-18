@@ -5,13 +5,13 @@ use quibitous_automation::quibitous::ConfigurationBuilder;
 use quibitous_automation::quibitous::QuibitousProcess;
 use quibitous_lib::interfaces::FragmentsProcessingSummary;
 use rstest::*;
-use thor::Wallet;
+use silica::Wallet;
 
 #[fixture]
 fn world() -> (QuibitousProcess, Wallet, Wallet, Wallet) {
-    let alice = thor::Wallet::default();
-    let bob = thor::Wallet::default();
-    let clarice = thor::Wallet::default();
+    let alice = silica::Wallet::default();
+    let bob = silica::Wallet::default();
+    let clarice = silica::Wallet::default();
 
     let (quibitous, _stake_pools) = startup::start_stake_pool(
         &[alice.clone()],
@@ -27,7 +27,7 @@ fn world() -> (QuibitousProcess, Wallet, Wallet, Wallet) {
 pub fn fragment_already_in_log(world: (QuibitousProcess, Wallet, Wallet, Wallet)) {
     let (quibitous, alice, bob, _) = world;
 
-    let alice_fragment = thor::FragmentBuilder::new(
+    let alice_fragment = silica::FragmentBuilder::new(
         &quibitous.genesis_block_hash(),
         &quibitous.fees(),
         BlockDate::first().next_epoch(),

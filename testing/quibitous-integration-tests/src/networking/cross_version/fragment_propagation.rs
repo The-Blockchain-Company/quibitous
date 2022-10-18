@@ -13,7 +13,7 @@ use quibitous_automation::quibitous::{
 };
 use quibitous_automation::testing::SyncNode;
 use std::path::PathBuf;
-use thor::{FragmentSender, StakePool};
+use silica::{FragmentSender, StakePool};
 
 #[test]
 pub fn legacy_current_node_fragment_propagation() {

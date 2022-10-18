@@ -24,8 +24,8 @@ pub fn test_utxo_transaction_with_more_than_one_witness_per_input_is_rejected() 
     let temp_dir = TempDir::new().unwrap();
     let qcli: QCli = Default::default();
 
-    let sender = thor::Wallet::new_utxo(&mut rand::rngs::OsRng);
-    let receiver = thor::Wallet::new_utxo(&mut rand::rngs::OsRng);
+    let sender = silica::Wallet::new_utxo(&mut rand::rngs::OsRng);
+    let receiver = silica::Wallet::new_utxo(&mut rand::rngs::OsRng);
     let config = ConfigurationBuilder::new()
         .with_funds(vec![InitialUTxO {
             address: sender.address(),
@@ -67,9 +67,9 @@ pub fn test_two_correct_utxo_to_utxo_transactions_are_accepted_by_node() {
     let qcli: QCli = Default::default();
     let temp_dir = TempDir::new().unwrap();
 
-    let sender = thor::Wallet::new_utxo(&mut rand::rngs::OsRng);
-    let middle_man = thor::Wallet::new_utxo(&mut rand::rngs::OsRng);
-    let receiver = thor::Wallet::new_utxo(&mut rand::rngs::OsRng);
+    let sender = silica::Wallet::new_utxo(&mut rand::rngs::OsRng);
+    let middle_man = silica::Wallet::new_utxo(&mut rand::rngs::OsRng);
+    let receiver = silica::Wallet::new_utxo(&mut rand::rngs::OsRng);
 
     let config = ConfigurationBuilder::new()
         .with_funds(vec![InitialUTxO {
@@ -121,8 +121,8 @@ pub fn test_correct_utxo_transaction_is_accepted_by_node() {
     let temp_dir = TempDir::new().unwrap();
     let qcli: QCli = Default::default();
 
-    let sender = thor::Wallet::new_utxo(&mut rand::rngs::OsRng);
-    let receiver = thor::Wallet::new_utxo(&mut rand::rngs::OsRng);
+    let sender = silica::Wallet::new_utxo(&mut rand::rngs::OsRng);
+    let receiver = silica::Wallet::new_utxo(&mut rand::rngs::OsRng);
     println!("Sender: {:?}", sender);
     println!("Receiver: {:?}", sender);
 
@@ -163,8 +163,8 @@ pub fn test_correct_utxo_transaction_replaces_old_utxo_by_node() {
 
     let temp_dir = TempDir::new().unwrap();
 
-    let sender = thor::Wallet::new_utxo(&mut rand::rngs::OsRng);
-    let receiver = thor::Wallet::new_utxo(&mut rand::rngs::OsRng);
+    let sender = silica::Wallet::new_utxo(&mut rand::rngs::OsRng);
+    let receiver = silica::Wallet::new_utxo(&mut rand::rngs::OsRng);
 
     let config = ConfigurationBuilder::new()
         .with_funds(vec![InitialUTxO {
@@ -218,8 +218,8 @@ pub fn test_account_is_created_if_transaction_out_is_account() {
     let qcli: QCli = Default::default();
     let temp_dir = TempDir::new().unwrap();
 
-    let sender = thor::Wallet::new_utxo(&mut rand::rngs::OsRng);
-    let receiver = thor::Wallet::default();
+    let sender = silica::Wallet::new_utxo(&mut rand::rngs::OsRng);
+    let receiver = silica::Wallet::default();
     let transfer_amount = 100.into();
 
     let config = ConfigurationBuilder::new()
@@ -320,7 +320,7 @@ pub fn test_transaction_from_delegation_to_account_is_accepted_by_node() {
     let qcli: QCli = Default::default();
 
     let sender = startup::create_new_delegation_address();
-    let receiver = thor::Wallet::default();
+    let receiver = silica::Wallet::default();
     let transfer_amount = 100.into();
 
     let config = ConfigurationBuilder::new()
@@ -358,7 +358,7 @@ pub fn test_transaction_from_delegation_to_utxo_is_accepted_by_node() {
     let qcli: QCli = Default::default();
 
     let sender = startup::create_new_delegation_address();
-    let receiver = thor::Wallet::new_utxo(&mut rand::rngs::OsRng);
+    let receiver = silica::Wallet::new_utxo(&mut rand::rngs::OsRng);
     let transfer_amount = 100.into();
 
     let config = ConfigurationBuilder::new()
@@ -396,8 +396,8 @@ pub fn test_transaction_from_utxo_to_account_is_accepted_by_node() {
     let temp_dir = TempDir::new().unwrap();
     let qcli: QCli = Default::default();
 
-    let sender = thor::Wallet::new_utxo(&mut rand::rngs::OsRng);
-    let receiver = thor::Wallet::default();
+    let sender = silica::Wallet::new_utxo(&mut rand::rngs::OsRng);
+    let receiver = silica::Wallet::default();
 
     let config = ConfigurationBuilder::new()
         .with_funds(vec![InitialUTxO {
@@ -433,8 +433,8 @@ pub fn test_transaction_from_account_to_account_is_accepted_by_node() {
     let temp_dir = TempDir::new().unwrap();
     let qcli: QCli = Default::default();
 
-    let sender = thor::Wallet::default();
-    let receiver = thor::Wallet::default();
+    let sender = silica::Wallet::default();
+    let receiver = silica::Wallet::default();
     let transfer_amount = 100.into();
 
     let config = ConfigurationBuilder::new()
@@ -470,7 +470,7 @@ pub fn test_transaction_from_account_to_delegation_is_accepted_by_node() {
     let temp_dir = TempDir::new().unwrap();
     let qcli: QCli = Default::default();
 
-    let sender = thor::Wallet::default();
+    let sender = silica::Wallet::default();
     let receiver = startup::create_new_delegation_address();
     let transfer_amount = 100.into();
 
@@ -506,7 +506,7 @@ pub fn test_transaction_from_utxo_to_delegation_is_accepted_by_node() {
     let temp_dir = TempDir::new().unwrap();
     let qcli: QCli = Default::default();
 
-    let sender = thor::Wallet::new_utxo(&mut rand::rngs::OsRng);
+    let sender = silica::Wallet::new_utxo(&mut rand::rngs::OsRng);
     let receiver = startup::create_new_delegation_address();
     let transfer_amount = 100.into();
 
@@ -544,8 +544,8 @@ pub fn test_input_with_smaller_value_than_initial_utxo_is_rejected_by_node() {
     let temp_dir = TempDir::new().unwrap();
     let qcli: QCli = Default::default();
 
-    let sender = thor::Wallet::new_utxo(&mut rand::rngs::OsRng);
-    let receiver = thor::Wallet::new_utxo(&mut rand::rngs::OsRng);
+    let sender = silica::Wallet::new_utxo(&mut rand::rngs::OsRng);
+    let receiver = silica::Wallet::new_utxo(&mut rand::rngs::OsRng);
     let config = ConfigurationBuilder::new()
         .with_funds(vec![InitialUTxO {
             address: sender.address(),
@@ -582,8 +582,8 @@ pub fn test_input_with_smaller_value_than_initial_utxo_is_rejected_by_node() {
 pub fn test_transaction_with_non_existing_id_should_be_rejected_by_node() {
     let temp_dir = TempDir::new().unwrap();
     let qcli: QCli = Default::default();
-    let sender = thor::Wallet::new_utxo(&mut rand::rngs::OsRng);
-    let receiver = thor::Wallet::new_utxo(&mut rand::rngs::OsRng);
+    let sender = silica::Wallet::new_utxo(&mut rand::rngs::OsRng);
+    let receiver = silica::Wallet::new_utxo(&mut rand::rngs::OsRng);
     let config = ConfigurationBuilder::new()
         .with_funds(vec![InitialUTxO {
             address: sender.address(),
@@ -616,7 +616,7 @@ pub fn test_transaction_with_input_address_equal_to_output_is_accepted_by_node()
     let temp_dir = TempDir::new().unwrap();
     let qcli: QCli = Default::default();
 
-    let sender = thor::Wallet::new_utxo(&mut rand::rngs::OsRng);
+    let sender = silica::Wallet::new_utxo(&mut rand::rngs::OsRng);
     let config = ConfigurationBuilder::new()
         .with_funds(vec![InitialUTxO {
             address: sender.address(),
@@ -650,8 +650,8 @@ pub fn test_input_with_no_spending_utxo_is_rejected_by_node() {
     let temp_dir = TempDir::new().unwrap();
     let qcli: QCli = Default::default();
 
-    let sender = thor::Wallet::new_utxo(&mut rand::rngs::OsRng);
-    let receiver = thor::Wallet::new_utxo(&mut rand::rngs::OsRng);
+    let sender = silica::Wallet::new_utxo(&mut rand::rngs::OsRng);
+    let receiver = silica::Wallet::new_utxo(&mut rand::rngs::OsRng);
     let config = ConfigurationBuilder::new()
         .with_funds(vec![InitialUTxO {
             address: sender.address(),
@@ -688,8 +688,8 @@ pub fn test_transaction_with_non_zero_linear_fees() {
     let qcli: QCli = Default::default();
     let temp_dir = TempDir::new().unwrap();
 
-    let sender = thor::Wallet::new_utxo(&mut rand::rngs::OsRng);
-    let receiver = thor::Wallet::new_utxo(&mut rand::rngs::OsRng);
+    let sender = silica::Wallet::new_utxo(&mut rand::rngs::OsRng);
+    let receiver = silica::Wallet::new_utxo(&mut rand::rngs::OsRng);
     let fee = LinearFee::new(10, 1, 0);
     let config = ConfigurationBuilder::new()
         .with_funds(vec![InitialUTxO {
@@ -742,8 +742,8 @@ fn test_cannot_create_transaction_without_expiration() {
     let qcli: QCli = Default::default();
     let temp_dir = TempDir::new().unwrap();
 
-    let sender = thor::Wallet::new_utxo(&mut rand::rngs::OsRng);
-    let receiver = thor::Wallet::new_utxo(&mut rand::rngs::OsRng);
+    let sender = silica::Wallet::new_utxo(&mut rand::rngs::OsRng);
+    let receiver = silica::Wallet::new_utxo(&mut rand::rngs::OsRng);
     let config = ConfigurationBuilder::new()
         .with_funds(vec![InitialUTxO {
             address: sender.address(),
@@ -764,8 +764,8 @@ fn test_different_transaction_expiry_yields_different_id() {
     let qcli: QCli = Default::default();
     let temp_dir = TempDir::new().unwrap();
 
-    let sender = thor::Wallet::new_utxo(&mut rand::rngs::OsRng);
-    let receiver = thor::Wallet::new_utxo(&mut rand::rngs::OsRng);
+    let sender = silica::Wallet::new_utxo(&mut rand::rngs::OsRng);
+    let receiver = silica::Wallet::new_utxo(&mut rand::rngs::OsRng);
     let config = ConfigurationBuilder::new()
         .with_funds(vec![InitialUTxO {
             address: sender.address(),

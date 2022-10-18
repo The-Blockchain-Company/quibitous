@@ -12,7 +12,7 @@ use jortestkit::prelude::ProgressBarMode;
 use std::time::Duration;
 use std::{path::PathBuf, str::FromStr};
 use structopt::StructOpt;
-use thor::{BlockDateGenerator, FragmentSender, FragmentSenderSetup, Wallet};
+use silica::{BlockDateGenerator, FragmentSender, FragmentSenderSetup, Wallet};
 
 #[derive(StructOpt, Debug)]
 pub struct AllFragments {
@@ -81,7 +81,7 @@ impl AllFragments {
             Some(self.faucet_spending_counter.into()),
             Discrimination::from_testing_bool(self.testing),
         );
-        let receiver = thor::Wallet::default();
+        let receiver = silica::Wallet::default();
         let remote_quibitous = RemoteQuibitousBuilder::new("node".to_string())
             .with_rest(self.endpoint.parse().unwrap())
             .build();

@@ -9,8 +9,8 @@ use quibitous_automation::testing::benchmark::{
 use quibitous_automation::testing::SyncWaitParams;
 use quibitous_lib::interfaces::Policy;
 use std::time::Duration;
-use thor::FragmentSender;
-use thor::FragmentSenderSetup;
+use silica::FragmentSender;
+use silica::FragmentSenderSetup;
 
 const PASSIVE: &str = "PASSIVE";
 const LEADER: &str = "LEADER";

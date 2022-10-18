@@ -143,8 +143,8 @@ pub fn test_genesis_without_initial_funds_is_built_successfully() {
 
 #[test]
 pub fn test_genesis_with_many_initial_funds_is_built_successfully() {
-    let address_1 = thor::Wallet::default();
-    let address_2 = thor::Wallet::default();
+    let address_1 = silica::Wallet::default();
+    let address_2 = silica::Wallet::default();
     let initial_funds = Initial::Fund(vec![
         InitialUTxO {
             value: 100.into(),

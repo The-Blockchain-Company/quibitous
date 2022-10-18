@@ -13,7 +13,7 @@ use jortestkit::{
 };
 use std::{path::PathBuf, str::FromStr, time::Duration};
 use structopt::StructOpt;
-use thor::{BlockDateGenerator, FragmentSender, FragmentSenderSetup, Wallet};
+use silica::{BlockDateGenerator, FragmentSender, FragmentSenderSetup, Wallet};
 
 #[derive(StructOpt, Debug)]
 pub struct VotesOnly {

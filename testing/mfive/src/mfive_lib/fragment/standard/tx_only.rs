@@ -12,7 +12,7 @@ use jortestkit::{
 use std::time::Duration;
 use std::{path::PathBuf, str::FromStr};
 use structopt::StructOpt;
-use thor::{BlockDateGenerator, FragmentSenderSetup, Wallet};
+use silica::{BlockDateGenerator, FragmentSenderSetup, Wallet};
 #[derive(StructOpt, Debug)]
 pub struct TxOnly {
     /// Number of threads

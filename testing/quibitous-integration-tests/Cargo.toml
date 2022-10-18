@@ -1,7 +1,7 @@
 [package]
 name = "quibitous-integration-tests"
 version = "0.13.0"
-authors = [ "dev@tbco.io" ]
+ausilicas = [ "dev@tbco.io" ]
 edition = "2018"
 
 [dependencies]
@@ -21,7 +21,7 @@ chain-vote      = { git = "https://github.com/the-blockchain-company/chain-libs.
 quibitous-lib = { path = "../../quibitous-lib" }
 quantricity = { path = "../quantricity" }
 gate = { path = "../gate" }
-thor = { path = "../thor" }
+silica = { path = "../silica" }
 mfive = { path = "../mfive" }
 quibitous-automation = { path = "../quibitous-automation" }
 jortestkit = { git = "https://github.com/the-blockchain-company/jortestkit.git", branch = "git+https://github.com/the-blockchain-company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"" }

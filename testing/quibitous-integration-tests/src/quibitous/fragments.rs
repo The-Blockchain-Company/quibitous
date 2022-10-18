@@ -8,12 +8,12 @@ use quibitous_automation::testing::time;
 use quibitous_lib::interfaces::{ActiveSlotCoefficient, BlockDate, InitialToken, Mempool};
 use mfive::generators::FragmentGenerator;
 use std::time::Duration;
-use thor::{FragmentSender, FragmentSenderSetup, FragmentVerifier};
+use silica::{FragmentSender, FragmentSenderSetup, FragmentVerifier};
 
 #[test]
 pub fn send_all_fragments() {
-    let receiver = thor::Wallet::default();
-    let sender = thor::Wallet::default();
+    let receiver = silica::Wallet::default();
+    let sender = silica::Wallet::default();
 
     let (quibitous, _) = startup::start_stake_pool(
         &[sender.clone()],

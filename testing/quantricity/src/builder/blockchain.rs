@@ -11,7 +11,7 @@ use quibitous_lib::interfaces::{
 use quibitous_lib::time::SecondsSinceUnixEpoch;
 use serde::Deserialize;
 use std::collections::HashMap;
-use thor::WalletAlias;
+use silica::WalletAlias;
 
 #[derive(Clone, Deserialize, Debug)]
 #[serde(deny_unknown_fields)]

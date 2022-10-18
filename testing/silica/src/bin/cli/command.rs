@@ -2,7 +2,7 @@ use super::wallet::Wallets;
 use crate::cli::send::SendCommand;
 use structopt::StructOpt;
 use thiserror::Error;
-use thor::cli::{CliController, Connection};
+use silica::cli::{CliController, Connection};
 
 #[derive(StructOpt, Debug)]
 pub enum Command {
@@ -122,9 +122,9 @@ impl Connect {
 #[derive(Error, Debug)]
 pub enum Error {
     #[error(transparent)]
-    Controller(#[from] thor::cli::Error),
+    Controller(#[from] silica::cli::Error),
     #[error(transparent)]
-    Config(#[from] thor::cli::ConfigError),
+    Config(#[from] silica::cli::ConfigError),
     #[error(transparent)]
     Key(#[from] qcli_lib::key::Error),
 }

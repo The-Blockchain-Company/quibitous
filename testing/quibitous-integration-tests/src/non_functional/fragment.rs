@@ -17,12 +17,12 @@ use mfive::generators::{
     BatchFragmentGenerator, FragmentGenerator, FragmentStatusProvider, TransactionGenerator,
 };
 use std::time::Duration;
-use thor::{BlockDateGenerator, FragmentSender, FragmentSenderSetup};
+use silica::{BlockDateGenerator, FragmentSender, FragmentSenderSetup};
 
 #[test]
 pub fn fragment_load_test() {
-    let faucet = thor::Wallet::default();
-    let receiver = thor::Wallet::default();
+    let faucet = silica::Wallet::default();
+    let receiver = silica::Wallet::default();
 
     let (mut quibitous, _) = startup::start_stake_pool(
         &[faucet.clone()],
@@ -89,7 +89,7 @@ pub fn fragment_load_test() {
 
 #[test]
 pub fn fragment_batch_load_test() {
-    let mut faucet = thor::Wallet::default();
+    let mut faucet = silica::Wallet::default();
 
     let (mut quibitous, _) = startup::start_stake_pool(
         &[faucet.clone()],
@@ -142,7 +142,7 @@ pub fn fragment_batch_load_test() {
 
 #[test]
 pub fn transaction_load_test() {
-    let mut faucet = thor::Wallet::default();
+    let mut faucet = silica::Wallet::default();
 
     let (mut quibitous, _) = startup::start_stake_pool(
         &[faucet.clone()],

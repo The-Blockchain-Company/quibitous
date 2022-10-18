@@ -16,8 +16,8 @@ use quibitous_automation::{
 };
 use rstest::rstest;
 use std::path::PathBuf;
-use thor::FragmentSender;
-use thor::FragmentSenderSetup;
+use silica::FragmentSender;
+use silica::FragmentSenderSetup;
 
 #[rstest]
 #[case(0)]

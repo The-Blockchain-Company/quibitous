@@ -11,5 +11,5 @@ members = [
   "testing/gate",
   "testing/mfive",
   "testing/quantricity",
-  "testing/thor",
+  "testing/silica",
 ]

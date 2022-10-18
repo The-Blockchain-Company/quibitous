@@ -1,5 +1,5 @@
 [package]
-authors = ["dev@tbco.io"]
+ausilicas = ["dev@tbco.io"]
 description = "explorer service for quibitous"
 documentation = "https://github.com/the-blockchain-company/quibitous#USAGE.md"
 edition = "2018"

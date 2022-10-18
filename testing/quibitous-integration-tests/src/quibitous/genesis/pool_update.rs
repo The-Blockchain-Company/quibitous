@@ -2,7 +2,7 @@ use crate::startup;
 use chain_impl_mockchain::rewards::TaxType;
 use quibitous_automation::testing::time;
 use quibitous_automation::{qcli::QCli, quibitous::ConfigurationBuilder};
-use thor::TransactionHash;
+use silica::TransactionHash;
 
 use assert_fs::prelude::*;
 use assert_fs::TempDir;
@@ -12,7 +12,7 @@ pub fn update_pool_fees_is_not_allowed() {
     let temp_dir = TempDir::new().unwrap();
     let qcli: QCli = Default::default();
 
-    let stake_pool_owner = thor::Wallet::default();
+    let stake_pool_owner = silica::Wallet::default();
 
     let (quibitous, stake_pools) = startup::start_stake_pool(
         &[stake_pool_owner.clone()],
@@ -30,7 +30,7 @@ pub fn update_pool_fees_is_not_allowed() {
     // 6. send pool update certificate
     time::wait_for_epoch(2, quibitous.rest());
 
-    let transaction = thor::FragmentBuilder::new(
+    let transaction = silica::FragmentBuilder::new(
         &quibitous.genesis_block_hash(),
         &quibitous.fees(),
         chain_impl_mockchain::block::BlockDate {

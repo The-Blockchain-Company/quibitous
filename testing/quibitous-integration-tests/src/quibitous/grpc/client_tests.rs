@@ -15,7 +15,7 @@ use quibitous_automation::quibitous::grpc::client::MockClientError;
 use quibitous_automation::{qcli::QCli, quibitous::ConfigurationBuilder};
 use quibitous_lib::interfaces::InitialUTxO;
 
-use thor::TransactionHash;
+use silica::TransactionHash;
 
 use rand::Rng;
 use std::time::Duration;
@@ -301,8 +301,8 @@ pub fn upload_block_nonexisting_stake_pool() {
 // L1020 Get fragments
 #[test]
 pub fn get_fragments() {
-    let sender = thor::Wallet::default();
-    let receiver = thor::Wallet::default();
+    let sender = silica::Wallet::default();
+    let receiver = silica::Wallet::default();
     let config = ConfigurationBuilder::new()
         .with_slot_duration(4)
         .with_funds(vec![InitialUTxO {
@@ -314,7 +314,7 @@ pub fn get_fragments() {
     let setup = setup::client::bootstrap(config);
     let output_value = 1u64;
     let qcli: QCli = Default::default();
-    let transaction = thor::FragmentBuilder::new(
+    let transaction = silica::FragmentBuilder::new(
         &setup.server.genesis_block_hash(),
         &setup.server.fees(),
         BlockDate::first().next_epoch(),

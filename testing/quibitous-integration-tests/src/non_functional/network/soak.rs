@@ -11,8 +11,8 @@ use quibitous_automation::quibitous::LogLevel;
 use quibitous_automation::testing::ensure_nodes_are_in_sync;
 use quibitous_automation::testing::SyncWaitParams;
 use std::time::{Duration, SystemTime};
-use thor::FragmentSender;
-use thor::FragmentVerifier;
+use silica::FragmentSender;
+use silica::FragmentVerifier;
 
 const CORE_NODE: &str = "Core";
 const RELAY_NODE_1: &str = "Relay1";

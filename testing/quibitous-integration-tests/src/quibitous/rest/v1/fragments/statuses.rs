@@ -4,14 +4,14 @@ use quibitous_automation::quibitous::ConfigurationBuilder;
 use quibitous_automation::quibitous::QuibitousProcess;
 use quibitous_automation::quibitous::MemPoolCheck;
 use rstest::*;
-use thor::FragmentSender;
-use thor::FragmentSenderSetup;
+use silica::FragmentSender;
+use silica::FragmentSenderSetup;
 
 #[fixture]
 fn world() -> (QuibitousProcess, FragmentId, FragmentId, FragmentId) {
-    let alice = thor::Wallet::default();
-    let bob = thor::Wallet::default();
-    let mut clarice = thor::Wallet::default();
+    let alice = silica::Wallet::default();
+    let bob = silica::Wallet::default();
+    let mut clarice = silica::Wallet::default();
 
     let (quibitous, _stake_pools) = startup::start_stake_pool(
         &[alice.clone()],
@@ -22,7 +22,7 @@ fn world() -> (QuibitousProcess, FragmentId, FragmentId, FragmentId) {
 
     let transaction_sender = FragmentSender::from(quibitous.block0_configuration());
 
-    let fragment_builder = thor::FragmentBuilder::new(
+    let fragment_builder = silica::FragmentBuilder::new(
         &quibitous.genesis_block_hash(),
         &quibitous.fees(),
         BlockDate::first().next_epoch(),

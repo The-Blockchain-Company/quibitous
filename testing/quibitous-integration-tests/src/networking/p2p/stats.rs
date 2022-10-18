@@ -12,7 +12,7 @@ use quibitous_lib::interfaces::Policy;
 use quibitous_lib::interfaces::SlotDuration;
 use std::fmt::Display;
 use std::time::Duration;
-use thor::FragmentSender;
+use silica::FragmentSender;
 
 const LEADER1: &str = "LEADER1";
 const LEADER2: &str = "LEADER2";

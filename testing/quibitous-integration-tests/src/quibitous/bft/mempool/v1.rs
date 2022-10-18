@@ -10,14 +10,14 @@ use quibitous_lib::interfaces::FragmentRejectionReason;
 use quibitous_lib::interfaces::InitialUTxO;
 use quibitous_lib::interfaces::Mempool;
 use std::time::Duration;
-use thor::{FragmentSender, FragmentVerifier, VerifyExitStrategy};
+use silica::{FragmentSender, FragmentVerifier, VerifyExitStrategy};
 
 #[test]
 pub fn test_mempool_pool_max_entries_limit() {
     let temp_dir = TempDir::new().unwrap();
 
-    let receiver = thor::Wallet::default();
-    let mut sender = thor::Wallet::default();
+    let receiver = silica::Wallet::default();
+    let mut sender = silica::Wallet::default();
 
     let leader_config = ConfigurationBuilder::new()
         .with_funds(vec![
@@ -48,7 +48,7 @@ pub fn test_mempool_pool_max_entries_limit() {
         .correct_state_verifier()
         .record_address_state(vec![&sender.address(), &receiver.address()]);
 
-    let fragment_builder = thor::FragmentBuilder::new(
+    let fragment_builder = silica::FragmentBuilder::new(
         &quibitous.genesis_block_hash(),
         &quibitous.fees(),
         BlockDate::first().next_epoch(),
@@ -106,8 +106,8 @@ pub fn test_mempool_pool_max_entries_limit() {
 pub fn test_mempool_pool_max_entries_equal_0() {
     let temp_dir = TempDir::new().unwrap();
 
-    let receiver = thor::Wallet::default();
-    let mut sender = thor::Wallet::default();
+    let receiver = silica::Wallet::default();
+    let mut sender = silica::Wallet::default();
 
     let config = ConfigurationBuilder::new()
         .with_funds(vec![
@@ -137,7 +137,7 @@ pub fn test_mempool_pool_max_entries_equal_0() {
         .correct_state_verifier()
         .record_address_state(vec![&sender.address(), &receiver.address()]);
 
-    let fragment_builder = thor::FragmentBuilder::new(
+    let fragment_builder = silica::FragmentBuilder::new(
         &quibitous.genesis_block_hash(),
         &quibitous.fees(),
         BlockDate::first().next_epoch(),
@@ -185,8 +185,8 @@ pub fn test_mempool_pool_max_entries_equal_0() {
 pub fn test_mempool_log_max_entries_only_one_fragment() {
     let temp_dir = TempDir::new().unwrap();
 
-    let receiver = thor::Wallet::default();
-    let mut sender = thor::Wallet::default();
+    let receiver = silica::Wallet::default();
+    let mut sender = silica::Wallet::default();
 
     let config = ConfigurationBuilder::new()
         .with_funds(vec![
@@ -216,7 +216,7 @@ pub fn test_mempool_log_max_entries_only_one_fragment() {
         .correct_state_verifier()
         .record_address_state(vec![&sender.address(), &receiver.address()]);
 
-    let fragment_builder = thor::FragmentBuilder::new(
+    let fragment_builder = silica::FragmentBuilder::new(
         &quibitous.genesis_block_hash(),
         &quibitous.fees(),
         BlockDate::first().next_epoch(),
@@ -274,8 +274,8 @@ pub fn test_mempool_log_max_entries_only_one_fragment() {
 pub fn test_mempool_log_max_entries_equals_0() {
     let temp_dir = TempDir::new().unwrap();
 
-    let receiver = thor::Wallet::default();
-    let mut sender = thor::Wallet::default();
+    let receiver = silica::Wallet::default();
+    let mut sender = silica::Wallet::default();
 
     let config = ConfigurationBuilder::new()
         .with_funds(vec![
@@ -305,7 +305,7 @@ pub fn test_mempool_log_max_entries_equals_0() {
         .correct_state_verifier()
         .record_address_state(vec![&sender.address(), &receiver.address()]);
 
-    let fragment_builder = thor::FragmentBuilder::new(
+    let fragment_builder = silica::FragmentBuilder::new(
         &quibitous.genesis_block_hash(),
         &quibitous.fees(),
         BlockDate::first().next_epoch(),
@@ -354,8 +354,8 @@ pub fn test_mempool_log_max_entries_equals_0() {
 pub fn test_mempool_pool_max_entries_overrides_log_max_entries() {
     let temp_dir = TempDir::new().unwrap();
 
-    let receiver = thor::Wallet::default();
-    let mut sender = thor::Wallet::default();
+    let receiver = silica::Wallet::default();
+    let mut sender = silica::Wallet::default();
 
     let config = ConfigurationBuilder::new()
         .with_funds(vec![
@@ -387,7 +387,7 @@ pub fn test_mempool_pool_max_entries_overrides_log_max_entries() {
 
     let fragment_sender = FragmentSender::from(quibitous.block0_configuration());
 
-    let fragment_builder = thor::FragmentBuilder::new(
+    let fragment_builder = silica::FragmentBuilder::new(
         &quibitous.genesis_block_hash(),
         &quibitous.fees(),
         BlockDate::first().next_epoch(),

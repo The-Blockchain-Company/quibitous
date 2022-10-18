@@ -12,7 +12,7 @@ lazy_static::lazy_static! {
 
 #[test]
 pub fn test_utxo_transation_with_more_than_one_witness_per_input_is_rejected() {
-    let receiver = thor::Wallet::new_utxo(&mut rand::rngs::OsRng);
+    let receiver = silica::Wallet::new_utxo(&mut rand::rngs::OsRng);
 
     let mut transaction_wrapper = QCli::default().transaction_builder(TestGen::hash().into());
     transaction_wrapper
@@ -38,7 +38,7 @@ pub fn test_utxo_transation_with_more_than_one_witness_per_input_is_rejected() {
 
 #[test]
 pub fn test_utxo_transation_with_address_type_witness_is_rejected() {
-    let receiver = thor::Wallet::new_utxo(&mut rand::rngs::OsRng);
+    let receiver = silica::Wallet::new_utxo(&mut rand::rngs::OsRng);
 
     let mut transaction_wrapper = QCli::default().transaction_builder(TestGen::hash().into());
 
@@ -58,8 +58,8 @@ pub fn test_utxo_transation_with_address_type_witness_is_rejected() {
 
 #[test]
 pub fn test_account_transation_with_utxo_type_witness_is_rejected() {
-    let receiver = thor::Wallet::default();
-    let sender = thor::Wallet::default();
+    let receiver = silica::Wallet::default();
+    let sender = silica::Wallet::default();
 
     let mut transaction_wrapper = QCli::default().transaction_builder(TestGen::hash().into());
     transaction_wrapper
@@ -77,7 +77,7 @@ pub fn test_account_transation_with_utxo_type_witness_is_rejected() {
 
 #[test]
 pub fn test_make_witness_with_unknown_type_fails() {
-    let receiver = thor::Wallet::new_utxo(&mut rand::rngs::OsRng);
+    let receiver = silica::Wallet::new_utxo(&mut rand::rngs::OsRng);
     let mut transaction_wrapper = QCli::default().transaction_builder(TestGen::hash().into());
     transaction_wrapper
         .new_transaction()
@@ -91,7 +91,7 @@ pub fn test_make_witness_with_unknown_type_fails() {
 
 #[test]
 pub fn test_make_witness_with_invalid_private_key_fails() {
-    let receiver = thor::Wallet::new_utxo(&mut rand::rngs::OsRng);
+    let receiver = silica::Wallet::new_utxo(&mut rand::rngs::OsRng);
     let qcli: QCli = Default::default();
 
     let mut transaction_wrapper = QCli::default().transaction_builder(TestGen::hash().into());
@@ -114,7 +114,7 @@ pub fn test_make_witness_with_invalid_private_key_fails() {
 #[test]
 pub fn test_make_witness_with_non_existing_private_key_file_fails() {
     let qcli: QCli = Default::default();
-    let receiver = thor::Wallet::new_utxo(&mut rand::rngs::OsRng);
+    let receiver = silica::Wallet::new_utxo(&mut rand::rngs::OsRng);
     let mut transaction_wrapper = qcli.transaction_builder(TestGen::hash().into());
     let private_key = qcli.key().generate_default();
     transaction_wrapper
@@ -137,7 +137,7 @@ pub fn test_make_witness_with_non_existing_private_key_file_fails() {
 
 #[test]
 pub fn test_account_transaction_different_lane_is_accepted() {
-    let receiver = thor::Wallet::new_utxo(&mut rand::rngs::OsRng);
+    let receiver = silica::Wallet::new_utxo(&mut rand::rngs::OsRng);
 
     let mut transaction_wrapper = QCli::default().transaction_builder(TestGen::hash().into());
 

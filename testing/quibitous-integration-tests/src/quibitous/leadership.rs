@@ -8,7 +8,7 @@ use std::time::Duration;
 
 #[test]
 fn verify_genesis_optimum_leadership_logs_parent_hash() {
-    let faucet = thor::Wallet::default();
+    let faucet = silica::Wallet::default();
     let (quibitous, _) =
         startup::start_stake_pool(&[faucet], &[], &mut ConfigurationBuilder::new()).unwrap();
 
@@ -18,7 +18,7 @@ fn verify_genesis_optimum_leadership_logs_parent_hash() {
 #[test]
 fn verify_bft_leadership_logs_parent_hash() {
     let quibitous = startup::start_bft(
-        vec![&thor::Wallet::default()],
+        vec![&silica::Wallet::default()],
         &mut ConfigurationBuilder::new(),
     )
     .unwrap();

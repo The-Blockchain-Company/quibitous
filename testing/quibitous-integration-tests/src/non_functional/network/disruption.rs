@@ -8,7 +8,7 @@ use quantricity::builder::Topology;
 use quibitous_automation::quibitous::{LeadershipMode, PersistenceMode};
 use quibitous_automation::testing::benchmark::MeasurementReportInterval;
 use quibitous_automation::testing::SyncWaitParams;
-use thor::FragmentSender;
+use silica::FragmentSender;
 #[test]
 pub fn passive_leader_disruption_no_overlap() {
     let mut controller = NetworkBuilder::default()

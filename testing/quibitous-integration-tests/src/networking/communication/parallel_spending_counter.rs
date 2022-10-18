@@ -3,7 +3,7 @@ use quantricity::builder::Blockchain;
 use quantricity::builder::{
     wallet::template::builder::WalletTemplateBuilder, NetworkBuilder, Node, SpawnParams, Topology,
 };
-use thor::{FragmentSender, FragmentSenderSetup, FragmentVerifier};
+use silica::{FragmentSender, FragmentSenderSetup, FragmentVerifier};
 
 const LEADER: &str = "Leader";
 const PASSIVE_1: &str = "Passive1";

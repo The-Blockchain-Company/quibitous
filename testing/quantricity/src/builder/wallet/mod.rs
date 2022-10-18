@@ -10,7 +10,7 @@ use rand_core::{CryptoRng, RngCore};
 use serde::Deserialize;
 use std::path::Path;
 pub use template::{ExternalWalletTemplate, WalletTemplate};
-use thor::{AccountWallet, UTxOWallet, Wallet as Inner};
+use silica::{AccountWallet, UTxOWallet, Wallet as Inner};
 
 #[derive(Clone, Debug, Deserialize, PartialEq, Eq, Hash)]
 #[serde(rename_all = "lowercase")]

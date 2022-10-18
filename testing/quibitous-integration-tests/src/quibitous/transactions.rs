@@ -3,13 +3,13 @@ use chain_impl_mockchain::{block::BlockDate, fee::LinearFee};
 use quibitous_automation::testing::time::wait_for_epoch;
 use quibitous_automation::{qcli::QCli, quibitous::ConfigurationBuilder};
 use quibitous_lib::interfaces::{ActiveSlotCoefficient, Mempool, Value};
-use thor::TransactionHash;
+use silica::TransactionHash;
 
 #[test]
 pub fn accounts_funds_are_updated_after_transaction() {
     let qcli: QCli = Default::default();
-    let receiver = thor::Wallet::default();
-    let mut sender = thor::Wallet::default();
+    let receiver = silica::Wallet::default();
+    let mut sender = silica::Wallet::default();
     let fee = LinearFee::new(1, 1, 1);
     let value_to_send = 1;
 
@@ -41,7 +41,7 @@ pub fn accounts_funds_are_updated_after_transaction() {
     let sender_value_before = sender_account_state_before.value();
     let receiver_value_before = receiever_account_state_before.value();
 
-    let new_transaction = thor::FragmentBuilder::new(
+    let new_transaction = silica::FragmentBuilder::new(
         &quibitous.genesis_block_hash(),
         &quibitous.fees(),
         BlockDate::first().next_epoch(),
@@ -91,8 +91,8 @@ pub fn accounts_funds_are_updated_after_transaction() {
 
 #[test]
 fn expired_transactions_rejected() {
-    let receiver = thor::Wallet::default();
-    let sender = thor::Wallet::default();
+    let receiver = silica::Wallet::default();
+    let sender = silica::Wallet::default();
 
     let (quibitous, _) = startup::start_stake_pool(
         &[sender.clone()],
@@ -111,7 +111,7 @@ fn expired_transactions_rejected() {
 
     let qcli = QCli::default();
 
-    let valid_transaction = thor::FragmentBuilder::new(
+    let valid_transaction = silica::FragmentBuilder::new(
         &quibitous.genesis_block_hash(),
         &quibitous.fees(),
         chain_impl_mockchain::block::BlockDate::first().next_epoch(),
@@ -126,7 +126,7 @@ fn expired_transactions_rejected() {
 
     wait_for_epoch(2, quibitous.rest());
 
-    let expired_transaction = thor::FragmentBuilder::new(
+    let expired_transaction = silica::FragmentBuilder::new(
         &quibitous.genesis_block_hash(),
         &quibitous.fees(),
         chain_impl_mockchain::block::BlockDate::first().next_epoch(),
@@ -146,8 +146,8 @@ fn expired_transactions_rejected() {
 fn transactions_with_long_time_to_live_rejected() {
     const MAX_EXPIRY_EPOCHS: u8 = 5;
 
-    let receiver = thor::Wallet::default();
-    let sender = thor::Wallet::default();
+    let receiver = silica::Wallet::default();
+    let sender = silica::Wallet::default();
 
     let (quibitous, _) = startup::start_stake_pool(
         &[sender.clone()],
@@ -167,7 +167,7 @@ fn transactions_with_long_time_to_live_rejected() {
 
     let qcli = QCli::default();
 
-    let valid_transaction = thor::FragmentBuilder::new(
+    let valid_transaction = silica::FragmentBuilder::new(
         &quibitous.genesis_block_hash(),
         &quibitous.fees(),
         chain_impl_mockchain::block::BlockDate {
@@ -183,7 +183,7 @@ fn transactions_with_long_time_to_live_rejected() {
         .send(&valid_transaction)
         .assert_in_block();
 
-    let expired_transaction = thor::FragmentBuilder::new(
+    let expired_transaction = silica::FragmentBuilder::new(
         &quibitous.genesis_block_hash(),
         &quibitous.fees(),
         chain_impl_mockchain::block::BlockDate {

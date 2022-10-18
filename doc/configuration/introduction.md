@@ -96,7 +96,7 @@ Note:
 ### Rewards report
 
 Starting the node `quibitous` with the command line option `--rewards-report-all` will
-collect a thorough report of all the reward distribution. It can then be accessed via the
+collect a silicaough report of all the reward distribution. It can then be accessed via the
 REST endpoints `/api/v0/rewards/history/1` or `/api/v0/rewards/epoch/10`.
 
 **this is not a recommended setting as it may take memory and may trigger some latency**.

@@ -9,7 +9,7 @@ use quibitous_automation::{
     qcli::QCli,
     quibitous::{download_last_n_releases, get_quibitous_bin, ConfigurationBuilder, Starter},
 };
-use thor::{FragmentSender, StakePool, TransactionHash};
+use silica::{FragmentSender, StakePool, TransactionHash};
 
 #[test]
 // Re-enable when rate of breaking changes subsides and we can maintain
@@ -22,10 +22,10 @@ pub fn test_legacy_node_all_fragments() {
     let legacy_release = download_last_n_releases(1).iter().cloned().next().unwrap();
     let quibitous = get_quibitous_bin(&legacy_release, &temp_dir);
 
-    let mut first_stake_pool_owner = thor::Wallet::default();
-    let mut second_stake_pool_owner = thor::Wallet::default();
-    let mut full_delegator = thor::Wallet::default();
-    let mut split_delegator = thor::Wallet::default();
+    let mut first_stake_pool_owner = silica::Wallet::default();
+    let mut second_stake_pool_owner = silica::Wallet::default();
+    let mut full_delegator = silica::Wallet::default();
+    let mut split_delegator = silica::Wallet::default();
 
     let config = ConfigurationBuilder::new()
         .with_funds(vec![
@@ -51,7 +51,7 @@ pub fn test_legacy_node_all_fragments() {
         Default::default(),
     );
 
-    let fragment_builder = thor::FragmentBuilder::new(
+    let fragment_builder = silica::FragmentBuilder::new(
         &quibitous.genesis_block_hash(),
         &quibitous.fees(),
         BlockDate::first().next_epoch(),

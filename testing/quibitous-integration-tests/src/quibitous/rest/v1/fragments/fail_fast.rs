@@ -6,8 +6,8 @@ use quibitous_automation::quibitous::{
 use gate::FaultyTransactionBuilder;
 use rstest::*;
 use std::time::Duration;
-use thor::FragmentSender;
-use thor::FragmentVerifier;
+use silica::FragmentSender;
+use silica::FragmentVerifier;
 
 #[fixture]
 fn world() -> (
@@ -18,10 +18,10 @@ fn world() -> (
     Fragment,
     Fragment,
 ) {
-    let alice = thor::Wallet::default();
-    let bob = thor::Wallet::default();
-    let clarice = thor::Wallet::default();
-    let david = thor::Wallet::default();
+    let alice = silica::Wallet::default();
+    let bob = silica::Wallet::default();
+    let clarice = silica::Wallet::default();
+    let david = silica::Wallet::default();
 
     let (quibitous, _stake_pools) = startup::start_stake_pool(
         &[alice.clone()],
@@ -30,7 +30,7 @@ fn world() -> (
     )
     .unwrap();
 
-    let fragment_builder = thor::FragmentBuilder::new(
+    let fragment_builder = silica::FragmentBuilder::new(
         &quibitous.genesis_block_hash(),
         &quibitous.fees(),
         BlockDate::first().next_epoch(),

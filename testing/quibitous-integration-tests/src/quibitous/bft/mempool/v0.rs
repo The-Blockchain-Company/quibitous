@@ -5,14 +5,14 @@ use quibitous_lib::interfaces::BlockDate;
 use quibitous_lib::interfaces::InitialUTxO;
 use quibitous_lib::interfaces::Mempool;
 use std::time::Duration;
-use thor::{FragmentSender, FragmentSenderSetup, FragmentVerifier, VerifyExitStrategy};
+use silica::{FragmentSender, FragmentSenderSetup, FragmentVerifier, VerifyExitStrategy};
 
 #[test]
 pub fn test_mempool_pool_max_entries_limit() {
     let temp_dir = TempDir::new().unwrap();
 
-    let receiver = thor::Wallet::default();
-    let mut sender = thor::Wallet::default();
+    let receiver = silica::Wallet::default();
+    let mut sender = silica::Wallet::default();
 
     let leader_config = ConfigurationBuilder::new()
         .with_funds(vec![
@@ -89,8 +89,8 @@ pub fn test_mempool_pool_max_entries_limit() {
 pub fn test_mempool_pool_max_entries_equal_0() {
     let temp_dir = TempDir::new().unwrap();
 
-    let receiver = thor::Wallet::default();
-    let mut sender = thor::Wallet::default();
+    let receiver = silica::Wallet::default();
+    let mut sender = silica::Wallet::default();
 
     let config = ConfigurationBuilder::new()
         .with_funds(vec![
@@ -148,8 +148,8 @@ pub fn test_mempool_pool_max_entries_equal_0() {
 pub fn test_mempool_log_max_entries_only_one_fragment() {
     let temp_dir = TempDir::new().unwrap();
 
-    let receiver = thor::Wallet::default();
-    let mut sender = thor::Wallet::default();
+    let receiver = silica::Wallet::default();
+    let mut sender = silica::Wallet::default();
 
     let config = ConfigurationBuilder::new()
         .with_funds(vec![
@@ -226,8 +226,8 @@ pub fn test_mempool_log_max_entries_only_one_fragment() {
 pub fn test_mempool_log_max_entries_equals_0() {
     let temp_dir = TempDir::new().unwrap();
 
-    let receiver = thor::Wallet::default();
-    let mut sender = thor::Wallet::default();
+    let receiver = silica::Wallet::default();
+    let mut sender = silica::Wallet::default();
 
     let config = ConfigurationBuilder::new()
         .with_funds(vec![
@@ -286,8 +286,8 @@ pub fn test_mempool_log_max_entries_equals_0() {
 pub fn test_mempool_pool_max_entries_overrides_log_max_entries() {
     let temp_dir = TempDir::new().unwrap();
 
-    let receiver = thor::Wallet::default();
-    let mut sender = thor::Wallet::default();
+    let receiver = silica::Wallet::default();
+    let mut sender = silica::Wallet::default();
 
     let config = ConfigurationBuilder::new()
         .with_funds(vec![

@@ -8,7 +8,7 @@ use jortestkit::load::{Request, RequestFailure, RequestGenerator};
 use rand::RngCore;
 use rand_core::OsRng;
 use std::time::Instant;
-use thor::{BlockDateGenerator, FragmentBuilder, FragmentSender, FragmentSenderError, Wallet};
+use silica::{BlockDateGenerator, FragmentBuilder, FragmentSender, FragmentSenderError, Wallet};
 
 const DEFAULT_MAX_SPLITS: usize = 7; // equals to 128 splits, will likely not reach that value but it's there just to prevent a stack overflow
 

@@ -5,12 +5,12 @@ use chain_impl_mockchain::tokens::minting_policy::MintingPolicy;
 use chain_impl_mockchain::{fee::LinearFee, value::Value};
 use quibitous_automation::quibitous::{ConfigurationBuilder, Starter};
 use quibitous_lib::interfaces::InitialToken;
-use thor::{FragmentSender, FragmentVerifier};
+use silica::{FragmentSender, FragmentVerifier};
 
 #[test]
 pub fn rest_shows_initial_token_state() {
     let temp_dir = TempDir::new().unwrap();
-    let alice = thor::Wallet::default();
+    let alice = silica::Wallet::default();
 
     let initial_token_value = 1_000;
 
@@ -48,7 +48,7 @@ pub fn rest_shows_initial_token_state() {
 #[test]
 pub fn can_assign_token_to_non_existing_account() {
     let temp_dir = TempDir::new().unwrap();
-    let alice = thor::Wallet::default();
+    let alice = silica::Wallet::default();
 
     let minting_policy = MintingPolicy::new();
     let token_id = TokenIdentifier {
@@ -69,7 +69,7 @@ pub fn can_assign_token_to_non_existing_account() {
 #[should_panic]
 pub fn setup_wrong_policy_hash() {
     let temp_dir = TempDir::new().unwrap();
-    let alice = thor::Wallet::default();
+    let alice = silica::Wallet::default();
 
     ConfigurationBuilder::new()
         .with_fund(alice.to_initial_fund(1_000))
@@ -84,7 +84,7 @@ pub fn setup_wrong_policy_hash() {
 #[test]
 pub fn setup_0_token_assigned() {
     let temp_dir = TempDir::new().unwrap();
-    let alice = thor::Wallet::default();
+    let alice = silica::Wallet::default();
 
     let minting_policy = MintingPolicy::new();
     let token_id = TokenIdentifier {
@@ -120,8 +120,8 @@ pub fn setup_0_token_assigned() {
 #[test]
 pub fn transaction_does_not_influence_token_count() {
     let temp_dir = TempDir::new().unwrap();
-    let mut alice = thor::Wallet::default();
-    let bob = thor::Wallet::default();
+    let mut alice = silica::Wallet::default();
+    let bob = silica::Wallet::default();
 
     let initial_token_value = 1_000;
 

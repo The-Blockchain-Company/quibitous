@@ -37,7 +37,7 @@ use quibitous_automation::{
 };
 use quibitous_lib::{crypto::hash::Hash, interfaces::Value};
 use thiserror::Error;
-use thor::Wallet;
+use silica::Wallet;
 
 #[derive(Error, Debug)]
 pub enum NodeStuckError {

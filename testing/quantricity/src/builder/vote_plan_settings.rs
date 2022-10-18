@@ -1,6 +1,6 @@
 use chain_impl_mockchain::certificate::VotePlanId;
 use quibitous_lib::interfaces::VotePlan;
-use thor::PrivateVoteCommitteeDataManager;
+use silica::PrivateVoteCommitteeDataManager;
 
 #[derive(Debug, Clone)]
 pub enum VotePlanSettings {

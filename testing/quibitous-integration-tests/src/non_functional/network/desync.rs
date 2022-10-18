@@ -7,8 +7,8 @@ use quantricity::builder::Node;
 use quantricity::builder::SpawnParams;
 use quantricity::builder::Topology;
 use quibitous_automation::quibitous::FaketimeConfig;
-use thor::FragmentSender;
-use thor::Wallet;
+use silica::FragmentSender;
+use silica::Wallet;
 
 #[test]
 pub fn bft_forks() {

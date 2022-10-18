@@ -2036,7 +2036,7 @@ dependencies = [
  "serde_yaml",
  "structopt",
  "thiserror",
- "thor",
+ "silica",
  "yaml-rust",
 ]
 
@@ -2508,7 +2508,7 @@ dependencies = [
  "serde_yaml",
  "tempfile",
  "thiserror",
- "thor",
+ "silica",
  "tokio",
  "tonic 0.6.2",
  "tracing",
@@ -2757,7 +2757,7 @@ dependencies = [
  "serde_yaml",
  "structopt",
  "thiserror",
- "thor",
+ "silica",
  "tokio",
  "warp",
 ]
@@ -2897,7 +2897,7 @@ dependencies = [
  "rand_core 0.6.3",
  "structopt",
  "thiserror",
- "thor",
+ "silica",
  "tokio",
  "versionisator",
 ]
@@ -4664,7 +4664,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "thor"
+name = "silica"
 version = "0.1.0"
 dependencies = [
  "assert_fs",

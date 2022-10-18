@@ -15,12 +15,12 @@ use mfive::generators::ExplorerRequestGen;
 
 use jortestkit::load::{ConfigurationBuilder as LoadConfigurationBuilder, Monitor};
 use std::{str::FromStr, time::Duration};
-use thor::{BlockDateGenerator, Wallet};
+use silica::{BlockDateGenerator, Wallet};
 
 #[test]
 pub fn test_explorer_is_in_sync_with_node_for_15_minutes() {
-    let mut sender = thor::Wallet::default();
-    let mut receiver = thor::Wallet::default();
+    let mut sender = silica::Wallet::default();
+    let mut receiver = silica::Wallet::default();
     let qcli: QCli = Default::default();
 
     let (quibitous, _) = startup::start_stake_pool(
@@ -122,10 +122,10 @@ fn check_explorer_and_rest_are_in_sync(
 
 #[test]
 pub fn explorer_load_test() {
-    let stake_pool_owners: Vec<Wallet> = std::iter::from_fn(|| Some(thor::Wallet::default()))
+    let stake_pool_owners: Vec<Wallet> = std::iter::from_fn(|| Some(silica::Wallet::default()))
         .take(100)
         .collect();
-    let addresses: Vec<Wallet> = std::iter::from_fn(|| Some(thor::Wallet::default()))
+    let addresses: Vec<Wallet> = std::iter::from_fn(|| Some(silica::Wallet::default()))
         .take(100)
         .collect();
 

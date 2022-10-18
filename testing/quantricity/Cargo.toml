@@ -17,7 +17,7 @@ chain-impl-mockchain = { git = "https://github.com/the-blockchain-company/chain-
 indicatif = "0.15"
 quibitous-automation = { path = "../quibitous-automation" }
 quibitous-lib = { path = "../../quibitous-lib" }
-thor = { path = "../thor" }
+silica = { path = "../silica" }
 jortestkit = { git = "https://github.com/the-blockchain-company/jortestkit.git", branch = "git+https://github.com/the-blockchain-company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"" }
 hex = "0.4"
 serde = "1.0"

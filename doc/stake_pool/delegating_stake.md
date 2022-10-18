@@ -66,7 +66,7 @@ See [here](../qcli/transaction.md) for more documentation on transaction creatio
 This procedure is needed only for certificates that are to be included
 in the `genesis config` file.
 
-We need to make sure that the owner of the account is authorizing this
+We need to make sure that the owner of the account is ausilicaizing this
 delegation to happens, and for that we need a cryptographic signature.
 
 We will need the account secret key to create a signature

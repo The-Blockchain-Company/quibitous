@@ -32,7 +32,7 @@ use quibitous_lib::{
 };
 use rand::rngs::OsRng;
 use std::time::Duration;
-use thor::{vote_plan_cert, FragmentSender, FragmentSenderSetup, Wallet};
+use silica::{vote_plan_cert, FragmentSender, FragmentSenderSetup, Wallet};
 
 const TEST_COMMITTEE_SIZE: usize = 3;
 
@@ -663,7 +663,7 @@ pub fn qcli_e2e_flow() {
 
 #[test]
 pub fn duplicated_vote() {
-    let mut alice = thor::Wallet::default();
+    let mut alice = silica::Wallet::default();
 
     let vote_plan = VotePlanBuilder::new()
         .proposals_count(3)
@@ -696,7 +696,7 @@ pub fn duplicated_vote() {
         .account_state(&alice.account_id())
         .unwrap();
 
-    thor::FragmentChainSender::from_with_setup(
+    silica::FragmentChainSender::from_with_setup(
         quibitous.block0_configuration(),
         quibitous.to_remote(),
         FragmentSenderSetup::no_verify(),
@@ -731,7 +731,7 @@ pub fn duplicated_vote() {
 
 #[test]
 pub fn non_duplicated_vote() {
-    let mut alice = thor::Wallet::default();
+    let mut alice = silica::Wallet::default();
 
     let vote_plan = VotePlanBuilder::new()
         .proposals_count(3)
@@ -764,7 +764,7 @@ pub fn non_duplicated_vote() {
         .account_state(&alice.account_id())
         .unwrap();
 
-    let fragment_sender_chain = thor::FragmentChainSender::from_with_setup(
+    let fragment_sender_chain = silica::FragmentChainSender::from_with_setup(
         quibitous.block0_configuration(),
         quibitous.to_remote(),
         FragmentSenderSetup::no_verify(),
@@ -805,7 +805,7 @@ pub fn non_duplicated_vote() {
 
 #[test]
 pub fn vote_outside_of_choices_is_rejected_in_tally() {
-    let mut alice = thor::Wallet::default();
+    let mut alice = silica::Wallet::default();
     let options_size = 2;
 
     let vote_plan = VotePlanBuilder::new()
@@ -835,7 +835,7 @@ pub fn vote_outside_of_choices_is_rejected_in_tally() {
     )
     .unwrap();
 
-    thor::FragmentChainSender::from_with_setup(
+    silica::FragmentChainSender::from_with_setup(
         quibitous.block0_configuration(),
         quibitous.to_remote(),
         FragmentSenderSetup::no_verify(),

@@ -5,7 +5,7 @@ use jortestkit::load::{Request, RequestFailure, RequestGenerator};
 use gate::AdversaryFragmentSender;
 use rand_core::OsRng;
 use std::time::Instant;
-use thor::{FragmentSender, FragmentSenderSetup, Wallet};
+use silica::{FragmentSender, FragmentSenderSetup, Wallet};
 
 const DEFAULT_MAX_SPLITS: usize = 7; // equals to 128 splits, will likely not reach that value but it's there just to prevent a stack overflow
 

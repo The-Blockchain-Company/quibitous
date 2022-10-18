@@ -5,7 +5,7 @@ use quibitous_automation::testing::keys;
 
 #[test]
 pub fn test_genesis_stake_pool_with_account_faucet_starts_successfully() {
-    let faucet = thor::Wallet::default();
+    let faucet = silica::Wallet::default();
     let (_quibitous, _) =
         startup::start_stake_pool(&[faucet], &[], &mut ConfigurationBuilder::new()).unwrap();
 }

@@ -21,7 +21,7 @@ use quibitous_lib::{
 use std::collections::HashMap;
 use std::net::{IpAddr, SocketAddr};
 use std::sync::{Arc, RwLock};
-use thor::{FragmentSender, FragmentSenderSetup};
+use silica::{FragmentSender, FragmentSenderSetup};
 
 /// An adversary-controlled node, which can deviate in every way
 /// from the blockchain protocol.

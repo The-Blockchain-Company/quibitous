@@ -8,7 +8,7 @@ use quibitous_automation::testing::benchmark::sync::{
     measure_and_log_sync_time, MeasurementReportInterval,
 };
 use quibitous_automation::testing::SyncWaitParams;
-use thor::FragmentSender;
+use silica::FragmentSender;
 
 const LEADER_1: &str = "Leader1";
 const LEADER_2: &str = "Leader2";

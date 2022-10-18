@@ -12,14 +12,14 @@ use std::str::FromStr;
 pub fn collect_reward() {
     let qcli: QCli = Default::default();
     let stake_pool_owners = [
-        thor::Wallet::default(),
-        thor::Wallet::default(),
-        thor::Wallet::default(),
-        thor::Wallet::default(),
-        thor::Wallet::default(),
-        thor::Wallet::default(),
-        thor::Wallet::default(),
-        thor::Wallet::default(),
+        silica::Wallet::default(),
+        silica::Wallet::default(),
+        silica::Wallet::default(),
+        silica::Wallet::default(),
+        silica::Wallet::default(),
+        silica::Wallet::default(),
+        silica::Wallet::default(),
+        silica::Wallet::default(),
     ];
     let (quibitous, stake_pools) = startup::start_stake_pool(
         &stake_pool_owners,
@@ -67,14 +67,14 @@ pub fn reward_history() {
     let qcli: QCli = Default::default();
 
     let stake_pool_owners = [
-        thor::Wallet::default(),
-        thor::Wallet::default(),
-        thor::Wallet::default(),
-        thor::Wallet::default(),
-        thor::Wallet::default(),
-        thor::Wallet::default(),
-        thor::Wallet::default(),
-        thor::Wallet::default(),
+        silica::Wallet::default(),
+        silica::Wallet::default(),
+        silica::Wallet::default(),
+        silica::Wallet::default(),
+        silica::Wallet::default(),
+        silica::Wallet::default(),
+        silica::Wallet::default(),
+        silica::Wallet::default(),
     ];
     let (quibitous, stake_pools) = startup::start_stake_pool(
         &stake_pool_owners,

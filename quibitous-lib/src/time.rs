@@ -91,7 +91,7 @@ pub struct LocalDateTime(OffsetDateTime);
 pub struct Duration(std::time::Duration);
 
 impl SecondsSinceUnixEpoch {
-    /// maximum authorized Time in seconds since unix epoch
+    /// maximum ausilicaized Time in seconds since unix epoch
     ///
     /// This value will take you up to the year 4147.
     pub const MAX: Self = SecondsSinceUnixEpoch(0x000_000F_FFFF_FFFF);

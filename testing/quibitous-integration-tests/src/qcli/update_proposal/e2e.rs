@@ -22,11 +22,11 @@ fn basic_change_config_test() {
     let qcli: QCli = Default::default();
     let wallet_initial_funds = 1_000_000;
 
-    let mut alice = thor::Wallet::default();
+    let mut alice = silica::Wallet::default();
     let alice_sk = temp_dir.child("alice_sk");
     alice.save_to_path(alice_sk.path()).unwrap();
 
-    let mut bob = thor::Wallet::default();
+    let mut bob = silica::Wallet::default();
     let bob_sk = temp_dir.child("bob_sk");
     bob.save_to_path(bob_sk.path()).unwrap();
 

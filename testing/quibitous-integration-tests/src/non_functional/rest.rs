@@ -7,7 +7,7 @@ use std::time::Duration;
 
 #[test]
 pub fn rest_load_quick() {
-    let faucet = thor::Wallet::default();
+    let faucet = silica::Wallet::default();
 
     let (mut quibitous, _) = startup::start_stake_pool(
         &[faucet],

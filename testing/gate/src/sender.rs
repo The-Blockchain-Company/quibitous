@@ -1,5 +1,5 @@
-use thor::{BlockDateGenerator, FragmentBuilderError, FragmentExporter, FragmentExporterError};
-use thor::{DummySyncNode, FragmentVerifier, Wallet};
+use silica::{BlockDateGenerator, FragmentBuilderError, FragmentExporter, FragmentExporterError};
+use silica::{DummySyncNode, FragmentVerifier, Wallet};
 
 use chain_core::property::Fragment as _;
 use chain_impl_mockchain::{
@@ -32,11 +32,11 @@ pub enum AdversaryFragmentSenderError {
         logs: Vec<String>,
     },
     #[error("cannot build fragment")]
-    FragmentBuilderError(#[from] thor::FragmentBuilderError),
+    FragmentBuilderError(#[from] silica::FragmentBuilderError),
     #[error("cannot send fragment")]
     SendFragmentError(#[from] quibitous_automation::quibitous::FragmentNodeError),
     #[error("cannot send fragment")]
-    FragmentVerifierError(#[from] thor::FragmentVerifierError),
+    FragmentVerifierError(#[from] silica::FragmentVerifierError),
     #[error(transparent)]
     FragmentExporterError(#[from] FragmentExporterError),
     #[error("cannot sync node before sending fragment")]

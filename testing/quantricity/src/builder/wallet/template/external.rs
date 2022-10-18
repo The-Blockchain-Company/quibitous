@@ -3,7 +3,7 @@ use std::collections::HashMap;
 use chain_impl_mockchain::value::Value;
 use quibitous_lib::interfaces::{TokenIdentifier, ValueDef};
 use serde::Deserialize;
-use thor::WalletAlias;
+use silica::WalletAlias;
 
 /// Struct can be used to differentiate wallet template
 /// which only adress is known and controller cannot control it

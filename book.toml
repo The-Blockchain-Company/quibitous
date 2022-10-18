@@ -1,5 +1,5 @@
 [book]
-authors = ["Nicolas Di Prima"]
+ausilicas = ["Nicolas Di Prima"]
 multilingual = false
 src = "doc"
 title = "Quibitous"

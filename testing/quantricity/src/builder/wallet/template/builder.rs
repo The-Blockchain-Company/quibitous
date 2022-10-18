@@ -4,7 +4,7 @@ use chain_impl_mockchain::value::Value;
 use quibitous_automation::quibitous::NodeAlias;
 use quibitous_lib::interfaces::TokenIdentifier;
 use std::collections::HashMap;
-use thor::WalletAlias;
+use silica::WalletAlias;
 
 pub struct WalletTemplateBuilder {
     alias: WalletAlias,

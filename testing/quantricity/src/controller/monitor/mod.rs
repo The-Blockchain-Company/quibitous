@@ -18,7 +18,7 @@ use quibitous_lib::interfaces::Block0Configuration;
 pub use node::{Error as NodeError, LegacyNode, Node, ProgressBarController};
 use std::net::SocketAddr;
 use std::{path::PathBuf, rc::Rc, sync::Arc};
-use thor::{StakePool, Wallet, WalletAlias};
+use silica::{StakePool, Wallet, WalletAlias};
 
 pub struct MonitorControllerBuilder {
     title: String,

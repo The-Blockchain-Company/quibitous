@@ -6,8 +6,8 @@ use quibitous_lib::crypto::hash::Hash;
 use jortestkit::load::{Request, RequestFailure, RequestGenerator};
 use rand_core::OsRng;
 use std::time::Instant;
-use thor::{BlockDateGenerator, FragmentSenderSetup};
-use thor::{FragmentSender, Wallet};
+use silica::{BlockDateGenerator, FragmentSenderSetup};
+use silica::{FragmentSender, Wallet};
 
 use super::wallet_lane_iter::SplitLaneIter;
 pub struct TransactionGenerator<'a, S: SyncNode + Send> {

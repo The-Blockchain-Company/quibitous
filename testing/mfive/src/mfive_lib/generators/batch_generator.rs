@@ -6,7 +6,7 @@ use quibitous_lib::crypto::hash::Hash;
 use jortestkit::load::{Request, RequestFailure, RequestGenerator};
 use rand_core::OsRng;
 use std::time::Instant;
-use thor::{BlockDateGenerator, FragmentBuilder, FragmentSender, FragmentSenderSetup, Wallet};
+use silica::{BlockDateGenerator, FragmentBuilder, FragmentSender, FragmentSenderSetup, Wallet};
 
 use super::wallet_lane_iter::SplitLaneIter;
 

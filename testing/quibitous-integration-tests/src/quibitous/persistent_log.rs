@@ -6,13 +6,13 @@ use quibitous_automation::qcli::QCli;
 use quibitous_automation::quibitous::ConfigurationBuilder;
 use quibitous_lib::interfaces::{Mempool, PersistentLog};
 pub use jortestkit::console::progress_bar::{parse_progress_bar_mode_from_str, ProgressBarMode};
-use thor::{PersistentLogViewer, TransactionHash};
+use silica::{PersistentLogViewer, TransactionHash};
 
 #[test]
 /// Verifies that no log entries are created for fragments that are already expired when received.
 fn rejected_fragments_have_no_log() {
-    let receiver = thor::Wallet::default();
-    let sender = thor::Wallet::default();
+    let receiver = silica::Wallet::default();
+    let sender = silica::Wallet::default();
 
     let log_path = TempDir::new().unwrap().child("log_path");
 
@@ -31,13 +31,13 @@ fn rejected_fragments_have_no_log() {
 
     let qcli = QCli::default();
 
-    let correct_fragment_builder = thor::FragmentBuilder::new(
+    let correct_fragment_builder = silica::FragmentBuilder::new(
         &quibitous.genesis_block_hash(),
         &quibitous.fees(),
         BlockDate::first().next_epoch(),
     );
 
-    let faulty_fragment_builder = thor::FragmentBuilder::new(
+    let faulty_fragment_builder = silica::FragmentBuilder::new(
         &quibitous.genesis_block_hash(),
         &quibitous.fees(),
         BlockDate::first(),

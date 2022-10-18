@@ -2,7 +2,7 @@ use crate::cli::command::Error;
 use qcli_lib::key::read_bech32;
 use std::path::PathBuf;
 use structopt::StructOpt;
-use thor::cli::{Alias, CliController};
+use silica::cli::{Alias, CliController};
 
 #[derive(StructOpt, Debug)]
 pub enum Wallets {

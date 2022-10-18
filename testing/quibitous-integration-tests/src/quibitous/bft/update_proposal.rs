@@ -9,12 +9,12 @@ use quibitous_automation::testing::time::{get_current_date, wait_for_epoch};
 use quibitous_lib::interfaces::{
     BlockContentMaxSize, ConfigParam, ConfigParams, ConsensusLeaderId,
 };
-use thor::{FragmentSender, FragmentSenderSetup, FragmentVerifier};
+use silica::{FragmentSender, FragmentSenderSetup, FragmentVerifier};
 
 #[test]
 fn proposal_expired_after_proposal_expiration_deadline() {
     let temp_dir = TempDir::new().unwrap();
-    let mut alice = thor::Wallet::default();
+    let mut alice = silica::Wallet::default();
     let bft_secret = create_new_key_pair::<Ed25519>();
     let wallet_initial_funds = 1_000_000;
 
@@ -80,7 +80,7 @@ fn proposal_expired_after_proposal_expiration_deadline() {
 #[test]
 fn not_a_bft_leader() {
     let temp_dir = TempDir::new().unwrap();
-    let mut alice = thor::Wallet::default();
+    let mut alice = silica::Wallet::default();
     let bft_secret = create_new_key_pair::<Ed25519>();
     let wallet_initial_funds = 1_000_000;
 
@@ -120,7 +120,7 @@ fn not_a_bft_leader() {
 #[test]
 fn proposal_changes_immutable_setting() {
     let temp_dir = TempDir::new().unwrap();
-    let mut alice = thor::Wallet::default();
+    let mut alice = silica::Wallet::default();
     let bft_secret = create_new_key_pair::<Ed25519>();
     let wallet_initial_funds = 1_000_000;
 

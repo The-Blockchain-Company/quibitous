@@ -16,7 +16,7 @@ use rand_core::OsRng;
 use std::iter;
 use std::time::Duration;
 use std::time::Instant;
-use thor::{
+use silica::{
     FragmentBuilder, FragmentSender, FragmentSenderError, FragmentVerifier, StakePool, Wallet,
 };
 

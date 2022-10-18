@@ -10,11 +10,11 @@ pub use jortestkit::{
     load::{self, ConfigurationBuilder as LoadConfigurationBuilder, Monitor},
 };
 use mfive::generators::{BatchFragmentGenerator, FragmentStatusProvider};
-use thor::{BlockDateGenerator, FragmentSenderSetup, PersistentLogViewer};
+use silica::{BlockDateGenerator, FragmentSenderSetup, PersistentLogViewer};
 
 #[test]
 pub fn persistent_log_load_test() {
-    let mut faucet = thor::Wallet::default();
+    let mut faucet = silica::Wallet::default();
 
     let temp_dir = TempDir::new().unwrap();
     let persistent_log_path = temp_dir.child("fragment_dump");

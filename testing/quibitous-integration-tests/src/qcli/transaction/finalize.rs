@@ -16,7 +16,7 @@ lazy_static! {
 
 #[test]
 pub fn test_unbalanced_output_utxo_transaction_is_not_finalized() {
-    let receiver = thor::Wallet::new_utxo(&mut rand::rngs::OsRng);
+    let receiver = silica::Wallet::new_utxo(&mut rand::rngs::OsRng);
     let qcli: QCli = Default::default();
 
     qcli.transaction_builder(*FAKE_GENESIS_HASH)

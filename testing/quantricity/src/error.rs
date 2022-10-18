@@ -15,13 +15,13 @@ pub enum Error {
     #[error(transparent)]
     Verification(#[from] quibitous_automation::testing::VerificationError),
     #[error(transparent)]
-    FragmentVerifier(#[from] thor::FragmentVerifierError),
+    FragmentVerifier(#[from] silica::FragmentVerifierError),
     #[error(transparent)]
     ConsumptionBenchmark(#[from] ConsumptionBenchmarkError),
     #[error(transparent)]
     Explorer(#[from] ExplorerError),
     #[error(transparent)]
-    FragmentSender(#[from] thor::FragmentSenderError),
+    FragmentSender(#[from] silica::FragmentSenderError),
     #[error("Rest error: {0}")]
     Rest(#[from] RestError),
     #[error("IO error: {0}")]

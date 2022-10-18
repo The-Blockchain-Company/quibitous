@@ -92,7 +92,7 @@ impl CliController {
             .map_err(Into::into)
     }
 
-    fn thor_wallet(&self, password: &str) -> Result<Wallet, Error> {
+    fn silica_wallet(&self, password: &str) -> Result<Wallet, Error> {
         let template = self.wallets.wallet()?;
 
         Ok(Wallet::Account(
@@ -141,13 +141,13 @@ impl CliController {
         target: Address,
         bcc: u64,
     ) -> Result<MemPoolCheck, Error> {
-        let mut thor_wallet = self.thor_wallet(password)?;
+        let mut silica_wallet = self.silica_wallet(password)?;
         let settings = self.client.settings()?;
         let node = RemoteQuibitousBuilder::new("dummy".to_string())
             .with_rest_client(self.client.clone())
             .build();
         let check = FragmentSender::from(&settings).send_transaction_to_address(
-            &mut thor_wallet,
+            &mut silica_wallet,
             target,
             &node,
             bcc.into(),
@@ -159,7 +159,7 @@ impl CliController {
                 Default::default(),
                 &node,
             )?;
-            self.wallets.wallet_mut()?.spending_counters = thor_wallet
+            self.wallets.wallet_mut()?.spending_counters = silica_wallet
                 .spending_counter()
                 .ok_or(Error::SpendingCounter)?
                 .get_valid_counters()

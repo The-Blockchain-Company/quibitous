@@ -1,7 +1,7 @@
 use crate::cli::command::Error;
 use chain_addr::AddressReadable;
 use structopt::StructOpt;
-use thor::cli::CliController;
+use silica::cli::CliController;
 
 #[derive(StructOpt, Debug)]
 pub struct SendCommand {

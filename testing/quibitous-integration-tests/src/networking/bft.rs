@@ -8,8 +8,8 @@ use quantricity::builder::Topology;
 use quibitous_automation::testing::benchmark::sync::MeasurementReportInterval;
 use quibitous_automation::testing::SyncWaitParams;
 use std::time::Duration;
-use thor::FragmentSender;
-use thor::FragmentVerifier;
+use silica::FragmentSender;
+use silica::FragmentVerifier;
 
 const LEADER_1: &str = "Leader1";
 const LEADER_2: &str = "Leader2";

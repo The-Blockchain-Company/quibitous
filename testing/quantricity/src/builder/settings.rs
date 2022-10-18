@@ -28,8 +28,8 @@ use quibitous_lib::{
 };
 use rand_core::{CryptoRng, RngCore};
 use std::collections::{HashMap, HashSet};
-use thor::PrivateVoteCommitteeDataManager;
-use thor::{signed_stake_pool_cert, StakePool, Wallet as WalletLib, WalletAlias};
+use silica::PrivateVoteCommitteeDataManager;
+use silica::{signed_stake_pool_cert, StakePool, Wallet as WalletLib, WalletAlias};
 
 /// contains all the data to start or interact with a node
 #[derive(Debug, Clone)]

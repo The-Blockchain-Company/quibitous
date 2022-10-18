@@ -10,12 +10,12 @@ use quibitous_automation::testing::VotePlanBuilder;
 use quibitous_lib::interfaces::{AccountVotes, InitialToken};
 use std::collections::HashMap;
 use std::time::Duration;
-use thor::FragmentSenderSetup;
+use silica::FragmentSenderSetup;
 
 #[test]
 pub fn list_cast_votes_for_active_vote_plan() {
-    let mut alice = thor::Wallet::default();
-    let bob = thor::Wallet::default();
+    let mut alice = silica::Wallet::default();
+    let bob = silica::Wallet::default();
     let wait_time = Duration::from_secs(2);
     let discrimination = Discrimination::Test;
 
@@ -54,7 +54,7 @@ pub fn list_cast_votes_for_active_vote_plan() {
 
     let proposals_ids = vec![0u8, 1u8, 2u8];
 
-    thor::FragmentChainSender::from_with_setup(
+    silica::FragmentChainSender::from_with_setup(
         quibitous.block0_configuration(),
         quibitous.to_remote(),
         FragmentSenderSetup::no_verify(),
@@ -109,7 +109,7 @@ pub fn list_cast_votes_for_active_vote_plan() {
 
 #[test]
 pub fn list_cast_votes_for_already_finished_vote_plan() {
-    let mut alice = thor::Wallet::default();
+    let mut alice = silica::Wallet::default();
     let wait_time = Duration::from_secs(2);
     let discrimination = Discrimination::Test;
 
@@ -139,7 +139,7 @@ pub fn list_cast_votes_for_already_finished_vote_plan() {
 
     let proposals_ids = vec![0u8, 1u8, 2u8];
 
-    thor::FragmentChainSender::from_with_setup(
+    silica::FragmentChainSender::from_with_setup(
         quibitous.block0_configuration(),
         quibitous.to_remote(),
         FragmentSenderSetup::no_verify(),
@@ -184,7 +184,7 @@ pub fn list_cast_votes_for_already_finished_vote_plan() {
 
 #[test]
 pub fn list_casted_votes_for_non_voted() {
-    let alice = thor::Wallet::default();
+    let alice = silica::Wallet::default();
     let discrimination = Discrimination::Test;
 
     let quibitous = startup::start_bft(
@@ -220,8 +220,8 @@ pub fn list_casted_votes_for_non_voted() {
 
 #[test]
 pub fn list_cast_votes_count() {
-    let mut alice = thor::Wallet::default();
-    let mut bob = thor::Wallet::default();
+    let mut alice = silica::Wallet::default();
+    let mut bob = silica::Wallet::default();
     let wait_time = Duration::from_secs(2);
     let discrimination = Discrimination::Test;
 
@@ -252,7 +252,7 @@ pub fn list_cast_votes_count() {
     )
     .unwrap();
 
-    thor::FragmentChainSender::from_with_setup(
+    silica::FragmentChainSender::from_with_setup(
         quibitous.block0_configuration(),
         quibitous.to_remote(),
         FragmentSenderSetup::no_verify(),

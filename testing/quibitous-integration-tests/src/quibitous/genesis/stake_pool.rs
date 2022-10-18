@@ -10,7 +10,7 @@ use quibitous_lib::{
     interfaces::{BlockDate, InitialUTxO, Ratio, TaxType, Value},
 };
 use jortestkit::process::Wait;
-use thor::Wallet;
+use silica::Wallet;
 
 use assert_fs::prelude::*;
 use assert_fs::TempDir;
@@ -20,7 +20,7 @@ use std::str::FromStr;
 pub fn create_delegate_retire_stake_pool() {
     let temp_dir = TempDir::new().unwrap();
 
-    let mut actor_account = thor::Wallet::default();
+    let mut actor_account = silica::Wallet::default();
 
     let config = ConfigurationBuilder::new()
         .with_linear_fees(LinearFee::new(100, 100, 200))

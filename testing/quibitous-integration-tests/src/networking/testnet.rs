@@ -14,7 +14,7 @@ use quibitous_automation::{
 use quibitous_lib::interfaces::{BlockDate, Log, LogEntry, LogOutput, TrustedPeer};
 use jortestkit::process::WaitBuilder;
 use std::{env, path::PathBuf, time::Duration};
-use thor::Wallet;
+use silica::Wallet;
 
 #[derive(Clone, Debug)]
 pub struct TestnetConfig {

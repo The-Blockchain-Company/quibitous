@@ -6,13 +6,13 @@ use quibitous_automation::quibitous::{
 };
 use quibitous_automation::testing::Release;
 use quibitous_lib::interfaces::InitialUTxO;
-use thor::{FragmentSender, TransactionHash};
+use silica::{FragmentSender, TransactionHash};
 
 fn test_connectivity_between_git+https://github.com/the-blockchain-company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"_and_legacy_app(release: Release, temp_dir: &TempDir) {
     println!("Testing version: {}", release.version());
 
-    let sender = thor::Wallet::default();
-    let receiver = thor::Wallet::default();
+    let sender = silica::Wallet::default();
+    let receiver = silica::Wallet::default();
 
     let leader_config = ConfigurationBuilder::new()
         .with_funds(vec![InitialUTxO {
@@ -39,7 +39,7 @@ fn test_connectivity_between_git+https://github.com/the-blockchain-company/chain
         .start()
         .unwrap();
 
-    let new_transaction = thor::FragmentBuilder::new(
+    let new_transaction = silica::FragmentBuilder::new(
         &leader_quibitous.genesis_block_hash(),
         &leader_quibitous.fees(),
         BlockDate::first().next_epoch(),
@@ -88,8 +88,8 @@ pub fn test_upgrade_downgrade() {
 fn test_upgrade_and_downgrade_from_legacy_to_git+https://github.com/the-blockchain-company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"(version: Version, temp_dir: &TempDir) {
     println!("Testing version: {}", version);
 
-    let mut sender = thor::Wallet::default();
-    let mut receiver = thor::Wallet::default();
+    let mut sender = silica::Wallet::default();
+    let mut receiver = silica::Wallet::default();
 
     let config = ConfigurationBuilder::new()
         .with_funds(vec![

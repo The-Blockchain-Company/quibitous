@@ -36,7 +36,7 @@ pub use monitor::{
     Node as MonitorNode, NodeError, ProgressBarController,
 };
 use std::path::PathBuf;
-use thor::{StakePool, Wallet, WalletAlias};
+use silica::{StakePool, Wallet, WalletAlias};
 
 const NODE_CONFIG_FILE: &str = "node_config.yaml";
 const NODE_SECRETS_FILE: &str = "node_secret.yaml";

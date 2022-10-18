@@ -5,25 +5,25 @@ use quibitous_automation::{qcli::QCli, quibitous::ConfigurationBuilder};
 use quibitous_lib::interfaces::ActiveSlotCoefficient;
 use jortestkit::process as process_utils;
 use std::time::Duration;
-use thor::TransactionHash;
+use silica::TransactionHash;
 
 #[test]
 pub fn collect_reward_for_15_minutes() {
     let qcli: QCli = Default::default();
     let duration_48_hours = Duration::from_secs(900);
 
-    let mut sender = thor::Wallet::default();
-    let receiver = thor::Wallet::default();
+    let mut sender = silica::Wallet::default();
+    let receiver = silica::Wallet::default();
 
     let stake_pool_owners = [
         sender.clone(),
         receiver.clone(),
-        thor::Wallet::default(),
-        thor::Wallet::default(),
-        thor::Wallet::default(),
-        thor::Wallet::default(),
-        thor::Wallet::default(),
-        thor::Wallet::default(),
+        silica::Wallet::default(),
+        silica::Wallet::default(),
+        silica::Wallet::default(),
+        silica::Wallet::default(),
+        silica::Wallet::default(),
+        silica::Wallet::default(),
     ];
     let (quibitous, _stake_pool_ids) = startup::start_stake_pool(
         &stake_pool_owners,
@@ -46,7 +46,7 @@ pub fn collect_reward_for_15_minutes() {
             .start();
 
     loop {
-        let new_transaction = thor::FragmentBuilder::new(
+        let new_transaction = silica::FragmentBuilder::new(
             &quibitous.genesis_block_hash(),
             &quibitous.fees(),
             BlockDate::first().next_epoch(),

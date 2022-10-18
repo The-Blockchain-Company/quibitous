@@ -31,7 +31,7 @@ use std::fs::metadata;
 use std::path::Path;
 use std::thread::sleep;
 use std::time::Duration;
-use thor::{
+use silica::{
     BlockDateGenerator, FragmentBuilder, FragmentExporter, FragmentSender, FragmentSenderSetup,
     FragmentVerifier, PersistentLogViewer,
 };
@@ -41,8 +41,8 @@ pub fn dump_send_correct_fragments() {
     let temp_dir = TempDir::new().unwrap();
     let dump_folder = temp_dir.child("dump");
     let persistent_log_path = temp_dir.child("persistent_log");
-    let receiver = thor::Wallet::default();
-    let sender = thor::Wallet::default();
+    let receiver = silica::Wallet::default();
+    let sender = silica::Wallet::default();
 
     let quibitous = startup::start_bft(
         vec![&sender, &receiver],
@@ -107,8 +107,8 @@ pub fn dump_send_invalid_fragments() {
     let temp_dir = TempDir::new().unwrap();
     let dump_folder = temp_dir.child("dump");
     let persistent_log_path = temp_dir.child("persistent_log");
-    let receiver = thor::Wallet::default();
-    let mut sender = thor::Wallet::default();
+    let receiver = silica::Wallet::default();
+    let mut sender = silica::Wallet::default();
 
     let quibitous = startup::start_bft(
         vec![&sender, &receiver],
@@ -154,8 +154,8 @@ pub fn non_existing_folder() {
     let temp_dir = TempDir::new().unwrap();
     let dump_folder = temp_dir.child("dump");
     let persistent_log_path = dump_folder.child("persistent_log");
-    let receiver = thor::Wallet::default();
-    let sender = thor::Wallet::default();
+    let receiver = silica::Wallet::default();
+    let sender = silica::Wallet::default();
 
     let _quibitous = startup::start_bft(
         vec![&sender, &receiver],
@@ -207,8 +207,8 @@ pub fn fragment_which_reached_mempool_should_be_persisted() {
     let temp_dir = TempDir::new().unwrap();
     let dump_folder = temp_dir.child("dump_folder");
     let persistent_log_path = temp_dir.child("persistent_log");
-    let receiver = thor::Wallet::default();
-    let mut sender = thor::Wallet::default();
+    let receiver = silica::Wallet::default();
+    let mut sender = silica::Wallet::default();
 
     let quibitous = startup::start_bft(
         vec![&sender, &receiver],
@@ -246,8 +246,8 @@ pub fn fragment_which_is_not_in_fragment_log_should_be_persisted() {
     let temp_dir = TempDir::new().unwrap();
     let dump_folder = temp_dir.child("dump_folder");
     let persistent_log_path = temp_dir.child("persistent_log");
-    let receiver = thor::Wallet::default();
-    let mut sender = thor::Wallet::default();
+    let receiver = silica::Wallet::default();
+    let mut sender = silica::Wallet::default();
 
     let quibitous = startup::start_bft(
         vec![&sender, &receiver],
@@ -285,8 +285,8 @@ pub fn pending_fragment_should_be_persisted() {
     let temp_dir = TempDir::new().unwrap();
     let dump_folder = temp_dir.child("dump_folder");
     let persistent_log_path = temp_dir.child("persistent_log");
-    let receiver = thor::Wallet::default();
-    let mut sender = thor::Wallet::default();
+    let receiver = silica::Wallet::default();
+    let mut sender = silica::Wallet::default();
 
     let quibitous = startup::start_bft(
         vec![&sender, &receiver],
@@ -331,8 +331,8 @@ pub fn node_should_pickup_log_after_restart() {
     let temp_dir = TempDir::new().unwrap();
     let dump_folder = temp_dir.child("dump_folder");
     let persistent_log_path = temp_dir.child("persistent_log");
-    let receiver = thor::Wallet::default();
-    let mut sender = thor::Wallet::default();
+    let receiver = silica::Wallet::default();
+    let mut sender = silica::Wallet::default();
 
     let config = ConfigurationBuilder::new()
         .with_slots_per_epoch(60)
@@ -409,8 +409,8 @@ pub fn node_should_pickup_log_after_restart() {
 pub fn expired_fragment_should_be_rejected_by_leader_optimum_node() {
     const N_FRAGMENTS: u32 = 10;
 
-    let receiver = thor::Wallet::default();
-    let mut sender = thor::Wallet::default();
+    let receiver = silica::Wallet::default();
+    let mut sender = silica::Wallet::default();
 
     let (quibitous, _) = startup::start_stake_pool(
         &[sender.clone()],
@@ -456,8 +456,8 @@ pub fn expired_fragment_should_be_rejected_by_leader_optimum_node() {
 fn expired_fragment_should_be_rejected_by_passive_bft_node() {
     const N_FRAGMENTS: u32 = 10;
 
-    let receiver = thor::Wallet::default();
-    let mut sender = thor::Wallet::default();
+    let receiver = silica::Wallet::default();
+    let mut sender = silica::Wallet::default();
 
     let leader = startup::start_bft(
         vec![&receiver, &sender],
@@ -512,8 +512,8 @@ fn expired_fragment_should_be_rejected_by_passive_bft_node() {
 #[test]
 /// Verifies `tx_pending` and `mempool_total_size` metrics reported by the node
 fn pending_transaction_stats() {
-    let bob = thor::Wallet::default();
-    let alice = thor::Wallet::default();
+    let bob = silica::Wallet::default();
+    let alice = silica::Wallet::default();
     let mempool_max_entries = 1000;
 
     let leader = startup::start_bft(

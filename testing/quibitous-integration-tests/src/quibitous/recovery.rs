@@ -5,7 +5,7 @@ use quibitous_automation::{
 
 use quibitous_automation::quibitous::LeadershipMode;
 use quibitous_lib::interfaces::{AccountState, BlockDate, InitialUTxO, SettingsDto, UTxOInfo};
-use thor::Wallet;
+use silica::Wallet;
 
 use assert_fs::prelude::*;
 use assert_fs::TempDir;
@@ -80,9 +80,9 @@ pub fn test_node_recovers_from_node_restart() {
     let temp_dir = TempDir::new().unwrap();
     let qcli: QCli = Default::default();
 
-    let sender = thor::Wallet::new_utxo(&mut rand::rngs::OsRng);
-    let account_receiver = thor::Wallet::default();
-    let utxo_receiver = thor::Wallet::new_utxo(&mut rand::rngs::OsRng);
+    let sender = silica::Wallet::new_utxo(&mut rand::rngs::OsRng);
+    let account_receiver = silica::Wallet::default();
+    let utxo_receiver = silica::Wallet::new_utxo(&mut rand::rngs::OsRng);
 
     let config = ConfigurationBuilder::new()
         .with_funds(vec![InitialUTxO {
@@ -137,9 +137,9 @@ pub fn test_node_recovers_from_node_restart() {
 pub fn test_node_recovers_kill_signal() {
     let temp_dir = TempDir::new().unwrap();
 
-    let sender = thor::Wallet::new_utxo(&mut rand::rngs::OsRng);
-    let account_receiver = thor::Wallet::default();
-    let utxo_receiver = thor::Wallet::new_utxo(&mut rand::rngs::OsRng);
+    let sender = silica::Wallet::new_utxo(&mut rand::rngs::OsRng);
+    let account_receiver = silica::Wallet::default();
+    let utxo_receiver = silica::Wallet::new_utxo(&mut rand::rngs::OsRng);
 
     let config = ConfigurationBuilder::new()
         .with_funds(vec![InitialUTxO {

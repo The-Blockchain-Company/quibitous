@@ -3,7 +3,7 @@ use quibitous_automation::quibitous::ExplorerError;
 use quibitous_automation::quibitous::LegacyConfigConverterError;
 use quibitous_automation::quibitous::StartupError;
 use thiserror::Error;
-use thor::FragmentSenderError;
+use silica::FragmentSenderError;
 
 #[derive(Debug, Error)]
 pub enum Error {
@@ -11,7 +11,7 @@ pub enum Error {
     Node(#[from] super::monitor::NodeError),
 
     #[error(transparent)]
-    Wallet(#[from] thor::WalletError),
+    Wallet(#[from] silica::WalletError),
 
     #[error(transparent)]
     FsFixture(#[from] assert_fs::fixture::FixtureError),

@@ -12,7 +12,7 @@ pub fn test_make_test_transaction() {
     let temp_dir = TempDir::new().unwrap();
 
     let qcli: QCli = Default::default();
-    let sender = thor::Wallet::default();
+    let sender = silica::Wallet::default();
 
     let sk_file_path = temp_dir.join("sender.sk");
 
@@ -58,8 +58,8 @@ pub fn test_make_transaction_to_receiver_account() {
     let temp_dir = TempDir::new().unwrap();
 
     let qcli: QCli = Default::default();
-    let sender = thor::Wallet::default();
-    let receiver = thor::Wallet::default();
+    let sender = silica::Wallet::default();
+    let receiver = silica::Wallet::default();
 
     let sk_file_path = temp_dir.join("sender.sk");
 
@@ -105,8 +105,8 @@ pub fn test_make_transaction_to_receiver_account_with_fees() {
     let temp_dir = TempDir::new().unwrap();
 
     let qcli: QCli = Default::default();
-    let sender = thor::Wallet::default();
-    let receiver = thor::Wallet::default();
+    let sender = silica::Wallet::default();
+    let receiver = silica::Wallet::default();
 
     let sk_file_path = temp_dir.join("sender.sk");
 
@@ -153,8 +153,8 @@ pub fn test_make_transaction_to_receiver_account_with_fees_and_post() {
     let temp_dir = TempDir::new().unwrap();
 
     let qcli: QCli = Default::default();
-    let sender = thor::Wallet::default();
-    let receiver = thor::Wallet::default();
+    let sender = silica::Wallet::default();
+    let receiver = silica::Wallet::default();
 
     let sk_file_path = temp_dir.join("sender.sk");
 

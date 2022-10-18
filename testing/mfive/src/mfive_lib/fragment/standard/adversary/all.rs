@@ -14,7 +14,7 @@ use gate::{AdversaryFragmentSender, AdversaryFragmentSenderSetup};
 use std::time::Duration;
 use std::{path::PathBuf, str::FromStr};
 use structopt::StructOpt;
-use thor::{BlockDateGenerator, FragmentSender, FragmentSenderSetup, Wallet};
+use silica::{BlockDateGenerator, FragmentSender, FragmentSenderSetup, Wallet};
 #[derive(StructOpt, Debug)]
 pub struct AllAdversary {
     /// Number of threads

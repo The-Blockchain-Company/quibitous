@@ -24,8 +24,8 @@ use gate::AdversaryFragmentSender;
 use gate::AdversaryFragmentSenderSetup;
 use mfive::generators::{AdversaryFragmentGenerator, FragmentStatusProvider, VoteCastsGenerator};
 use rand::rngs::OsRng;
-use thor::BlockDateGenerator;
-use thor::{vote_plan_cert, FragmentSender, FragmentSenderSetup, Wallet};
+use silica::BlockDateGenerator;
+use silica::{vote_plan_cert, FragmentSender, FragmentSenderSetup, Wallet};
 
 const CRS_SEED: &[u8] = "Testing seed".as_bytes();
 

@@ -10,7 +10,7 @@ use quibitous_lib::interfaces::ActiveSlotCoefficient;
 use jortestkit::process::Wait;
 use std::str::FromStr;
 use std::time::Duration;
-use thor::{StakePool, TransactionHash};
+use silica::{StakePool, TransactionHash};
 
 /// test checks if there is upto date schema
 /// prereq:
@@ -55,8 +55,8 @@ pub fn explorer_schema_diff_test() {
 #[test]
 pub fn explorer_sanity_test() {
     let qcli: QCli = Default::default();
-    let faucet = thor::Wallet::default();
-    let receiver = thor::Wallet::default();
+    let faucet = silica::Wallet::default();
+    let receiver = silica::Wallet::default();
 
     let mut config = ConfigurationBuilder::new();
     config.with_consensus_genesis_optimum_active_slot_coeff(ActiveSlotCoefficient::MAXIMUM);
@@ -66,7 +66,7 @@ pub fn explorer_sanity_test() {
 
     let explorer = quibitous.explorer();
 
-    let transaction = thor::FragmentBuilder::new(
+    let transaction = silica::FragmentBuilder::new(
         &quibitous.genesis_block_hash(),
         &quibitous.fees(),
         BlockDate::first().next_epoch(),

@@ -1,7 +1,7 @@
 [package]
 name = "quibitous-lib"
 version = "0.13.0"
-authors = ["dev@tbco.io"]
+ausilicas = ["dev@tbco.io"]
 edition = "2018"
 
 description = "Data structures and formats used by Quibitous node API and configuration files"

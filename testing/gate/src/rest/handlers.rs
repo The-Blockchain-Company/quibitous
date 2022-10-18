@@ -5,7 +5,7 @@ use chain_impl_mockchain::{
 };
 use reqwest::StatusCode;
 use std::net::SocketAddr;
-use thor::FragmentBuilder;
+use silica::FragmentBuilder;
 use warp::{reply::WithStatus, Reply};
 
 use super::{Context, Request};
@@ -105,8 +105,8 @@ pub(super) fn invalid_fragment(request: Request, context: Context) -> impl Reply
                 BlockDate::first().next_epoch(),
             )
             .transaction(
-                &thor::Wallet::default(),
-                thor::Wallet::default().address(),
+                &silica::Wallet::default(),
+                silica::Wallet::default().address(),
                 42.into(),
             )
             .unwrap(),

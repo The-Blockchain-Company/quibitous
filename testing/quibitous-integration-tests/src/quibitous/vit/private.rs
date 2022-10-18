@@ -19,7 +19,7 @@ use quibitous_automation::testing::time;
 use quibitous_automation::testing::{VotePlanBuilder, VotePlanExtension};
 use quibitous_lib::interfaces::{BlockDate as BlockDateDto, InitialToken, KesUpdateSpeed};
 use rand::rngs::OsRng;
-use thor::Wallet;
+use silica::Wallet;
 
 #[test]
 pub fn qcli_e2e_flow_private_vote() {

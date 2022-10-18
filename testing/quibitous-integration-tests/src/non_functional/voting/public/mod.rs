@@ -19,7 +19,7 @@ use jortestkit::load::Configuration;
 use jortestkit::measurement::Status;
 use gate::{AdversaryFragmentSender, AdversaryFragmentSenderSetup};
 use mfive::generators::{AdversaryFragmentGenerator, FragmentStatusProvider, VoteCastsGenerator};
-use thor::{vote_plan_cert, BlockDateGenerator, FragmentSender, FragmentSenderSetup, Wallet};
+use silica::{vote_plan_cert, BlockDateGenerator, FragmentSender, FragmentSenderSetup, Wallet};
 
 pub fn public_vote_load_scenario(quick_config: PublicVotingLoadTestConfig) {
     let temp_dir = TempDir::new().unwrap();

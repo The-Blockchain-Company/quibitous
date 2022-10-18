@@ -5,15 +5,15 @@ use quibitous_automation::{qcli::QCli, quibitous::ConfigurationBuilder};
 use quibitous_lib::interfaces::{ActiveSlotCoefficient, KesUpdateSpeed, Mempool};
 use jortestkit::process::Wait;
 use std::time::Duration;
-use thor::TransactionHash;
+use silica::TransactionHash;
 
 #[test]
 pub fn test_blocks_are_being_created_for_7_hours() {
     let qcli: QCli = Default::default();
     let duration_48_hours = Duration::from_secs(25_200);
 
-    let mut receiver = thor::Wallet::default();
-    let mut sender = thor::Wallet::default();
+    let mut receiver = silica::Wallet::default();
+    let mut sender = silica::Wallet::default();
     let (quibitous, _) = startup::start_stake_pool(
         &[sender.clone()],
         &[],
@@ -41,7 +41,7 @@ pub fn test_blocks_are_being_created_for_7_hours() {
             .start();
 
     loop {
-        let new_transaction = thor::FragmentBuilder::new(
+        let new_transaction = silica::FragmentBuilder::new(
             &quibitous.genesis_block_hash(),
             &quibitous.fees(),
             BlockDate::first().next_epoch(),

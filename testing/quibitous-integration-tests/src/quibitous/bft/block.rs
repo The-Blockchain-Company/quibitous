@@ -9,7 +9,7 @@ use quibitous_automation::quibitous::{ConfigurationBuilder, Starter};
 use quibitous_automation::testing::keys;
 use quibitous_lib::interfaces::SlotDuration;
 use gate::{block::BlockBuilder, process::AdversaryNodeBuilder};
-use thor::FragmentBuilder;
+use silica::FragmentBuilder;
 
 #[test]
 /// Ensures that blocks with an incorrect signature are rejected by a BFT leader node
@@ -178,8 +178,8 @@ fn block_with_invalid_fragment() {
             BlockDate::first().next_epoch(),
         )
         .transaction(
-            &thor::Wallet::default(),
-            thor::Wallet::default().address(),
+            &silica::Wallet::default(),
+            silica::Wallet::default().address(),
             42.into(),
         )
         .unwrap(),

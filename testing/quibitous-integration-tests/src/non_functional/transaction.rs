@@ -10,11 +10,11 @@ use quibitous_lib::interfaces::{
     ActiveSlotCoefficient, BlockDate as JLibBlockDate, KesUpdateSpeed, Mempool,
 };
 use std::{iter, time::Duration};
-use thor::{BlockDateGenerator, FragmentSender, FragmentSenderSetup, Wallet};
+use silica::{BlockDateGenerator, FragmentSender, FragmentSenderSetup, Wallet};
 
 #[test]
 pub fn test_100_transaction_is_processed_in_10_packs_to_many_accounts() {
-    let receivers: Vec<Wallet> = iter::from_fn(|| Some(thor::Wallet::default()))
+    let receivers: Vec<Wallet> = iter::from_fn(|| Some(silica::Wallet::default()))
         .take(10)
         .collect();
     send_and_measure_100_transaction_in_10_packs_for_recievers(
@@ -25,7 +25,7 @@ pub fn test_100_transaction_is_processed_in_10_packs_to_many_accounts() {
 
 #[test]
 pub fn test_100_transaction_is_processed_in_10_packs_to_single_account() {
-    let single_reciever = thor::Wallet::default();
+    let single_reciever = silica::Wallet::default();
     let receivers: Vec<Wallet> = iter::from_fn(|| Some(single_reciever.clone()))
         .take(10)
         .collect();
@@ -51,7 +51,7 @@ fn send_100_transaction_in_10_packs_for_recievers(
     receivers: Vec<Wallet>,
     efficiency_benchmark_def: &mut EfficiencyBenchmarkDef,
 ) -> EfficiencyBenchmarkFinish {
-    let mut sender = thor::Wallet::default();
+    let mut sender = silica::Wallet::default();
     let qcli: QCli = Default::default();
     let (quibitous, _) = startup::start_stake_pool(
         &[sender.clone()],
@@ -109,8 +109,8 @@ fn send_100_transaction_in_10_packs_for_recievers(
 #[test]
 pub fn test_100_transaction_is_processed_simple() {
     let transaction_max_count = 100;
-    let mut sender = thor::Wallet::default();
-    let receiver = thor::Wallet::default();
+    let mut sender = silica::Wallet::default();
+    let receiver = silica::Wallet::default();
     let qcli: QCli = Default::default();
 
     let (quibitous, _) = startup::start_stake_pool(
@@ -173,8 +173,8 @@ pub fn test_100_transaction_is_processed_simple() {
 
 #[test]
 pub fn test_blocks_are_being_created_for_more_than_15_minutes() {
-    let mut sender = thor::Wallet::default();
-    let mut receiver = thor::Wallet::default();
+    let mut sender = silica::Wallet::default();
+    let mut receiver = silica::Wallet::default();
     let qcli: QCli = Default::default();
 
     let (quibitous, _) = startup::start_stake_pool(
@@ -242,8 +242,8 @@ pub fn test_blocks_are_being_created_for_more_than_15_minutes() {
 pub fn test_expired_transactions_processing_speed() {
     const N_TRANSACTIONS: usize = 100_000;
 
-    let mut sender = thor::Wallet::default();
-    let receiver = thor::Wallet::default();
+    let mut sender = silica::Wallet::default();
+    let receiver = silica::Wallet::default();
 
     let (quibitous, _) = startup::start_stake_pool(
         &[sender.clone()],
@@ -261,7 +261,7 @@ pub fn test_expired_transactions_processing_speed() {
     let output_value = 1;
     let transactions: Vec<Fragment> = (0..N_TRANSACTIONS)
         .map(|_| {
-            let tx = thor::FragmentBuilder::new(
+            let tx = silica::FragmentBuilder::new(
                 &quibitous.genesis_block_hash(),
                 &quibitous.fees(),
                 BlockDate {
@@ -301,8 +301,8 @@ pub fn test_expired_transactions_processing_speed() {
 pub fn test_transactions_with_long_ttl_processing_speed() {
     const N_TRANSACTIONS: usize = 1_000;
     const MAX_EXPIRY_EPOCHS: u32 = 20;
-    let mut sender = thor::Wallet::default();
-    let receiver = thor::Wallet::default();
+    let mut sender = silica::Wallet::default();
+    let receiver = silica::Wallet::default();
 
     let (quibitous, _) = startup::start_stake_pool(
         &[sender.clone()],
@@ -337,7 +337,7 @@ pub fn test_transactions_with_long_ttl_processing_speed() {
 
     let transactions: Vec<Fragment> = (0..N_TRANSACTIONS)
         .map(|_| {
-            let tx = thor::FragmentBuilder::new(
+            let tx = silica::FragmentBuilder::new(
                 &quibitous.genesis_block_hash(),
                 &quibitous.fees(),
                 block_date_generator.block_date(),

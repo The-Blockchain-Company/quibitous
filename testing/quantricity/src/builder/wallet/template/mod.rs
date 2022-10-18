@@ -10,7 +10,7 @@ use quibitous_lib::interfaces::{DiscriminationDef, TokenIdentifier, ValueDef};
 use serde::Deserialize;
 use std::collections::HashMap;
 use std::hash::{Hash, Hasher};
-use thor::WalletAlias;
+use silica::WalletAlias;
 #[derive(Clone, Debug, Deserialize, Eq, PartialEq)]
 pub struct WalletTemplate {
     alias: WalletAlias,

@@ -9,8 +9,8 @@ use quibitous_automation::quibitous::LogLevel;
 use quibitous_lib::interfaces::TopicsOfInterest;
 use quibitous_lib::interfaces::TrustedPeer;
 use quibitous_lib::time::Duration;
-use thor::DummySyncNode;
-use thor::FragmentSender;
+use silica::DummySyncNode;
+use silica::FragmentSender;
 
 const LEADER1: &str = "LEADER1";
 const LEADER2: &str = "LEADER2";

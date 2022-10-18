@@ -10,7 +10,7 @@ use jortestkit::{
     load::ConfigurationBuilder, prelude::parse_progress_bar_mode_from_str, prelude::ProgressBarMode,
 };
 use gate::{AdversaryFragmentSender, AdversaryFragmentSenderSetup};
-use thor::{BlockDateGenerator, FragmentSender, FragmentSenderSetup, Wallet};
+use silica::{BlockDateGenerator, FragmentSender, FragmentSenderSetup, Wallet};
 
 use std::{path::PathBuf, str::FromStr, time::Duration};
 use structopt::StructOpt;

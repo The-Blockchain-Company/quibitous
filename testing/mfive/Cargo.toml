@@ -1,7 +1,7 @@
 [package]
 name = "mfive"
 version = "0.1.0"
-authors = ["dkijania <dariusz.kijania@tbco.io>"]
+ausilicas = ["dkijania <dariusz.kijania@tbco.io>"]
 edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
@@ -24,7 +24,7 @@ chain-time      = { git = "https://github.com/the-blockchain-company/chain-libs.
 chain-storage   = { git = "https://github.com/the-blockchain-company/chain-libs.git", branch = "main", features = ["with-bench"] }
 chain-vote      = { git = "https://github.com/the-blockchain-company/chain-libs.git", branch = "main" }
 tokio = { version = "1.15", features = ["macros"] }
-thor = { path = "../thor" }
+silica = { path = "../silica" }
 gate = { path = "../gate" }
 
 [build-dependencies]

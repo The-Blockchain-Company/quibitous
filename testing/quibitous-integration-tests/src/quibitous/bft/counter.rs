@@ -3,13 +3,13 @@ use chain_impl_mockchain::{chaintypes::ConsensusType, testing::WitnessMode};
 use quibitous_automation::quibitous::ConfigurationBuilder;
 use quibitous_automation::quibitous::Starter;
 use quibitous_lib::interfaces::InitialUTxO;
-use thor::{FragmentSender, FragmentSenderSetup, FragmentVerifier};
+use silica::{FragmentSender, FragmentSenderSetup, FragmentVerifier};
 
 #[test]
 fn parallel_transaction_using_different_lanes() {
     let temp_dir = TempDir::new().unwrap();
-    let receiver = thor::Wallet::default();
-    let mut sender = thor::Wallet::default();
+    let receiver = silica::Wallet::default();
+    let mut sender = silica::Wallet::default();
 
     let config = ConfigurationBuilder::new()
         .with_slots_per_epoch(20)

@@ -117,7 +117,7 @@ p2p:
     blocks: normal
 ```
 
-8. Start Jörmungandr node :
+8. Start Quibitous node :
 
 ```sh
 quibitous --genesis-block block-0.bin --config node.config --secret node_secret.yaml

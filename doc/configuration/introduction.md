@@ -5,8 +5,8 @@ It covers the network, logging and storage parameters.
 
 ## Node Configuration
 
-This is an common example of a Jörmungandr node configuration file typically named `node-config.yaml`, however your's will vary depending on your needs.
-Additionally, this configuration has been tested on a *specific Jörmungandr version* and may change with newer versions.
+This is an common example of a Quibitous node configuration file typically named `node-config.yaml`, however your's will vary depending on your needs.
+Additionally, this configuration has been tested on a *specific Quibitous version* and may change with newer versions.
 It's important to keep in mind that the `trusted_peers` portion of this configuration will be different for each Bcc blockchain network.
 If you're trying to connect this node to a specific network, you need to know its genesis block hash, and its associated list of trusted peers.
 

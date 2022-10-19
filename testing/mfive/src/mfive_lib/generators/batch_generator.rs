@@ -3,7 +3,7 @@ use chain_impl_mockchain::fragment::Fragment;
 use quibitous_automation::quibitous::RemoteQuibitous;
 use quibitous_automation::testing::SyncNode;
 use quibitous_lib::crypto::hash::Hash;
-use jortestkit::load::{Request, RequestFailure, RequestGenerator};
+use quibitestkit::load::{Request, RequestFailure, RequestGenerator};
 use rand_core::OsRng;
 use std::time::Instant;
 use silica::{BlockDateGenerator, FragmentBuilder, FragmentSender, FragmentSenderSetup, Wallet};

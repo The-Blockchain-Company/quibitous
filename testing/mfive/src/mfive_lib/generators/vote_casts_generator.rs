@@ -2,7 +2,7 @@ use chain_impl_mockchain::{certificate::VotePlan, vote::Choice};
 use quibitous_automation::quibitous::{MemPoolCheck, RemoteQuibitous};
 use quibitous_automation::testing::SyncNode;
 use quibitous_automation::testing::VoteCastCounter;
-use jortestkit::load::{Request, RequestFailure, RequestGenerator};
+use quibitestkit::load::{Request, RequestFailure, RequestGenerator};
 use rand_core::OsRng;
 use rand_core::RngCore;
 use std::time::Instant;

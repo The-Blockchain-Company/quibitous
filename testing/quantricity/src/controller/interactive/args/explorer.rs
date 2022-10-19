@@ -1,5 +1,5 @@
 use crate::controller::{Error, UserInteractionController};
-use jortestkit::prelude::InteractiveCommandError;
+use quibitestkit::prelude::InteractiveCommandError;
 use structopt::StructOpt;
 
 #[derive(StructOpt, Debug)]

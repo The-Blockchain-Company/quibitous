@@ -3,8 +3,8 @@ use assert_cmd::assert::OutputAssertExt;
 use assert_fs::{prelude::*, NamedTempFile};
 use chain_impl_mockchain::vote::Choice;
 use quibitous_lib::interfaces::TaxType;
-use jortestkit::file;
-use jortestkit::process::output_extensions::ProcessOutput;
+use quibitestkit::file;
+use quibitestkit::process::output_extensions::ProcessOutput;
 use std::path::Path;
 
 #[derive(Debug)]
@@ -164,7 +164,7 @@ impl Certificate {
             .build()
             .assert()
             .success();
-        temp_file.assert(jortestkit::prelude::file_exists_and_not_empty());
+        temp_file.assert(quibitestkit::prelude::file_exists_and_not_empty());
         file::read_file(temp_file.path())
     }
 
@@ -178,7 +178,7 @@ impl Certificate {
             .build()
             .assert()
             .success();
-        temp_file.assert(jortestkit::prelude::file_exists_and_not_empty());
+        temp_file.assert(quibitestkit::prelude::file_exists_and_not_empty());
         file::read_file(temp_file.path())
     }
 

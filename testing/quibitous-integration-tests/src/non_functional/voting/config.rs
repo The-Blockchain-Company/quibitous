@@ -1,4 +1,4 @@
-use jortestkit::{
+use quibitestkit::{
     load::{Configuration, ConfigurationBuilder, Monitor},
     prelude::ResourcesUsage,
 };

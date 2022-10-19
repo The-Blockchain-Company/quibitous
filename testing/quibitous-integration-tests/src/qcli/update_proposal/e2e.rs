@@ -12,7 +12,7 @@ use quibitous_automation::{
 use quibitous_lib::interfaces::{
     BlockContentMaxSize, BlockDate, ConfigParam, ConfigParams, ConsensusLeaderId,
 };
-use jortestkit::process::Wait;
+use quibitestkit::process::Wait;
 use std::time::Duration;
 
 #[test]

@@ -2,7 +2,7 @@ use crate::qcli::command::rest::v0::MessageCommand;
 use assert_cmd::assert::OutputAssertExt;
 use assert_fs::{fixture::FileWriteStr, NamedTempFile};
 use quibitous_lib::interfaces::{FragmentLog, FragmentsProcessingSummary};
-use jortestkit::prelude::ProcessOutput;
+use quibitestkit::prelude::ProcessOutput;
 
 pub struct Message {
     message_command: MessageCommand,

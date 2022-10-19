@@ -5,7 +5,7 @@ use chain_impl_mockchain::block::BlockDate;
 use quibitous_automation::qcli::QCli;
 use quibitous_automation::quibitous::ConfigurationBuilder;
 use quibitous_lib::interfaces::{Mempool, PersistentLog};
-pub use jortestkit::console::progress_bar::{parse_progress_bar_mode_from_str, ProgressBarMode};
+pub use quibitestkit::console::progress_bar::{parse_progress_bar_mode_from_str, ProgressBarMode};
 use silica::{PersistentLogViewer, TransactionHash};
 
 #[test]

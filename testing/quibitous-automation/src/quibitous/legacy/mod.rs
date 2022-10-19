@@ -10,7 +10,7 @@ pub use config::{
 pub use quibitous_lib::interfaces::{
     Log, Mempool, NodeConfig, P2p, Policy, Rest, TopicsOfInterest, TrustedPeer,
 };
-use jortestkit::file;
+use quibitestkit::file;
 
 use assert_fs::fixture::PathChild;
 use assert_fs::prelude::*;

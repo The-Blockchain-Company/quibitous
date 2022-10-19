@@ -8,7 +8,7 @@ edition = "2018"
 
 [dependencies]
 quibitous-lib = { path = "../../quibitous-lib" }
-jortestkit = { git = "https://github.com/the-blockchain-company/jortestkit.git", branch = "git+https://github.com/the-blockchain-company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"" }
+quibitestkit = { git = "https://github.com/the-blockchain-company/quibitestkit.git", branch = "git+https://github.com/the-blockchain-company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56"" }
 quibitous-automation = { path = "../quibitous-automation" }
 rand_core = "0.6"
 rand = "0.8"

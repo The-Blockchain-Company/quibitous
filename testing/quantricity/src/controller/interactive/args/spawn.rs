@@ -5,7 +5,7 @@ use quibitous_automation::quibitous::{
     download_last_n_releases, StartupVerificationMode, Version,
 };
 use quibitous_automation::quibitous::{LeadershipMode, PersistenceMode};
-use jortestkit::console::InteractiveCommandError;
+use quibitestkit::console::InteractiveCommandError;
 use std::time::Duration;
 use structopt::StructOpt;
 

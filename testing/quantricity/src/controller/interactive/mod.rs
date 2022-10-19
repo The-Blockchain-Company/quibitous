@@ -5,7 +5,7 @@ mod controller;
 use crate::controller::Error as ControllerError;
 pub use command::InteractiveCommand;
 pub use controller::{do_for_all_alias, UserInteractionController};
-pub use jortestkit::prelude::{ConsoleWriter, InteractiveCommandError, InteractiveCommandExec};
+pub use quibitestkit::prelude::{ConsoleWriter, InteractiveCommandError, InteractiveCommandExec};
 use std::ffi::OsStr;
 use structopt::StructOpt;
 pub struct QuibitousInteractiveCommandExec {

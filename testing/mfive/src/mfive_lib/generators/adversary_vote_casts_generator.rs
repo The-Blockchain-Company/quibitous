@@ -4,7 +4,7 @@ use chain_impl_mockchain::vote::PayloadType;
 use chain_impl_mockchain::{certificate::VotePlan, vote::Choice};
 use quibitous_automation::quibitous::{MemPoolCheck, RemoteQuibitous};
 use quibitous_automation::testing::SyncNode;
-use jortestkit::load::{Request, RequestFailure, RequestGenerator};
+use quibitestkit::load::{Request, RequestFailure, RequestGenerator};
 use rand::RngCore;
 use rand_core::OsRng;
 use std::time::Instant;

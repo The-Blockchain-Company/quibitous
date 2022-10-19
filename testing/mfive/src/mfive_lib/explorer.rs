@@ -1,7 +1,7 @@
 use crate::generators::ExplorerRequestGen;
 use crate::mfive_lib::MfiveError;
 use quibitous_automation::quibitous::Explorer;
-use jortestkit::{
+use quibitestkit::{
     load::{ConfigurationBuilder, Monitor},
     prelude::{parse_progress_bar_mode_from_str, ProgressBarMode},
 };
@@ -58,7 +58,7 @@ impl ExplorerLoadCommand {
             .step_delay(Duration::from_millis(self.delay))
             .monitor(self.build_monitor())
             .build();
-        let stats = jortestkit::load::start_sync(request_gen, config, "Explorer load test");
+        let stats = quibitestkit::load::start_sync(request_gen, config, "Explorer load test");
         if self.measure {
             assert!((stats.calculate_passrate() as u32) > 95);
         }

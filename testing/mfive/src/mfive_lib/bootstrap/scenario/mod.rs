@@ -9,7 +9,7 @@ pub use iteration::IterationBasedClientLoad;
 use quibitous_automation::quibitous::{
     ConfigurationBuilder, QuibitousProcess, Starter, StartupError,
 };
-use jortestkit::file;
+use quibitestkit::file;
 use std::path::PathBuf;
 use std::{fs, result::Result};
 

@@ -8,7 +8,7 @@ use chain_impl_mockchain::fragment::Fragment;
 use chain_impl_mockchain::header::HeaderId;
 use quibitous_lib::crypto::account::Identifier;
 use quibitous_lib::interfaces::{Address, FragmentsBatch, VotePlanId};
-use jortestkit::process::Wait;
+use quibitestkit::process::Wait;
 use reqwest::{
     blocking::{Client, Response},
     header::{HeaderMap, HeaderValue, CONTENT_TYPE},

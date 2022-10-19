@@ -25,7 +25,7 @@ use quibitous_lib::{
     crypto::hash::Hash,
     interfaces::{Block0Configuration, BlockDate, FragmentsProcessingSummary, TrustedPeer},
 };
-use jortestkit::prelude::NamedProcess;
+use quibitestkit::prelude::NamedProcess;
 use std::collections::HashMap;
 use std::net::SocketAddr;
 use std::path::Path;

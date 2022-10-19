@@ -5,8 +5,8 @@ use quibitous_lib::{
     interfaces::{FragmentLog, FragmentStatus},
     time::SystemTime,
 };
-use jortestkit::load::RequestStatusProvider;
-use jortestkit::load::{Id, Status};
+use quibitestkit::load::RequestStatusProvider;
+use quibitestkit::load::{Id, Status};
 
 pub struct FragmentStatusProvider {
     quibitous: RemoteQuibitous,

@@ -5,7 +5,7 @@ use chain_addr::Discrimination;
 use chain_impl_mockchain::block::BlockDate;
 use quibitous_automation::quibitous::RemoteQuibitousBuilder;
 use quibitous_lib::crypto::hash::Hash;
-use jortestkit::{
+use quibitestkit::{
     load::ConfigurationBuilder,
     prelude::{parse_progress_bar_mode_from_str, ProgressBarMode},
 };
@@ -100,7 +100,7 @@ impl TxOnly {
             .monitor(build_monitor(&self.progress_bar_mode))
             .shutdown_grace_period(Duration::from_secs(30))
             .build();
-        let stats = jortestkit::load::start_sync(generator, config, title);
+        let stats = quibitestkit::load::start_sync(generator, config, title);
         stats.print_summary(title);
         Ok(())
     }

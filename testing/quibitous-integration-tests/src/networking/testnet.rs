@@ -12,7 +12,7 @@ use quibitous_automation::{
     testing::benchmark::storage_loading_benchmark_from_log,
 };
 use quibitous_lib::interfaces::{BlockDate, Log, LogEntry, LogOutput, TrustedPeer};
-use jortestkit::process::WaitBuilder;
+use quibitestkit::process::WaitBuilder;
 use std::{env, path::PathBuf, time::Duration};
 use silica::Wallet;
 

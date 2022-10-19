@@ -3,7 +3,7 @@ use assert_cmd::assert::OutputAssertExt;
 use assert_fs::assert::PathAssert;
 use assert_fs::fixture::ChildPath;
 use quibitous_lib::crypto::hash::Hash;
-use jortestkit::prelude::ProcessOutput;
+use quibitestkit::prelude::ProcessOutput;
 use std::path::Path;
 use std::str::FromStr;
 pub struct Genesis {
@@ -23,7 +23,7 @@ impl Genesis {
             .build()
             .assert()
             .success();
-        output.assert(jortestkit::prelude::file_exists_and_not_empty());
+        output.assert(quibitestkit::prelude::file_exists_and_not_empty());
     }
 
     pub fn encode<P: AsRef<Path>>(self, input: P, output: &ChildPath) {
@@ -35,7 +35,7 @@ impl Genesis {
             .assert()
             .success();
 
-        output.assert(jortestkit::prelude::file_exists_and_not_empty());
+        output.assert(quibitestkit::prelude::file_exists_and_not_empty());
     }
 
     pub fn encode_expect_fail<P: AsRef<Path>>(self, input: P, expected_msg: &str) {

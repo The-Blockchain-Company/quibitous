@@ -13,7 +13,7 @@ use vote::Vote;
 use crate::qcli::command::rest::V0Command;
 use assert_cmd::assert::OutputAssertExt;
 use quibitous_lib::interfaces::{AccountState, LeadershipLog, SettingsDto, StakePoolStats};
-use jortestkit::prelude::ProcessOutput;
+use quibitestkit::prelude::ProcessOutput;
 pub struct RestV0 {
     v0_command: V0Command,
 }

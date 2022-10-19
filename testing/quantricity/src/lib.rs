@@ -7,4 +7,4 @@ pub mod error;
 pub mod spawn;
 pub mod utils;
 
-pub use jortestkit::console::style;
+pub use quibitestkit::console::style;

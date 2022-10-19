@@ -1,7 +1,7 @@
 use crate::qcli::command::votes::committee::CommunicationKeyCommand;
 use assert_cmd::assert::OutputAssertExt;
 use assert_fs::{assert::PathAssert, fixture::FileWriteStr, NamedTempFile};
-use jortestkit::prelude::ProcessOutput;
+use quibitestkit::prelude::ProcessOutput;
 pub struct CommunicationKey {
     communication_key_command: CommunicationKeyCommand,
 }
@@ -33,7 +33,7 @@ impl CommunicationKey {
             .build()
             .assert()
             .success();
-        output_file.assert(jortestkit::prelude::file_exists_and_not_empty());
-        jortestkit::prelude::read_file(output_file.path())
+        output_file.assert(quibitestkit::prelude::file_exists_and_not_empty());
+        quibitestkit::prelude::read_file(output_file.path())
     }
 }

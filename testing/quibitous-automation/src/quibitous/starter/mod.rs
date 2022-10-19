@@ -17,7 +17,7 @@ use assert_fs::fixture::FixtureError;
 use assert_fs::TempDir;
 use chain_impl_mockchain::header::HeaderId;
 use quibitous_lib::interfaces::NodeConfig;
-use jortestkit::process::{self as process_utils, ProcessError};
+use quibitestkit::process::{self as process_utils, ProcessError};
 use serde::{Deserialize, Serialize};
 use std::fmt::Debug;
 use std::path::Path;

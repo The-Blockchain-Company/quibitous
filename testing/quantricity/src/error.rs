@@ -1,7 +1,7 @@
 use crate::controller::Error as ControllerError;
 use quibitous_automation::quibitous::{ExplorerError, RestError};
 use quibitous_automation::testing::ConsumptionBenchmarkError;
-use jortestkit::prelude::InteractiveCommandError;
+use quibitestkit::prelude::InteractiveCommandError;
 use thiserror::Error;
 
 #[derive(Debug, Error)]

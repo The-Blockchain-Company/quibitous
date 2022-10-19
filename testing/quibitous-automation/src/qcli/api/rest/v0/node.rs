@@ -1,6 +1,6 @@
 use crate::qcli::command::rest::v0::NodeCommand;
 use assert_cmd::assert::OutputAssertExt;
-use jortestkit::prelude::ProcessOutput;
+use quibitestkit::prelude::ProcessOutput;
 use std::collections::BTreeMap;
 
 pub struct Node {

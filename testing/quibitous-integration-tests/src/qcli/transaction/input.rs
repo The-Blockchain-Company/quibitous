@@ -39,7 +39,7 @@ pub fn test_cannot_create_input_with_too_big_utxo_amount() {
 #[test]
 #[cfg(not(target_os = "linux"))]
 pub fn test_cannot_create_input_when_staging_file_is_readonly() {
-    use jortestkit::file;
+    use quibitestkit::file;
     let qcli: QCli = Default::default();
     let mut transaction_wrapper =
         qcli.transaction_builder(Hash::from_hex(FAKE_GENESIS_HASH).unwrap());

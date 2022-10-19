@@ -211,7 +211,7 @@ impl RemoteQuibitousBuilder {
 
     pub fn with_node_config(mut self, node_config: PathBuf) -> Self {
         self.node_config =
-            Some(serde_yaml::from_str(&jortestkit::file::read_file(node_config)).unwrap());
+            Some(serde_yaml::from_str(&quibitestkit::file::read_file(node_config)).unwrap());
         self
     }
 

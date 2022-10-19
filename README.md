@@ -7,11 +7,11 @@ User guide documentation available [here][docs]
 
 [docs]: https://the-blockchain-company.github.io/quibitous
 
-## git+https://github.com/the-blockchain-company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56" current build status
+## Master current build status
 
 | CI | Status | Description |
 |---:|:------:|:------------|
-| CircleCI | [![CircleCI](https://circleci.com/gh/the-blockchain-company/quibitous/tree/git+https://github.com/the-blockchain-company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56".svg?style=svg)](https://circleci.com/gh/the-blockchain-company/quibitous/tree/git+https://github.com/the-blockchain-company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56") | git+https://github.com/the-blockchain-company/chain-libs.git?branch=main#45b943be97f8bad0c90318a72cf23fc20d923d56" and PRs |
+| CircleCI | [![CircleCI](https://circleci.com/gh/The-Blockchain-Company/quibitous/tree/master.svg?style=svg)](https://circleci.com/gh/The-Blockchain-Company/quibitous/tree/master) | Master and PRs |
 
 ## Install from Binaries
 

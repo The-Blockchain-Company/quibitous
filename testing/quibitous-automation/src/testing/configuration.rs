@@ -14,14 +14,14 @@ pub fn get_quibitous_app() -> PathBuf {
 
 /// Get qcli executable from current environment
 pub fn get_qcli_app() -> PathBuf {
-    const JOR_CLI_NAME: &str = env!("JOR_CLI_NAME");
-    get_app_from_current_dir(JOR_CLI_NAME)
+    const QUI_CLI_NAME: &str = env!("QUI_CLI_NAME");
+    get_app_from_current_dir(QUI_CLI_NAME)
 }
 
 /// Get explorer executable from current environment
 pub fn get_explorer_app() -> PathBuf {
-    const JOR_EXPLORER_NAME: &str = env!("JOR_EXPLORER_NAME");
-    get_app_from_current_dir(JOR_EXPLORER_NAME)
+    const QUI_EXPLORER_NAME: &str = env!("QUI_EXPLORER_NAME");
+    get_app_from_current_dir(QUI_EXPLORER_NAME)
 }
 
 /// Get executable from current environment

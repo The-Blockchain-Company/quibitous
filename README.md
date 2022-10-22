@@ -1,7 +1,8 @@
 # Full Node
 
 > Quibitous is a Rust based implementation of Bcc-Node. 
-> Derived from Cardano's Jormungandr, Quibitous will be utilized for testing purposes during development of the Quantum One Ecosystem. 
+> Derived from Cardano's Jormungandr, Quibitous will be utilized for testing purposes during development of the Quantum One Ecosystem.
+> As the beta tag implies, this is not a production repo. This is a stride toward public testnet.
  
 
 User guide documentation available [here][docs]

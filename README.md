@@ -1,7 +1,8 @@
 # Full Node
 
-> Just because you call something a blockchain, that doesn't mean you aren't
-> subject to normal engineering laws.
+> Quibitous is a Rust based implementation of Bcc-Node. 
+> Derived from Cardano's Jormungandr, Quibitous will be utilized for testing purposes during development of the Quantum One Ecosystem. 
+ 
 
 User guide documentation available [here][docs]
 
